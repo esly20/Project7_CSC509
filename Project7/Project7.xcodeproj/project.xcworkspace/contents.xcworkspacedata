@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../Project7/SamarFolder">
+   </FileRef>
+   <FileRef
       location = "group:/Users/samarseth/Documents/CSC509/Winter Term/Project7_CSC509/Project7/Project7/ErikFolder">
    </FileRef>
    <FileRef
