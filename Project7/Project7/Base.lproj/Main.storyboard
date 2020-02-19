@@ -60,7 +60,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="9fg-lV-1Es">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LW8-x5-h6K" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="LW8-x5-h6K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JDf-ac-kX5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

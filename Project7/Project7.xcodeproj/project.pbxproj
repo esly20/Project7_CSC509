@@ -66,6 +66,11 @@
 		3F7388E023FCDDAF005E56FA /* Project7 */ = {
 			isa = PBXGroup;
 			children = (
+				892FF12023FDA7B100354A6B /* PatrickFolder */,
+				892FF11F23FDA7AB00354A6B /* MarkFolder */,
+				892FF11E23FDA7A400354A6B /* RyanFolder */,
+				892FF11D23FDA78B00354A6B /* ErikFolder */,
+				892FF11C23FDA78400354A6B /* EmmaFolder */,
 				3F7388E123FCDDAF005E56FA /* AppDelegate.swift */,
 				3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */,
 				3F7388E523FCDDAF005E56FA /* ViewController.swift */,
@@ -80,6 +85,41 @@
 				3F7388EF23FCDDB4005E56FA /* Info.plist */,
 			);
 			path = Project7;
+			sourceTree = "<group>";
+		};
+		892FF11C23FDA78400354A6B /* EmmaFolder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = EmmaFolder;
+			sourceTree = "<group>";
+		};
+		892FF11D23FDA78B00354A6B /* ErikFolder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ErikFolder;
+			sourceTree = "<group>";
+		};
+		892FF11E23FDA7A400354A6B /* RyanFolder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RyanFolder;
+			sourceTree = "<group>";
+		};
+		892FF11F23FDA7AB00354A6B /* MarkFolder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MarkFolder;
+			sourceTree = "<group>";
+		};
+		892FF12023FDA7B100354A6B /* PatrickFolder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PatrickFolder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
