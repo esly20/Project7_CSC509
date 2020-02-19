@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Announcements-->
         <scene sceneID="NHv-1I-6MW">
             <objects>
                 <tableViewController storyboardIdentifier="AnnouncementsViewController" id="Kxf-Gs-2mp" sceneMemberID="viewController">
@@ -29,7 +29,8 @@
                             <outlet property="delegate" destination="Kxf-Gs-2mp" id="79S-XG-cgD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zok-Ea-xEw"/>
+                    <tabBarItem key="tabBarItem" title="Announcements" image="tray.and.arrow.down.fill" catalog="system" id="mbM-1c-YLB"/>
+                    <navigationItem key="navigationItem" title="Announcements" id="gp8-p2-cNy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdr-MU-9FO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
