@@ -2,6 +2,21 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Project7.xcodeproj">
+      location = "group:../Project7/SamarFolder">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/samarseth/Documents/CSC509/Winter Term/Project7_CSC509/Project7/Project7/ErikFolder">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/samarseth/Documents/CSC509/Winter Term/Project7_CSC509/Project7/Project7/MarkFolder">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/samarseth/Documents/CSC509/Winter Term/Project7_CSC509/Project7/Project7/PatrickFolder">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/samarseth/Documents/CSC509/Winter Term/Project7_CSC509/Project7/Project7/RyanFolder">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

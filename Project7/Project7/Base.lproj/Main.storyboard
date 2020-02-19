@@ -60,13 +60,18 @@
         <!--Tab Bar Controller-->
         <scene sceneID="9fg-lV-1Es">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LW8-x5-h6K" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="LW8-x5-h6K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JDf-ac-kX5">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="cOJ-1E-YKO" kind="relationship" relationship="viewControllers" id="3Cy-K7-nQH"/>
                         <segue destination="evv-JL-xmf" kind="relationship" relationship="viewControllers" id="yxj-N6-VhU"/>
