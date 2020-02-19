@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13F5374623FDA8B80087447C /* AnnouncementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5374523FDA8B80087447C /* AnnouncementsTableViewController.swift */; };
+		13F5374823FDAA240087447C /* AnnouncementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5374723FDAA240087447C /* AnnouncementsTableViewCell.swift */; };
 		3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E123FCDDAF005E56FA /* AppDelegate.swift */; };
 		3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */; };
 		3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E523FCDDAF005E56FA /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13F5374523FDA8B80087447C /* AnnouncementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementsTableViewController.swift; path = Project7/AnnouncementsTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		13F5374723FDAA240087447C /* AnnouncementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementsTableViewCell.swift; path = Project7/AnnouncementsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		3F714EE223FDA5370052B279 /* Sources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sources.md; sourceTree = "<group>"; };
 		3F7388DE23FCDDAF005E56FA /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7388E123FCDDAF005E56FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		892FF11D23FDA78B00354A6B /* ErikFolder */ = {
 			isa = PBXGroup;
 			children = (
+				13F5374523FDA8B80087447C /* AnnouncementsTableViewController.swift */,
+				13F5374723FDAA240087447C /* AnnouncementsTableViewCell.swift */,
 			);
 			path = ErikFolder;
 			sourceTree = "<group>";
@@ -202,6 +208,8 @@
 			files = (
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
+				13F5374823FDAA240087447C /* AnnouncementsTableViewCell.swift in Sources */,
+				13F5374623FDA8B80087447C /* AnnouncementsTableViewController.swift in Sources */,
 				3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
