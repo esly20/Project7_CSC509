@@ -13,6 +13,10 @@
 		3F7388E923FCDDAF005E56FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388E723FCDDAF005E56FA /* Main.storyboard */; };
 		3F7388EB23FCDDB4005E56FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388EA23FCDDB4005E56FA /* Assets.xcassets */; };
 		3F7388EE23FCDDB4005E56FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388EC23FCDDB4005E56FA /* LaunchScreen.storyboard */; };
+		3F7388F623FCDFAD005E56FA /* MapStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F523FCDFAD005E56FA /* MapStoryboard.storyboard */; };
+		3F7388F823FCE306005E56FA /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */; };
+		3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */; };
+		3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		3F7388EA23FCDDB4005E56FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F7388ED23FCDDB4005E56FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F7388EF23FCDDB4005E56FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7388F523FCDFAD005E56FA /* MapStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapStoryboard.storyboard; sourceTree = "<group>"; };
+		3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
+		3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnnouncementsStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */,
 				3F7388E523FCDDAF005E56FA /* ViewController.swift */,
 				3F7388E723FCDDAF005E56FA /* Main.storyboard */,
+				3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */,
+				3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */,
+				3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */,
+				3F7388F523FCDFAD005E56FA /* MapStoryboard.storyboard */,
 				3F7388EA23FCDDB4005E56FA /* Assets.xcassets */,
 				3F7388EC23FCDDB4005E56FA /* LaunchScreen.storyboard */,
 				3F7388EF23FCDDB4005E56FA /* Info.plist */,
@@ -127,7 +139,11 @@
 			files = (
 				3F7388EE23FCDDB4005E56FA /* LaunchScreen.storyboard in Resources */,
 				3F7388EB23FCDDB4005E56FA /* Assets.xcassets in Resources */,
+				3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */,
+				3F7388F623FCDFAD005E56FA /* MapStoryboard.storyboard in Resources */,
 				3F7388E923FCDDAF005E56FA /* Main.storyboard in Resources */,
+				3F7388F823FCE306005E56FA /* ProfileStoryboard.storyboard in Resources */,
+				3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
