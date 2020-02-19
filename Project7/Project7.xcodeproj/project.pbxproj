@@ -21,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F714EE223FDA5370052B279 /* Sources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sources.md; sourceTree = "<group>"; };
 		3F7388DE23FCDDAF005E56FA /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7388E123FCDDAF005E56FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 				3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */,
 				3F7388E523FCDDAF005E56FA /* ViewController.swift */,
 				3F7388E723FCDDAF005E56FA /* Main.storyboard */,
+				3F714EE223FDA5370052B279 /* Sources.md */,
 				892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */,
 				3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */,
 				3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */,
