@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MapKit // Learned to use this from: https://www.raywenderlich.com/548-mapkit-tutorial-getting-started#toc-anchor-011
+import MapKit
 
 class MapViewController: UIViewController {
 
@@ -25,7 +25,6 @@ class MapViewController: UIViewController {
         mapView.mapType = MKMapType.hybrid
         
         // Long list of marked locations on the map (goes till end of viewDidLoad() function)
-        // Each one is an object of type Marker (a class copied from https://www.raywenderlich.com/548-mapkit-tutorial-getting-started#toc-anchor-011)
         // "addAnnotation()" places the pin at "coordinate"
         let commons = Marker(title: "Paresky Commons",
           locationName: "Phillips Academy",
