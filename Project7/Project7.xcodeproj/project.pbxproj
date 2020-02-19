@@ -17,6 +17,7 @@
 		3F7388F823FCE306005E56FA /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */; };
 		3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */; };
 		3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */; };
+		892FF11623FDA00F00354A6B /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnnouncementsStoryboard.storyboard; sourceTree = "<group>"; };
+		892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */,
 				3F7388E523FCDDAF005E56FA /* ViewController.swift */,
 				3F7388E723FCDDAF005E56FA /* Main.storyboard */,
+				892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */,
 				3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */,
 				3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */,
 				3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */,
@@ -142,6 +145,7 @@
 				3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */,
 				3F7388F623FCDFAD005E56FA /* MapStoryboard.storyboard in Resources */,
 				3F7388E923FCDDAF005E56FA /* Main.storyboard in Resources */,
+				892FF11623FDA00F00354A6B /* InfoStoryboard.storyboard in Resources */,
 				3F7388F823FCE306005E56FA /* ProfileStoryboard.storyboard in Resources */,
 				3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */,
 			);
