@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5374924004A3D0087447C /* AnnouncementsTableViewController.swift */; };
 		13F5374C24004A4F0087447C /* AnnouncementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5374B24004A4F0087447C /* AnnouncementsTableViewCell.swift */; };
+		3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */; };
 		3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E123FCDDAF005E56FA /* AppDelegate.swift */; };
 		3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */; };
 		3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E523FCDDAF005E56FA /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		13F5374924004A3D0087447C /* AnnouncementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementsTableViewController.swift; path = Project7/AnnouncementsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		13F5374B24004A4F0087447C /* AnnouncementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementsTableViewCell.swift; path = Project7/AnnouncementsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewController.swift; sourceTree = "<group>"; };
 		3F714EE223FDA5370052B279 /* Sources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sources.md; sourceTree = "<group>"; };
 		3F7388DE23FCDDAF005E56FA /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7388E123FCDDAF005E56FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F49E09E2400607200903EC1 /* EmmaFolder */ = {
+			isa = PBXGroup;
+			children = (
+				3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */,
+			);
+			path = EmmaFolder;
+			sourceTree = "<group>";
+		};
 		3F7388D523FCDDAF005E56FA = {
 			isa = PBXGroup;
 			children = (
@@ -80,10 +90,10 @@
 				892FF11F23FDA7AB00354A6B /* MarkFolder */,
 				892FF11E23FDA7A400354A6B /* RyanFolder */,
 				892FF11D23FDA78B00354A6B /* ErikFolder */,
-				892FF11C23FDA78400354A6B /* EmmaFolder */,
 				3F7388E123FCDDAF005E56FA /* AppDelegate.swift */,
 				3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */,
 				3F7388E523FCDDAF005E56FA /* ViewController.swift */,
+				3F49E09E2400607200903EC1 /* EmmaFolder */,
 				3F7388E723FCDDAF005E56FA /* Main.storyboard */,
 				3F714EE223FDA5370052B279 /* Sources.md */,
 				892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */,
@@ -96,13 +106,6 @@
 				3F7388EF23FCDDB4005E56FA /* Info.plist */,
 			);
 			path = Project7;
-			sourceTree = "<group>";
-		};
-		892FF11C23FDA78400354A6B /* EmmaFolder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EmmaFolder;
 			sourceTree = "<group>";
 		};
 		892FF11D23FDA78B00354A6B /* ErikFolder */ = {
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13F5374C24004A4F0087447C /* AnnouncementsTableViewCell.swift in Sources */,
+				3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */,
 				13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */,
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
