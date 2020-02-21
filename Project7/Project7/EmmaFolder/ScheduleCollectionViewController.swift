@@ -9,7 +9,7 @@
 import UIKit
 
 private let reuseIdentifier = "BlockCell"
-private let itemsPerRow: CGFloat = 3
+private let itemsPerRow: CGFloat = 4
 
 let sectionInsets = UIEdgeInsets(top: 50.0,
 left: 20.0,
