@@ -19,7 +19,7 @@
 		3F7388F823FCE306005E56FA /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */; };
 		3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */; };
 		3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */; };
-		5662170424005E6F0011369E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5662170324005E6F0011369E /* ProfileViewController.swift */; };
+		56621706240061640011369E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56621705240061640011369E /* ProfileViewController.swift */; };
 		892FF11623FDA00F00354A6B /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */; };
 		892FF12323FDAA8300354A6B /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12223FDAA8300354A6B /* Marker.swift */; };
 		892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12423FDAABF00354A6B /* MapViewController.swift */; };
@@ -42,7 +42,7 @@
 		3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnnouncementsStoryboard.storyboard; sourceTree = "<group>"; };
-		5662170324005E6F0011369E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = ../../../../ProfileViewController.swift; sourceTree = "<group>"; };
+		56621705240061640011369E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
 		892FF12223FDAA8300354A6B /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		892FF12423FDAABF00354A6B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -79,10 +79,10 @@
 		3F7388E023FCDDAF005E56FA /* Project7 */ = {
 			isa = PBXGroup;
 			children = (
+				566217072400616D0011369E /* RyanFolder */,
 				892FF12123FDA9F800354A6B /* SamarFolder */,
 				892FF12023FDA7B100354A6B /* PatrickFolder */,
 				892FF11F23FDA7AB00354A6B /* MarkFolder */,
-				892FF11E23FDA7A400354A6B /* RyanFolder */,
 				892FF11D23FDA78B00354A6B /* ErikFolder */,
 				892FF11C23FDA78400354A6B /* EmmaFolder */,
 				3F7388E123FCDDAF005E56FA /* AppDelegate.swift */,
@@ -103,6 +103,14 @@
 			path = Project7;
 			sourceTree = "<group>";
 		};
+		566217072400616D0011369E /* RyanFolder */ = {
+			isa = PBXGroup;
+			children = (
+				56621705240061640011369E /* ProfileViewController.swift */,
+			);
+			path = RyanFolder;
+			sourceTree = "<group>";
+		};
 		892FF11C23FDA78400354A6B /* EmmaFolder */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,14 +125,6 @@
 				13F5374B24004A4F0087447C /* AnnouncementsTableViewCell.swift */,
 			);
 			path = ErikFolder;
-			sourceTree = "<group>";
-		};
-		892FF11E23FDA7A400354A6B /* RyanFolder */ = {
-			isa = PBXGroup;
-			children = (
-				5662170324005E6F0011369E /* ProfileViewController.swift */,
-			);
-			path = RyanFolder;
 			sourceTree = "<group>";
 		};
 		892FF11F23FDA7AB00354A6B /* MarkFolder */ = {
@@ -233,7 +233,7 @@
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
-				5662170424005E6F0011369E /* ProfileViewController.swift in Sources */,
+				56621706240061640011369E /* ProfileViewController.swift in Sources */,
 				3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
