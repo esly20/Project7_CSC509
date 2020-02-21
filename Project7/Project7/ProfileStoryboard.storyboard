@@ -7,11 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="VwZ-Ak-SHG">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="uvn-Nk-hch" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tOR-Hf-GOj">
+                <viewController storyboardIdentifier="ProfileViewController" id="uvn-Nk-hch" customClass="profile" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tOR-Hf-GOj" customClass="ProfileViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -42,7 +42,7 @@
         <!--SettingsStoryboard-->
         <scene sceneID="R9U-Wg-OUw">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SettingsViewController" storyboardName="SettingsStoryboard" id="PuO-lP-oMp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SettingsStoryboard" id="PuO-lP-oMp" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="a9H-GS-G3l"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0gp-5r-6VL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

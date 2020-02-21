@@ -15,8 +15,6 @@ class AnnouncementsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.register(AnnouncementsTableViewCell.self, forCellReuseIdentifier: "AnnouncementCell")
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,7 +35,7 @@ class AnnouncementsTableViewController: UITableViewController {
             print(announcements.count)
             return announcements.count
         } else {
-            print("Error with announcements")
+            print("Error with fetching announcements")
             return 0
         }
     }
@@ -52,6 +50,14 @@ class AnnouncementsTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("AHHHHHHHH")
+        let vc = SelectedAnnouncementViewController()
+//        vc.detailItem = petitions[indexPath.row]
+//        navigationController?.pushViewController(vc, animated: true)
+//        navigationController?.show(vc, sender: (Any).self)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
