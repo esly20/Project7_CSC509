@@ -10,8 +10,8 @@
         <!--Profile-->
         <scene sceneID="VwZ-Ak-SHG">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="uvn-Nk-hch" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tOR-Hf-GOj">
+                <viewController storyboardIdentifier="ProfileViewController" id="uvn-Nk-hch" customClass="profile" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tOR-Hf-GOj" customClass="ProfileViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -26,15 +26,51 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jAd-Gh-zUK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="Xuw-OA-FJp"/>
+                    <navigationItem key="navigationItem" id="bGs-Zz-gH6">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="bBs-Y1-a7Q">
+                            <connections>
+                                <segue destination="PuO-lP-oMp" kind="show" id="MEz-ZQ-m8X"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHn-aJ-Z6m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="83.705357142857139"/>
+        </scene>
+        <!--SettingsStoryboard-->
+        <scene sceneID="R9U-Wg-OUw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SettingsStoryboard" id="PuO-lP-oMp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="a9H-GS-G3l"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gp-5r-6VL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="-150"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="1WA-K3-Sad">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXg-Yd-pgB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="Xuw-OA-FJp"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FTx-4f-FYD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uvn-Nk-hch" kind="relationship" relationship="rootViewController" id="eur-3z-L9k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36j-l1-QXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gear" catalog="system" width="64" height="58"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
     </resources>
 </document>
