@@ -10,8 +10,12 @@ import UIKit
 
 class AnnouncementsTableViewController: UITableViewController {
 
+    let announcements: [String] = ["1","2","3","4","5"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.register(AnnouncementsTableViewCell.self, forCellReuseIdentifier: "AnnouncementCell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,23 +28,29 @@ class AnnouncementsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        if announcements.count != 0 {
+            print(announcements.count)
+            return announcements.count
+        } else {
+            print("Error with announcements")
+            return 0
+        }
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell", for: indexPath)
+        if let announcementCell = cell as? AnnouncementsTableViewCell {
+            let announcementText = announcements[indexPath.row]
+            announcementCell.titleLabel?.text = announcementText
+            return announcementCell
+        }
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
