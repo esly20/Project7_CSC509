@@ -7,3 +7,4 @@ Marker class: https://www.raywenderlich.com/548-mapkit-tutorial-getting-started#
 ## Emma Slibeck
 1. [Using a Tab Bar Controller and References](https://stackoverflow.com/questions/37241684/use-storyboard-references-while-retaining-icons-text-for-tab-bar-controller)
 *__Note__*: The second solution on stackoverflow is the method I used. 
+
