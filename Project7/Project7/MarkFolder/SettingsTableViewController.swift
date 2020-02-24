@@ -39,8 +39,8 @@ class SettingsTableViewController: UITableViewController {
            cellWithOtherName.settingLabel.text = settings[indexPath.row]
 
         return cell
+        }
     }
-    
 
     /*
     // Override to support conditional editing of the table view.
