@@ -38,6 +38,7 @@ class SettingsTableViewController: UITableViewController {
        if let cellWithOtherName = cell as? SettingsTableViewCell {
            cellWithOtherName.settingLabel.text = settings[indexPath.row]
         }
+
         return cell
     
     }
