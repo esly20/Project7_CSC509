@@ -10,7 +10,7 @@ import UIKit
 
 class AnnouncementsTableViewController: UITableViewController {
 
-    let announcements: [String] = ["1","2","3","4","5"]
+    let announcements: [String] = ["0", "1","2","3","4","5"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,8 @@ class AnnouncementsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if announcements.count != 0 {
-            print(announcements.count)
+//            print(announcements.count)
             return announcements.count
         } else {
             print("Error with fetching announcements")
@@ -51,11 +50,13 @@ class AnnouncementsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("AHHHHHHHH")
-        let vc = SelectedAnnouncementViewController()
-//        vc.detailItem = petitions[indexPath.row]
-//        navigationController?.pushViewController(vc, animated: true)
-//        navigationController?.show(vc, sender: (Any).self)
+        print("\(indexPath.row) tapped")
+        
+//        let vc = self.storyboard?.instantiateViewController(identifier: "SelectedVC") as! SelectedAnnouncementViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
+//
+//        let vc: SelectedAnnouncementViewController = SelectedAnnouncementViewController()
+//        self.navigationController?.pushViewController(SelectedAnnouncementViewController(), animated: true)
     }
     
     /*

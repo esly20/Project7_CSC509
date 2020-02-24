@@ -26,6 +26,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="jAd-Gh-zUK"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Pqj-2k-gJv"/>
                     <navigationItem key="navigationItem" id="bGs-Zz-gH6">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="bBs-Y1-a7Q">
                             <connections>
@@ -72,5 +73,6 @@
     <resources>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

@@ -45,6 +45,9 @@
                     <tabBarItem key="tabBarItem" title="Announcements" image="tray.and.arrow.down.fill" catalog="system" id="mbM-1c-YLB"/>
                     <navigationItem key="navigationItem" title="Announcements" id="gp8-p2-cNy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="kit-K7-dDa" kind="show" id="zVg-3e-2Jo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdr-MU-9FO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +56,7 @@
         <!--Selected Announcement View Controller-->
         <scene sceneID="B04-OE-42w">
             <objects>
-                <viewController id="kit-K7-dDa" customClass="SelectedAnnouncementViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kit-K7-dDa" customClass="SelectedAnnouncementViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3xu-2D-Ali">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqk-gx-LWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2278" y="73"/>
+            <point key="canvasLocation" x="2371" y="73"/>
         </scene>
         <!--Announcements-->
         <scene sceneID="CAd-mX-zqL">
