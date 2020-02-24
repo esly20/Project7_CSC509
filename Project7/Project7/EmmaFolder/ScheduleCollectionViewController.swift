@@ -7,13 +7,13 @@
 //
 import UIKit
 private let reuseIdentifier = "BlockCell"
-private let itemsPerRow: CGFloat = 4
-let sectionInsets = UIEdgeInsets(top: 50.0,
+private let itemsPerRow: CGFloat = 5
+let sectionInsets = UIEdgeInsets(top: 10.0,
 left: 20.0,
-bottom: 50.0,
+bottom: 10.0,
 right: 20.0)
 var weekDays: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-var classPeriods: [String] = ["1", "2", "3a", "3b"]
+var classPeriods: [String] = ["1", "2a", "2b"]
 class ScheduleCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +33,11 @@ class ScheduleCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return weekDays.count
+        return classPeriods.count
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return classPeriods.count
+        return weekDays.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
