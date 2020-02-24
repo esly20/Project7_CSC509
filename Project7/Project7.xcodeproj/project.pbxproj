@@ -21,6 +21,9 @@
 		3F7388F823FCE306005E56FA /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */; };
 		3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */; };
 		3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */; };
+		563C2C2924042210003A496E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2824042210003A496E /* Student.swift */; };
+		563C2C2B240422E8003A496E /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2A240422E8003A496E /* Class.swift */; };
+		563C2C2D24042328003A496E /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2C24042328003A496E /* Faculty.swift */; };
 		56621706240061640011369E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56621705240061640011369E /* ProfileViewController.swift */; };
 		892FF11623FDA00F00354A6B /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */; };
 		892FF12323FDAA8300354A6B /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12223FDAA8300354A6B /* Marker.swift */; };
@@ -46,6 +49,9 @@
 		3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnnouncementsStoryboard.storyboard; sourceTree = "<group>"; };
+		563C2C2824042210003A496E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		563C2C2A240422E8003A496E /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Class.swift; path = Project7/Class.swift; sourceTree = SOURCE_ROOT; };
+		563C2C2C24042328003A496E /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Faculty.swift; path = Project7/Faculty.swift; sourceTree = SOURCE_ROOT; };
 		56621705240061640011369E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
 		892FF12223FDAA8300354A6B /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
@@ -119,15 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				56621705240061640011369E /* ProfileViewController.swift */,
+				563C2C2824042210003A496E /* Student.swift */,
+				563C2C2A240422E8003A496E /* Class.swift */,
+				563C2C2C24042328003A496E /* Faculty.swift */,
 			);
 			path = RyanFolder;
-			sourceTree = "<group>";
-		};
-		892FF11C23FDA78400354A6B /* EmmaFolder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = EmmaFolder;
 			sourceTree = "<group>";
 		};
 		892FF11D23FDA78B00354A6B /* ErikFolder */ = {
@@ -240,17 +242,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563C2C2B240422E8003A496E /* Class.swift in Sources */,
 				13F5374C24004A4F0087447C /* AnnouncementsTableViewCell.swift in Sources */,
 				3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */,
 				13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */,
+				563C2C2924042210003A496E /* Student.swift in Sources */,
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
 				56621706240061640011369E /* ProfileViewController.swift in Sources */,
 				13F5374E24005E5B0087447C /* SelectedAnnouncementViewController.swift in Sources */,
-				5662170424005E6F0011369E /* ProfileViewController.swift in Sources */,
 				3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */,
+				563C2C2D24042328003A496E /* Faculty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
