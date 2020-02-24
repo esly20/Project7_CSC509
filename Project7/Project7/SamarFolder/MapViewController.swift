@@ -9,19 +9,27 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
-    let regionRadius: CLLocationDistance = 500 // how to set the radius of the initially visible area on the map
+    
+    // copied from: https://www.codementor.io/@muneebali/mapkit-user-current-location-10xdbyy1v3
+    // I am unsure what the `fileprivate` means
+    fileprivate let locationManager: CLLocationManager = {
+       let manager = CLLocationManager()
+       manager.requestWhenInUseAuthorization()
+       return manager
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.delegate = self // needed to have the little pop up when you click on a pin
-        
-        // setting the location to center the map on when it first loads
-        let initialLocation = CLLocation(latitude: 42.647394, longitude: -71.132323)
-        centerMapOnLocation(location: initialLocation)
+        // setting up the map view
+        mapView.delegate = self // needed for pop-up window
+        mapView.showsUserLocation = true
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        currentLocation()
         mapView.mapType = MKMapType.hybrid
         
         // Long list of marked locations on the map (goes till end of viewDidLoad() function)
@@ -255,12 +263,32 @@ class MapViewController: UIViewController {
         let allen = Marker(title: "Allen House", locationName: "Phillips Academy Dorm", discipline: "None", coordinate: CLLocationCoordinate2D(latitude: 42.643618, longitude: -71.131051))
         mapView.addAnnotation(allen)
     }
+
+    // below functions copied from: https://www.codementor.io/@muneebali/mapkit-user-current-location-10xdbyy1v3
+    // used to get the current locatio
+    func currentLocation() {
+       locationManager.delegate = self
+       locationManager.desiredAccuracy = kCLLocationAccuracyBest
+       if #available(iOS 11.0, *) {
+          locationManager.showsBackgroundLocationIndicator = true
+       } else {
+          // Fallback on earlier versions
+       }
+       locationManager.startUpdatingLocation()
+    }
     
-    // func "centerMapOnLocation()" also copied from https://www.raywenderlich.com/548-mapkit-tutorial-getting-started#toc-anchor-011
-    // used to center the map at the location "location" in the parameter using the radius of the area we want to show, which was specified before the "viewDidLoad()" function
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion =  MKCoordinateRegion(center: location.coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
+    // takes current location or last known current location and centers the mapView there
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+       let location = locations.last! as CLLocation
+       let currentLocation = location.coordinate
+       let coordinateRegion = MKCoordinateRegion(center: currentLocation, latitudinalMeters: 800, longitudinalMeters: 800)
+       mapView.setRegion(coordinateRegion, animated: true)
+       locationManager.stopUpdatingLocation()
+    }
+    
+    // Error handler
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+       print(error.localizedDescription)
     }
 }
 
@@ -295,4 +323,3 @@ extension MapViewController: MKMapViewDelegate {
       location.mapItem().openInMaps(launchOptions: launchOptions)
     }
 }
-
