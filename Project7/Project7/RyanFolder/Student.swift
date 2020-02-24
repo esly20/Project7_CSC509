@@ -8,17 +8,17 @@
 
 import Foundation
 
-//struct Student: Codable {
-//    var name: String
-//    var preferredName: String
-//    var email: String
-//    var boarder: Boolean
-//    var dorm: String?
-//    var cluster: String
-//    var program: String
-//    var prepaidCollege: Boolean
-//
-//    var classOne: Class
-//    var classTwo: Class
-//    var afternoonActivity: Class
-//}
+struct Student: Codable {
+    var name: String
+    var preferredName: String
+    var email: String
+    var boarder: Bool
+    var dorm: String?
+    var cluster: String
+    var program: String
+    var prepaidCollege: Bool
+
+    var classOne: Class
+    var classTwo: Class
+    var afternoonActivity: Class
+}

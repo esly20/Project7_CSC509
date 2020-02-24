@@ -8,28 +8,19 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tx8-ec-cF9">
+        <scene sceneID="wfN-lq-Qd9">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="BvK-if-K78" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="b6Q-Re-0Cm">
+                <viewController storyboardIdentifier="SettingsViewController" id="2VW-cm-Mih" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l0S-4t-Ad3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xp7-1E-N7O">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Settings" id="TdW-iE-boy"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="4Bu-9X-cyU"/>
+                        <viewLayoutGuide key="safeArea" id="cM0-OV-jaz"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RQy-o6-G5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VO1-Ec-Elb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-943" y="52"/>
+            <point key="canvasLocation" x="-1060" y="-248"/>
         </scene>
     </scenes>
 </document>
