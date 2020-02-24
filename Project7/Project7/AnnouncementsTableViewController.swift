@@ -51,7 +51,7 @@ class AnnouncementsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print("AHHHHHHHH")
+        print("AHHHHHHHH")
         let vc = SelectedAnnouncementViewController()
 //        vc.detailItem = petitions[indexPath.row]
 //        navigationController?.pushViewController(vc, animated: true)
