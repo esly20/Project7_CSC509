@@ -52,8 +52,8 @@ class AnnouncementsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row) tapped")
         
-//        let vc = self.storyboard?.instantiateViewController(identifier: "SelectedVC") as! SelectedAnnouncementViewController
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = storyboard?.instantiateViewController(identifier: "SelectedVC") as! SelectedAnnouncementViewController
+        self.navigationController?.pushViewController(vc, animated: true)
 //
 //        let vc: SelectedAnnouncementViewController = SelectedAnnouncementViewController()
 //        self.navigationController?.pushViewController(SelectedAnnouncementViewController(), animated: true)

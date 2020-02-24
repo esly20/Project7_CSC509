@@ -46,7 +46,7 @@
                     <navigationItem key="navigationItem" title="Announcements" id="gp8-p2-cNy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="kit-K7-dDa" kind="show" id="zVg-3e-2Jo"/>
+                        <segue destination="kit-K7-dDa" kind="show" identifier="SelectedVC" id="zVg-3e-2Jo"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdr-MU-9FO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
