@@ -45,29 +45,26 @@
                     <tabBarItem key="tabBarItem" title="Announcements" image="tray.and.arrow.down.fill" catalog="system" id="mbM-1c-YLB"/>
                     <navigationItem key="navigationItem" title="Announcements" id="gp8-p2-cNy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <segue destination="kit-K7-dDa" kind="show" identifier="SelectedVC" id="zVg-3e-2Jo"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdr-MU-9FO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1592.753623188406" y="72.991071428571431"/>
         </scene>
-        <!--Selected Announcement View Controller-->
-        <scene sceneID="B04-OE-42w">
+        <!--View Controller-->
+        <scene sceneID="Pzl-VJ-GwD">
             <objects>
-                <viewController storyboardIdentifier="SelectedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kit-K7-dDa" customClass="SelectedAnnouncementViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3xu-2D-Ali">
+                <viewController id="77f-d1-ViE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVN-Da-cp8" customClass="SelectedViewClass" customModule="Project7" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="oxd-Z1-U0X"/>
+                        <viewLayoutGuide key="safeArea" id="aUP-ns-0p1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="sPN-NO-wWW"/>
+                    <navigationItem key="navigationItem" id="DED-Ie-GIn"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zqk-gx-LWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DRp-bI-xzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2371" y="73"/>
+            <point key="canvasLocation" x="2275" y="73"/>
         </scene>
         <!--Announcements-->
         <scene sceneID="CAd-mX-zqL">
