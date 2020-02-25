@@ -10,23 +10,32 @@ import UIKit
 import WebKit
 
 class InfoViewController: UIViewController, WKNavigationDelegate {
-var webView: WKWebView!
-    
-    override func loadView() {
-        webView = WKWebView()
-        webView.navigationDelegate = self
-        view = webView
-    }
+    var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let url = URL(string: "https://www.andover.edu")!
-         webView.load(URLRequest(url: url))
-        
-        
     }
-
+    @IBAction func commonsButtonPressed(_ sender: Any) {
+        let commonsurl = URL(string: "https://phillipsacademy.campusdish.com/en/LocationsAndMenus/PareskyCommons")!
+        webView!.load(URLRequest(url: commonsurl))
+    }
+    @IBAction func paNetButtonPressed(_ sender: Any) {
+        let paneturl = URL(string: "https://panet.andover.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_15_1")!
+        webView!.load(URLRequest(url: paneturl))
+    }
+    @IBAction func schoolWebsiteButtonPressed(_ sender: Any) {
+        let pawebsiteurl = URL(string: "https://www.andover.eduf")!
+        webView!.load(URLRequest(url: pawebsiteurl))
+    }
+    @IBAction func bluebookButtonPressed(_ sender: Any) {
+        let bluebookurl = URL(string: "https://panet.andover.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_15_1")!
+        webView!.load(URLRequest(url: bluebookurl))
+    }
+    @IBAction func athleticsButtonPressed(_ sender: Any) {
+        let athleticsurl = URL(string: "https://athletics.andover.edu")!
+        webView!.load(URLRequest(url: athleticsurl))
+    }
+    
     
 
     /*
@@ -39,4 +48,4 @@ var webView: WKWebView!
     }
     */
 
-}
+    }

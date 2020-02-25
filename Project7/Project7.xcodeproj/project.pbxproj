@@ -12,6 +12,8 @@
 		13F5374E24005E5B0087447C /* SelectedAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5374D24005E5B0087447C /* SelectedAnnouncementViewController.swift */; };
 		1FB87E2624006C9A007BC76F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB87E2524006C9A007BC76F /* InfoViewController.swift */; };
 		3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */; };
+		3F57D85624045C7300CB9810 /* schedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F57D85524045C7300CB9810 /* schedules.swift */; };
+		3F57D85824045C8300CB9810 /* periods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F57D85724045C8300CB9810 /* periods.swift */; };
 		3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E123FCDDAF005E56FA /* AppDelegate.swift */; };
 		3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */; };
 		3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E523FCDDAF005E56FA /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		892FF12323FDAA8300354A6B /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12223FDAA8300354A6B /* Marker.swift */; };
 		892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12423FDAABF00354A6B /* MapViewController.swift */; };
 		8947677924005DC500163EA5 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947677824005DC500163EA5 /* SettingsStoryboard.storyboard */; };
+		894C86C42404C46900A491DB /* BuildingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C86C32404C46900A491DB /* BuildingListTableViewController.swift */; };
+		894C86C62404C8AF00A491DB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C86C52404C8AF00A491DB /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,8 @@
 		13F5374D24005E5B0087447C /* SelectedAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectedAnnouncementViewController.swift; path = Project7/SelectedAnnouncementViewController.swift; sourceTree = SOURCE_ROOT; };
 		1FB87E2524006C9A007BC76F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = Project7/InfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewController.swift; sourceTree = "<group>"; };
+		3F57D85524045C7300CB9810 /* schedules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedules.swift; sourceTree = "<group>"; };
+		3F57D85724045C8300CB9810 /* periods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = periods.swift; sourceTree = "<group>"; };
 		3F714EE223FDA5370052B279 /* Sources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sources.md; sourceTree = "<group>"; };
 		3F7388DE23FCDDAF005E56FA /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7388E123FCDDAF005E56FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,8 @@
 		892FF12223FDAA8300354A6B /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		892FF12423FDAABF00354A6B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8947677824005DC500163EA5 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		894C86C32404C46900A491DB /* BuildingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingListTableViewController.swift; sourceTree = "<group>"; };
+		894C86C52404C8AF00A491DB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */,
+				3F57D85524045C7300CB9810 /* schedules.swift */,
+				3F57D85724045C8300CB9810 /* periods.swift */,
 			);
 			path = EmmaFolder;
 			sourceTree = "<group>";
@@ -168,6 +178,8 @@
 		892FF12123FDA9F800354A6B /* SamarFolder */ = {
 			isa = PBXGroup;
 			children = (
+				894C86C32404C46900A491DB /* BuildingListTableViewController.swift */,
+				894C86C52404C8AF00A491DB /* TableViewCell.swift */,
 				892FF12223FDAA8300354A6B /* Marker.swift */,
 				892FF12423FDAABF00354A6B /* MapViewController.swift */,
 			);
@@ -256,14 +268,18 @@
 				1FB87E2624006C9A007BC76F /* InfoViewController.swift in Sources */,
 				3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */,
 				13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */,
+				894C86C62404C8AF00A491DB /* TableViewCell.swift in Sources */,
+				3F57D85824045C8300CB9810 /* periods.swift in Sources */,
 				563C2C2924042210003A496E /* Student.swift in Sources */,
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
+				3F57D85624045C7300CB9810 /* schedules.swift in Sources */,
 				60D02CA824044BC10009325D /* SettingsTableViewCell.swift in Sources */,
 				56621706240061640011369E /* ProfileViewController.swift in Sources */,
 				60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */,
+				894C86C42404C46900A491DB /* BuildingListTableViewController.swift in Sources */,
 				13F5374E24005E5B0087447C /* SelectedAnnouncementViewController.swift in Sources */,
 				3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */,
 				563C2C2D24042328003A496E /* Faculty.swift in Sources */,

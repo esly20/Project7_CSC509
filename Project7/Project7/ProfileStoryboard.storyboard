@@ -10,7 +10,7 @@
         <!--Profile-->
         <scene sceneID="VwZ-Ak-SHG">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="uvn-Nk-hch" customClass="profile" sceneMemberID="viewController">
+                <viewController id="uvn-Nk-hch" customClass="ProfileViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tOR-Hf-GOj" customClass="ProfileViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
         <!--Profile-->
         <scene sceneID="1WA-K3-Sad">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UXg-Yd-pgB" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileViewController" automaticallyAdjustsScrollViewInsets="NO" id="UXg-Yd-pgB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="Xuw-OA-FJp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FTx-4f-FYD">

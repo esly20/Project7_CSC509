@@ -14,14 +14,40 @@ bottom: 10.0,
 right: 20.0)
 var weekDays: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 var classPeriods: [String] = ["1", "2a", "2b"]
+
 class ScheduleCollectionViewController: UICollectionViewController {
+    var periods = [Schedules]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        // Register cell classes
+        let urlString = "https://summer-session-api.herokuapp.com/"
+
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parse(json: data)
+                return
+            } else {
+                print("error getting data")
+            }
+        } else {
+            print("url encoding failed")
+            
+        }
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
+    
+    func parse(json: Data) {
+        let decoder = JSONDecoder()
+        if let jsonPeriods = try? decoder.decode(Periods.self, from: json) {
+            periods = jsonPeriods.results
+            collectionView.reloadData()
+        } else {
+            print("error decoding json")
+        }
+        print("successfully loaded data")
+    }
+    
+    
     /*
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
