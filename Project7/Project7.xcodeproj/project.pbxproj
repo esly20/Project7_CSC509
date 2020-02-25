@@ -34,6 +34,8 @@
 		892FF12323FDAA8300354A6B /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12223FDAA8300354A6B /* Marker.swift */; };
 		892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12423FDAABF00354A6B /* MapViewController.swift */; };
 		8947677924005DC500163EA5 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947677824005DC500163EA5 /* SettingsStoryboard.storyboard */; };
+		894C86C42404C46900A491DB /* BuildingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C86C32404C46900A491DB /* BuildingListTableViewController.swift */; };
+		894C86C62404C8AF00A491DB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C86C52404C8AF00A491DB /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		892FF12223FDAA8300354A6B /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		892FF12423FDAABF00354A6B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8947677824005DC500163EA5 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
+		894C86C32404C46900A491DB /* BuildingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingListTableViewController.swift; sourceTree = "<group>"; };
+		894C86C52404C8AF00A491DB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,8 @@
 		892FF12123FDA9F800354A6B /* SamarFolder */ = {
 			isa = PBXGroup;
 			children = (
+				894C86C32404C46900A491DB /* BuildingListTableViewController.swift */,
+				894C86C52404C8AF00A491DB /* TableViewCell.swift */,
 				892FF12223FDAA8300354A6B /* Marker.swift */,
 				892FF12423FDAABF00354A6B /* MapViewController.swift */,
 			);
@@ -262,6 +268,7 @@
 				1FB87E2624006C9A007BC76F /* InfoViewController.swift in Sources */,
 				3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */,
 				13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */,
+				894C86C62404C8AF00A491DB /* TableViewCell.swift in Sources */,
 				3F57D85824045C8300CB9810 /* periods.swift in Sources */,
 				563C2C2924042210003A496E /* Student.swift in Sources */,
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
@@ -272,6 +279,7 @@
 				60D02CA824044BC10009325D /* SettingsTableViewCell.swift in Sources */,
 				56621706240061640011369E /* ProfileViewController.swift in Sources */,
 				60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */,
+				894C86C42404C46900A491DB /* BuildingListTableViewController.swift in Sources */,
 				13F5374E24005E5B0087447C /* SelectedAnnouncementViewController.swift in Sources */,
 				3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */,
 				563C2C2D24042328003A496E /* Faculty.swift in Sources */,

@@ -6,15 +6,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map-->
+        <!--Campus Map-->
         <scene sceneID="qlk-8N-JiT">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" id="T8O-vA-9wC" customClass="MapViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="T8O-vA-9wC" customClass="MapViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="WSI-8S-hRH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="ytf-XR-sX0"/>
+                    <tabBarItem key="tabBarItem" title="Campus Map" image="mappin.and.ellipse" catalog="system" id="cc2-6q-E0w"/>
+                    <navigationItem key="navigationItem" title="Campus Map" id="J0l-r9-eRT">
+                        <barButtonItem key="rightBarButtonItem" image="list.bullet" catalog="system" id="8pg-Z8-zAv">
+                            <connections>
+                                <segue destination="GP0-gR-2op" kind="show" id="kXh-m6-WA1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="WSI-8S-hRH" id="Cgd-Ei-94F"/>
@@ -22,10 +29,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0zX-wq-Kzc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="154"/>
+            <point key="canvasLocation" x="1039.1304347826087" y="153.34821428571428"/>
+        </scene>
+        <!--Building List Table View Controller-->
+        <scene sceneID="Skm-rI-yuw">
+            <objects>
+                <tableViewController id="GP0-gR-2op" customClass="BuildingListTableViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="m8w-4v-Bz6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KZX-gT-yov">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KZX-gT-yov" id="53N-ff-QgX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GP0-gR-2op" id="4Jt-SH-eSe"/>
+                            <outlet property="delegate" destination="GP0-gR-2op" id="JsI-RP-y7D"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="gWL-x4-NNu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlG-xz-ry0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1937" y="149"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="eaL-gT-bsC">
+            <objects>
+                <navigationController storyboardIdentifier="MapViewController" automaticallyAdjustsScrollViewInsets="NO" id="bWE-ke-9RN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="mappin.and.ellipse" catalog="system" id="ytf-XR-sX0"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ewJ-eb-SWQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="T8O-vA-9wC" kind="relationship" relationship="rootViewController" id="5ty-86-4sK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYG-7b-bUm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="153.34821428571428"/>
         </scene>
     </scenes>
     <resources>
+        <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
     </resources>
 </document>
