@@ -7,13 +7,23 @@
 //
 
 import UIKit
+import Foundation
 
 class SelectedAnnouncementViewController: UIViewController {
 
+    //Outlets
+    @IBOutlet weak var slcTitleLabel: UILabel!
+    
+    //Defaults Variables
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        slcTitleLabel.text =
     }
     
 

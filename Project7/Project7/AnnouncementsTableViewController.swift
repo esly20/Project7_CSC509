@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class AnnouncementsTableViewController: UITableViewController {
 
@@ -59,13 +60,6 @@ class AnnouncementsTableViewController: UITableViewController {
         let storyboard = UIStoryboard(name: "AnnouncementsStoryboard", bundle: nil)
         let selectedVC = storyboard.instantiateViewController(identifier: "SelectedVC") as! SelectedAnnouncementViewController
         navigationController?.pushViewController(selectedVC, animated: true)
-        
-        
-        
-        
-//        let vc = SelectedViewClass.
-        
-//        self.performSegue(withIdentifier: "SelectedVC", sender: self)
     }
     
     /*
