@@ -9,10 +9,13 @@
 import Foundation
 
 struct Schedules: Codable {
-    var teacher: String
-    var class_title: String
-    var start_time: String
-    var end_time: String
-    var locations: String
+    var courseid: Int
+    var studentid: Int
+    var name: String
+    var time_start: String
+    var time_end: String
+    var instructor: String
+    var location: String
+    var period: String
 
 }
