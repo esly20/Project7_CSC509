@@ -24,6 +24,7 @@
 		3F7388F823FCE306005E56FA /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */; };
 		3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */; };
 		3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */; };
+		3FDDFF02240618AF00A462F1 /* ScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */; };
 		563C2C2924042210003A496E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2824042210003A496E /* Student.swift */; };
 		563C2C2B240422E8003A496E /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2A240422E8003A496E /* Class.swift */; };
 		563C2C2D24042328003A496E /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2C24042328003A496E /* Faculty.swift */; };
@@ -59,6 +60,7 @@
 		3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnnouncementsStoryboard.storyboard; sourceTree = "<group>"; };
+		3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		563C2C2824042210003A496E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		563C2C2A240422E8003A496E /* Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Class.swift; path = Project7/Class.swift; sourceTree = SOURCE_ROOT; };
 		563C2C2C24042328003A496E /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Faculty.swift; path = Project7/Faculty.swift; sourceTree = SOURCE_ROOT; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */,
+				3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */,
 				3F57D85524045C7300CB9810 /* schedules.swift */,
 				3F57D85724045C8300CB9810 /* periods.swift */,
 			);
@@ -270,6 +273,7 @@
 				13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */,
 				894C86C62404C8AF00A491DB /* TableViewCell.swift in Sources */,
 				3F57D85824045C8300CB9810 /* periods.swift in Sources */,
+				3FDDFF02240618AF00A462F1 /* ScheduleCollectionViewCell.swift in Sources */,
 				563C2C2924042210003A496E /* Student.swift in Sources */,
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
