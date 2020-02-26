@@ -21,6 +21,10 @@ class AnnouncementsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("yay")
+    }
 
     // MARK: - Table view data source
 
