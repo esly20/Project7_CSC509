@@ -2,7 +2,7 @@
 //  SelectedAnnouncementViewController.swift
 //  Project7
 //
-//  Created by Erik Fotta on 2/21/20.
+//  Created by Erik Fotta on 2/26/20.
 //  Copyright © 2020 CSC509. All rights reserved.
 //
 
@@ -10,11 +10,10 @@ import UIKit
 
 class SelectedAnnouncementViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view = SelectedAnnoun
+
+        // Do any additional setup after loading the view.
     }
     
 

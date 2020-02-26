@@ -11,6 +11,10 @@ import UIKit
 class AnnouncementsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var senderLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var groupLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

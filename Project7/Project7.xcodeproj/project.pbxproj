@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5374924004A3D0087447C /* AnnouncementsTableViewController.swift */; };
 		13F5374C24004A4F0087447C /* AnnouncementsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5374B24004A4F0087447C /* AnnouncementsTableViewCell.swift */; };
-		13F5374E24005E5B0087447C /* SelectedAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F5374D24005E5B0087447C /* SelectedAnnouncementViewController.swift */; };
+		13F537882406DAC20087447C /* SelectedAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F537872406DAC20087447C /* SelectedAnnouncementViewController.swift */; };
 		1FB87E2624006C9A007BC76F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB87E2524006C9A007BC76F /* InfoViewController.swift */; };
 		3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */; };
 		3F57D85624045C7300CB9810 /* schedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F57D85524045C7300CB9810 /* schedules.swift */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		13F5374924004A3D0087447C /* AnnouncementsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementsTableViewController.swift; path = Project7/AnnouncementsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		13F5374B24004A4F0087447C /* AnnouncementsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnnouncementsTableViewCell.swift; path = Project7/AnnouncementsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
-		13F5374D24005E5B0087447C /* SelectedAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectedAnnouncementViewController.swift; path = Project7/SelectedAnnouncementViewController.swift; sourceTree = SOURCE_ROOT; };
+		13F537872406DAC20087447C /* SelectedAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnnouncementViewController.swift; sourceTree = SOURCE_ROOT; };
 		1FB87E2524006C9A007BC76F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = Project7/InfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewController.swift; sourceTree = "<group>"; };
 		3F57D85524045C7300CB9810 /* schedules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedules.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		892FF11D23FDA78B00354A6B /* ErikFolder */ = {
 			isa = PBXGroup;
 			children = (
-				13F5374D24005E5B0087447C /* SelectedAnnouncementViewController.swift */,
+				13F537872406DAC20087447C /* SelectedAnnouncementViewController.swift */,
 				13F5374924004A3D0087447C /* AnnouncementsTableViewController.swift */,
 				13F5374B24004A4F0087447C /* AnnouncementsTableViewCell.swift */,
 			);
@@ -281,10 +281,10 @@
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
 				3F57D85624045C7300CB9810 /* schedules.swift in Sources */,
 				60D02CA824044BC10009325D /* SettingsTableViewCell.swift in Sources */,
+				13F537882406DAC20087447C /* SelectedAnnouncementViewController.swift in Sources */,
 				56621706240061640011369E /* ProfileViewController.swift in Sources */,
 				60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */,
 				894C86C42404C46900A491DB /* BuildingListTableViewController.swift in Sources */,
-				13F5374E24005E5B0087447C /* SelectedAnnouncementViewController.swift in Sources */,
 				3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */,
 				563C2C2D24042328003A496E /* Faculty.swift in Sources */,
 			);
