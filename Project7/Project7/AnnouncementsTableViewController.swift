@@ -23,7 +23,7 @@ class AnnouncementsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("yay")
+//        print("yay")
     }
 
     // MARK: - Table view data source
@@ -55,6 +55,14 @@ class AnnouncementsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(indexPath.row) tapped")
+        
+        let storyboard = UIStoryboard(name: "AnnouncementsStoryboard", bundle: nil)
+        let selectedVC = storyboard.instantiateViewController(identifier: "SelectedVC") as! SelectedAnnouncementViewController
+        navigationController?.pushViewController(selectedVC, animated: true)
+        
+        
+        
+        
 //        let vc = SelectedViewClass.
         
 //        self.performSegue(withIdentifier: "SelectedVC", sender: self)

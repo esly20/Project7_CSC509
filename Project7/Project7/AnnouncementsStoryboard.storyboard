@@ -10,7 +10,7 @@
         <!--Announcements-->
         <scene sceneID="NHv-1I-6MW">
             <objects>
-                <tableViewController storyboardIdentifier="AnnouncementsViewController" id="Kxf-Gs-2mp" customClass="AnnouncementsTableViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Kxf-Gs-2mp" customClass="AnnouncementsTableViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lxO-GB-hY5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnnouncementCell" rowHeight="117" id="fLi-sL-tDG" customClass="AnnouncementsTableViewCell" customModule="Project7" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="117"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fLi-sL-tDG" id="Rmi-8m-koA" customClass="SelectedCellView" customModule="Project7" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fLi-sL-tDG" id="Rmi-8m-koA">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="117"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -116,26 +116,10 @@
             </objects>
             <point key="canvasLocation" x="1592.753623188406" y="72.991071428571431"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Pzl-VJ-GwD">
-            <objects>
-                <viewController id="77f-d1-ViE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tVN-Da-cp8" customClass="SelectedViewClass" customModule="Project7" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="aUP-ns-0p1"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="DED-Ie-GIn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DRp-bI-xzh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2273.913043478261" y="72.991071428571431"/>
-        </scene>
         <!--Announcements-->
         <scene sceneID="CAd-mX-zqL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ikn-Lp-PNh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AnnouncementsViewController" automaticallyAdjustsScrollViewInsets="NO" id="ikn-Lp-PNh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Announcements" image="tray.and.arrow.down.fill" catalog="system" id="YwK-do-x8H"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ih7-sV-AIP">
@@ -150,6 +134,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNd-M2-zFg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="682.60869565217399" y="72.991071428571431"/>
+        </scene>
+        <!--Selected Announcement View Controller-->
+        <scene sceneID="1fj-Qa-NBB">
+            <objects>
+                <viewController storyboardIdentifier="SelectedVC" id="qAz-7L-B7A" customClass="SelectedAnnouncementViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j52-ql-HWW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="7Gf-kN-Vz1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fm5-Id-DSU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51p-3D-u98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2338" y="73"/>
         </scene>
     </scenes>
     <resources>
