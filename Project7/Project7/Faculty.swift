@@ -9,7 +9,10 @@
 import Foundation
 
 struct Faculty: Codable {
-    var name: String
+    var facultyid: Int
+    var firstname: String
+    var lastname: String
     var email: String
-    var position: String
+    var dorm: String
+    var phonenumber: String
 }
