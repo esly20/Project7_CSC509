@@ -15,8 +15,10 @@ class ProfileViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         viewDidLoad()
         
-        //let studentInfo: Student = data.getStudentInfo()!
-        //let studentTeam: Team = data.getStudentTeam()!
+        let _: Student = data.getStudentInfo()!
+        let _: Team = data.getStudentTeam()!
+        //let _: Periods = data.getStudentSchedule()!
+        
     }
 
     override func viewDidLoad() {
