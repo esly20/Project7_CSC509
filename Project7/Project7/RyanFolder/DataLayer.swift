@@ -33,8 +33,8 @@ class DataLayer {
     func getStudentInfo() -> Student? {
         let key = "studentInfo"
         //If Student already exists in UserDefaults, retrieve if from UserDefaults
-        if(checkUserDefaults(key: key)) {
-            return decodeStudentData()
+        if(checkUserDefaults(key: key, type: .Info)) {
+            return decodeStudentData(at: key)
         } else { //Information does not exist in UserDefaults
             //Get the information from the server
             if let url = URL(string: urlStudentInfoString) {
@@ -62,10 +62,9 @@ class DataLayer {
     
     func getStudentTeam() -> Team? {
         let key = "studentTeam"
-        let obj = "Team"
         
-        if(checkUserDefaults(key: key)) {
-            return decodeStudentTeam()
+        if(checkUserDefaults(key: key, type: .Team)) {
+            return decodeStudentTeam(at: key)
         } else {
             if let url = URL(string: urlStudentTeamString) {
                 if let data = try? Data(contentsOf: url) {
@@ -87,7 +86,7 @@ class DataLayer {
 
 extension DataLayer {
     
-    func decodeStudentData() -> Student? {
+    func decodeStudentData(at key: String) -> Student? {
         if let decodedStudentData = defaults.object(forKey: key) as? Data {
             if let studentData = try? decoder.decode(Student.self, from: decodedStudentData) {
                 return studentData
@@ -96,7 +95,7 @@ extension DataLayer {
         return nil
     }
     
-    func decodeStudentTeam() -> Team? {
+    func decodeStudentTeam(at key: String) -> Team? {
         if let decodedStudentTeam = defaults.object(forKey: key) as? Data {
             if let jsonTeam = try? decoder.decode(Team.self, from: decodedStudentTeam) {
                 print("getStudentTeam() successful")
@@ -117,9 +116,10 @@ extension DataLayer {
                     return true
                 }
             case .Team:
-                if let _ = try? decoder.decode(Team.self, from decodedData) {
+                if let _ = try? decoder.decode(Team.self, from: decodedData) {
                     return true
                 }
+            }
         }
         return false
     }
