@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+enum DataType {
+    case Info
+    case Team
+}
+
 class DataLayer {
     let defaults = UserDefaults.standard
     let decoder = JSONDecoder()
@@ -29,11 +34,7 @@ class DataLayer {
         let key = "studentInfo"
         //If Student already exists in UserDefaults, retrieve if from UserDefaults
         if(checkUserDefaults(key: key)) {
-            if let decodedStudentData = defaults.object(forKey: key) as? Data {
-                if let studentData = try? decoder.decode(Student.self, from: decodedStudentData) {
-                    return studentData
-                }
-            }
+            return decodeStudentData()
         } else { //Information does not exist in UserDefaults
             //Get the information from the server
             if let url = URL(string: urlStudentInfoString) {
@@ -60,28 +61,65 @@ class DataLayer {
     }
     
     func getStudentTeam() -> Team? {
-        if let url = URL(string: urlStudentTeamString) {
-            if let data = try? Data(contentsOf: url) {
-                if let jsonTeam = try? decoder.decode(Team.self, from: data) {
-                    if let encodedUserDefaults = try? encoder.encode(jsonTeam) {
-                        defaults.set(encodedUserDefaults, forKey: "studentTeam")
+        let key = "studentTeam"
+        let obj = "Team"
+        
+        if(checkUserDefaults(key: key)) {
+            return decodeStudentTeam()
+        } else {
+            if let url = URL(string: urlStudentTeamString) {
+                if let data = try? Data(contentsOf: url) {
+                    if let jsonTeam = try? decoder.decode(Team.self, from: data) {
+                        if let encodedUserDefaults = try? encoder.encode(jsonTeam) {
+                            defaults.set(encodedUserDefaults, forKey: key)
+                        }
+                        print("getStudentTeam() successful")
+                        return jsonTeam
                     }
-                    print("jsonTeam successful")
-                    return jsonTeam
                 }
+            }
+        }
+        print("getStudentTeam() Failed")
+        return nil
+    }
+    
+}
+
+extension DataLayer {
+    
+    func decodeStudentData() -> Student? {
+        if let decodedStudentData = defaults.object(forKey: key) as? Data {
+            if let studentData = try? decoder.decode(Student.self, from: decodedStudentData) {
+                return studentData
+            }
+        }
+        return nil
+    }
+    
+    func decodeStudentTeam() -> Team? {
+        if let decodedStudentTeam = defaults.object(forKey: key) as? Data {
+            if let jsonTeam = try? decoder.decode(Team.self, from: decodedStudentTeam) {
+                print("getStudentTeam() successful")
+                return jsonTeam
             }
         }
         return nil
     }
     
     //Method that checks whether the Student struct already exists in UserDefaults
-    func checkUserDefaults(key: String) -> Bool {
+    func checkUserDefaults(key: String, type: DataType) -> Bool {
         //Checking if the data exists in UserDefaults
-        if let decodedStudentData = defaults.object(forKey: key) as? Data {
-            if let _ = try? decoder.decode(Student.self, from: decodedStudentData) {
-                //return true if the data is found and exists in UserDefaults
-                return true
-            }
+        
+        if let decodedData = defaults.object(forKey: key) as? Data {
+            switch type {
+            case .Info:
+                if let _ = try? decoder.decode(Student.self, from: decodedData) {
+                    return true
+                }
+            case .Team:
+                if let _ = try? decoder.decode(Team.self, from decodedData) {
+                    return true
+                }
         }
         return false
     }
