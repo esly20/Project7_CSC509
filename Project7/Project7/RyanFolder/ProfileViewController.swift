@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     var data: DataLayer = DataLayer(userID: 1)
     
     override func viewDidAppear(_ animated: Bool) {
@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
         
         let _: Student = data.getStudentInfo()!
         let _: Team = data.getStudentTeam()!
+        
         //let _: Periods = data.getStudentSchedule()!
         
     }

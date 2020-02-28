@@ -23,6 +23,7 @@ class DataLayer {
     let urlStudentInfoString: String
     let urlStudentTeamString: String
     let urlStudentSchedule: String
+    let urlStudentAnnouncements: String
     
     //Initializer
     init(userID: Int) {
@@ -30,6 +31,7 @@ class DataLayer {
         urlStudentInfoString = "https://summer-session-api.herokuapp.com/student/\(userId)/info"
         urlStudentTeamString = "https://summer-session-api.herokuapp.com/student/\(userId)/team"
         urlStudentSchedule = "https://summer-session-api.herokuapp.com/student/\(userId)/schedule"
+        urlStudentAnnouncements = "https://summer-session-api.herokuapp.com/announcements"
     }
     
     // MARK: Method to retrieve Student from server or UserDefaults
@@ -56,6 +58,7 @@ class DataLayer {
         }
     }
     
+    // MARK: Method to retrieve schedules from server or UD
     func getStudentSchedule() -> Periods? {
         let key = "studentSchedule"
         
@@ -64,6 +67,18 @@ class DataLayer {
         } else {
             return parse(specificURL: urlStudentTeamString, type: .Schedule) as? Periods
         }
+    }
+    
+    // MARK: Method to get announcements from sever
+    func getAnnouncements() -> Announcements? {
+        if let url = URL(string: urlStudentAnnouncements) {
+            if let data = try? Data(contentsOf: url) {
+                if let json = try? decoder.decode(Announcements.self, from: data) {
+                    return json
+                }
+            }
+        }
+        return nil
     }
     
     // MARK: - More helpful functions
