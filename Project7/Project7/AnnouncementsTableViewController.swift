@@ -42,15 +42,19 @@ class AnnouncementsTableViewController: UITableViewController {
     let defaults = UserDefaults.standard
     var data: DataLayer = DataLayer(userID: 1)
     
+//    let abbotBlue =
+    
+//    let announcementsData = data.
+   
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let announcementsData = data.get
-        
+        self.tableView.backgroundColor = UIColor.yellow
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-//        print("yay")
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//
+//    }
 
     // MARK: - Table view data source
 
