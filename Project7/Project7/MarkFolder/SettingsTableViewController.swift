@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Foundation
 
 class SettingsTableViewController: UITableViewController {
-    var settings: [String] = ["Cluster Munch Notifications", "Sign-in Reminders","College Counseling Workshop Notifications"]
+    @IBOutlet weak var signInSwitchStatus: UISwitch!
+    @IBOutlet weak var clusterMunchSwitchStatus: UISwitch!
+    var signInNotifications: Bool = false
+    var clusterMunchNotifications: Bool = false
+    let calendar = Calendar.current
+    let rightNow = Date()
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,28 +27,54 @@ class SettingsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    override func viewWillAppear(_ animated: Bool) {
+        //if signInNotifications == true {
+            //signInSwitchStatus.isOn = true
+        //}else{
+            //signInSwitchStatus.isOn = false
+      //  }
+        //if clusterMunchNotifications == true {
+            //clusterMunchSwitchStatus.isOn = true
+      //  }else{
+            //clusterMunchSwitchStatus.isOn = false
+     //   }
+        
+        signInNotifications = defaults.bool(forKey: "signIn")
+        clusterMunchNotifications = defaults.bool(forKey: "clusterMunch")
+    }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settings.count
-    }
-
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCellIdentifier", for: indexPath)
-
-       if let cellWithOtherName = cell as? SettingsTableViewCell {
-           cellWithOtherName.settingLabel.text = settings[indexPath.row]
+    func createReminders(){
+        if signInNotifications == true {
+            print(1)
         }
-
-        return cell
-    
+        if clusterMunchNotifications == true {
+            print(1)
+        }
     }
+    
+    @IBAction func signInSwitchUsed(_ sender: UISwitch) {
+        if (sender.isOn == true){
+            signInNotifications = true
+            defaults.set(true, forKey: "signIn")
+        } else {
+            signInNotifications = false
+            defaults.set(false, forKey: "signIn")
+        }
+    }
+    
+
+    @IBAction func clusterMunchSwitchUsed(_ sender: UISwitch) {
+        if (sender.isOn == true){
+            clusterMunchNotifications = true
+            defaults.set(true, forKey: "clusterMunch")
+        }else{
+            clusterMunchNotifications = false
+            defaults.set(false, forKey: "clusterMunch")
+        }
+    }
+    
+    
 
     /*
     // Override to support conditional editing of the table view.

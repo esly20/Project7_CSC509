@@ -9,6 +9,9 @@
 import UIKit
 
 class ScheduleCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet var textLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var timeStartLabel: UILabel!
+    @IBOutlet var instructorLabel: UILabel!
+    @IBOutlet var locationLabel: UILabel!
+
 }

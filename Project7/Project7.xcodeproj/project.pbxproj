@@ -31,7 +31,6 @@
 		563C2C372407588A003A496E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56621705240061640011369E /* ProfileViewController.swift */; };
 		563C2C38240776FA003A496E /* periods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F57D85724045C8300CB9810 /* periods.swift */; };
 		60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02CA52404493C0009325D /* SettingsTableViewController.swift */; };
-		60D02CA824044BC10009325D /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02CA724044BC00009325D /* SettingsTableViewCell.swift */; };
 		892FF11623FDA00F00354A6B /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */; };
 		892FF12323FDAA8300354A6B /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12223FDAA8300354A6B /* Marker.swift */; };
 		892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12423FDAABF00354A6B /* MapViewController.swift */; };
@@ -67,7 +66,6 @@
 		563C2C35240756E4003A496E /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Project7/RyanFolder/Team.swift; sourceTree = SOURCE_ROOT; };
 		56621705240061640011369E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Project7/RyanFolder/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		60D02CA52404493C0009325D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		60D02CA724044BC00009325D /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
 		892FF12223FDAA8300354A6B /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
 		892FF12423FDAABF00354A6B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 		892FF11F23FDA7AB00354A6B /* MarkFolder */ = {
 			isa = PBXGroup;
 			children = (
-				60D02CA724044BC00009325D /* SettingsTableViewCell.swift */,
 				60D02CA52404493C0009325D /* SettingsTableViewController.swift */,
 			);
 			path = MarkFolder;
@@ -279,6 +276,7 @@
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
 				3F57D85624045C7300CB9810 /* schedules.swift in Sources */,
+				56621706240061640011369E /* ProfileViewController.swift in Sources */,
 				60D02CA824044BC10009325D /* SettingsTableViewCell.swift in Sources */,
 				13F537882406DAC20087447C /* SelectedAnnouncementViewController.swift in Sources */,
 				60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */,

@@ -11,7 +11,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
     
     var periods = [Schedules]()
     private let reuseIdentifier = "BlockCell"
-    private let itemsPerRow: CGFloat = 5
+    private let itemsPerRow: CGFloat = 1
     let sectionInsets = UIEdgeInsets(top: 10.0,
                                      left: 20.0,
                                      bottom: 10.0,
@@ -65,8 +65,12 @@ class ScheduleCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockCell", for: indexPath) as! ScheduleCollectionViewCell
         print(indexPath.row, periods.count)
         let schedule = periods[indexPath.row]
-        cell.textLabel.text = schedule.name
-        
+        cell.nameLabel.text = schedule.name
+        cell.timeStartLabel.text = "\(schedule.time_start) - \(schedule.time_end)"
+        cell.instructorLabel.text = schedule.instructor
+        cell.locationLabel.text = schedule.location
+        // color from Andover Bracding guidelines
+        cell.backgroundColor = UIColor.init(red: 102/256, green: 173/256, blue: 220/256, alpha: 0.66)
         return cell
     }
    
