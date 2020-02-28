@@ -35,9 +35,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zyC-1g-LBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="115"/>
+            <point key="canvasLocation" x="2968.115942028986" y="114.50892857142857"/>
         </scene>
-        <!--More Info-->
+        <!--Info View Controller-->
         <scene sceneID="Jzu-md-BxH">
             <objects>
                 <viewController storyboardIdentifier="InfoViewController" id="bN5-5U-E4v" customClass="InfoViewController" customModule="Project7" sceneMemberID="viewController">
@@ -127,16 +127,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r26-2R-nz9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="More Info" image="info" catalog="system" id="ibb-Bg-PSk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c42-TJ-iFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="115"/>
+            <point key="canvasLocation" x="2200" y="115"/>
         </scene>
     </scenes>
     <resources>
         <image name="andover__Seal&amp;Wordmark__RGB__white" width="1855" height="1994"/>
-        <image name="info" catalog="system" width="46" height="64"/>
     </resources>
 </document>
