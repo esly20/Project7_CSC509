@@ -12,7 +12,6 @@ import UIKit
 enum DataType {
     case Info
     case Team
-    case Schedule
 }
 
 class DataLayer {
@@ -22,7 +21,6 @@ class DataLayer {
     let userId: Int
     let urlStudentInfoString: String
     let urlStudentTeamString: String
-    let urlStudentSchedule: String
     let urlStudentAnnouncements: String
     
     //Initializer
@@ -30,7 +28,6 @@ class DataLayer {
         self.userId = userID
         urlStudentInfoString = "https://summer-session-api.herokuapp.com/student/\(userId)/info"
         urlStudentTeamString = "https://summer-session-api.herokuapp.com/student/\(userId)/team"
-        urlStudentSchedule = "https://summer-session-api.herokuapp.com/student/\(userId)/schedule"
         urlStudentAnnouncements = "https://summer-session-api.herokuapp.com/announcements"
     }
     
@@ -59,17 +56,6 @@ class DataLayer {
         }
     }
     
-    // MARK: Method to retrieve schedules from server or UD
-    func getStudentSchedule() -> Periods? {
-        let key = "studentSchedule"
-        
-        if(checkUserDefaults(key: key, type: .Schedule)) {
-            return decodeData(at: key, type: .Schedule) as? Periods
-        } else {
-            return parse(specificURL: urlStudentTeamString, type: .Schedule) as? Periods
-        }
-    }
-    
     // MARK: Method to get announcements from sever
     func getAnnouncements() -> Announcements? {
         if let url = URL(string: urlStudentAnnouncements) {
@@ -95,17 +81,6 @@ class DataLayer {
         }
     }
     
-//    func updatedParse(specificURL: String, preferredClass: Decodable.Protocol, key: String) {
-//        if let url = URL(string: specificURL) {
-//            if let data = try? Data(contentsOf: url) {
-//                if let json = try? decoder.decode(preferredClass.self, from: data) {
-//                    defaults.set(data, forKey: key)
-//                }
-//            }
-//        }
-//    }
-    
-    
     func parse(specificURL: String, type: DataType) -> Any {
         if let url = URL(string: specificURL) {
             if let data = try? Data(contentsOf: url) {
@@ -127,18 +102,6 @@ class DataLayer {
                         }
                         print("TEAM from server successful")
                         return json
-                    }
-                case .Schedule:
-//                    let key = "studentSchedule"
-//                    print("SCHD: I'm in parse")
-//                    print(data)
-//                    //ERROR RIGHT HERE
-//                    if let json = try? decoder.decode(Periods.self, from: data) {
-//                        if let encodedUserDefaults = try? encoder.encode(json) {
-//                            defaults.set(encodedUserDefaults, forKey: key)
-//                        }
-//                        print("SCHEDULES from server successful")
-//                        return json
                     }
                 }
             }
@@ -162,12 +125,6 @@ class DataLayer {
                     //print(jsonTeam)
                     return jsonTeam
                 }
-            case .Schedule:
-                if let studentSchedule = try? decoder.decode(Periods.self, from: decodedData) {
-                    print("Schedules from UD successful")
-                    //print(jsonTeam)
-                    return studentSchedule
-                }
             }
         }
         //Not expecting this to be called
@@ -186,10 +143,6 @@ class DataLayer {
                 }
             case .Team:
                 if let _ = try? decoder.decode(Team.self, from: decodedData) {
-                    return true
-                }
-            case .Schedule:
-                if let _ = try? decoder.decode(Periods.self, from: decodedData) {
                     return true
                 }
             }
