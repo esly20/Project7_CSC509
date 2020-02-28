@@ -39,7 +39,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
         let decoder = JSONDecoder()
             if let jsonSchedule = try? decoder.decode(Schedule.self, from: json) {
                 schedule = jsonSchedule.schedule
-                print(schedule)
+                //print(schedule)
                 collectionView.reloadData()
             } else {
                 print("error decoding json")
@@ -63,7 +63,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockCell", for: indexPath) as! ScheduleCollectionViewCell
-        print(indexPath.row, schedule.count)
+        //print(indexPath.row, schedule.count)
         let course = schedule[indexPath.row]
         cell.nameLabel.textAlignment = .center
         cell.timeStartLabel.textAlignment = .center
