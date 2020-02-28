@@ -37,15 +37,15 @@
             </objects>
             <point key="canvasLocation" x="2361" y="-355"/>
         </scene>
-        <!--InfoViewController-->
-        <scene sceneID="AM8-xl-Bhg">
+        <!--ActivitiesViewController-->
+        <scene sceneID="Pfg-09-Iy2">
             <objects>
-                <viewControllerPlaceholder storyboardName="InfoStoryboard" referencedIdentifier="InfoViewController" id="TNG-3g-oQo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ht1-Ms-5sa"/>
+                <viewControllerPlaceholder storyboardName="ActivitiesStoryboard" referencedIdentifier="ActivitiesViewController" id="KbC-ho-WUY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="i17-cy-8jq"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sT6-ci-zP4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmS-F0-0pa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2361" y="-280"/>
+            <point key="canvasLocation" x="2482" y="-103"/>
         </scene>
         <!--ScheduleViewController-->
         <scene sceneID="pW0-3H-Lpi">
@@ -77,7 +77,7 @@
                         <segue destination="evv-JL-xmf" kind="relationship" relationship="viewControllers" id="yxj-N6-VhU"/>
                         <segue destination="tRt-GW-KXG" kind="relationship" relationship="viewControllers" id="AK9-Gx-Y2w"/>
                         <segue destination="Yf1-ZF-EUg" kind="relationship" relationship="viewControllers" id="ouL-SK-XFE"/>
-                        <segue destination="TNG-3g-oQo" kind="relationship" relationship="viewControllers" id="pET-OA-lzf"/>
+                        <segue destination="KbC-ho-WUY" kind="relationship" relationship="viewControllers" id="TSz-R4-R0a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eas-hd-Cwe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

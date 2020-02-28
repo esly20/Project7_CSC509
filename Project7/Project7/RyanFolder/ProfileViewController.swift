@@ -9,14 +9,17 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
     var data: DataLayer = DataLayer(userID: 1)
     
     override func viewDidAppear(_ animated: Bool) {
         viewDidLoad()
         
-        //let studentInfo: Student = data.getStudentInfo()!
-        //let studentTeam: Team = data.getStudentTeam()!
+        let _: Student = data.getStudentInfo()!
+        let _: Team = data.getStudentTeam()!
+        
+       // let _: Periods = data.getStudentSchedule()!
+        
     }
 
     override func viewDidLoad() {
