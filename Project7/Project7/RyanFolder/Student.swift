@@ -9,16 +9,11 @@
 import Foundation
 
 struct Student: Codable {
-    var name: String
-    var preferredName: String
+    var firstname: String
+    var lastname: String
     var email: String
-    var boarder: Bool
-    var dorm: String?
     var cluster: String
+    var dorm: String
+    var boarder: Bool
     var program: String
-    var prepaidCollege: Bool
-
-    var classOne: Class
-    var classTwo: Class
-    var afternoonActivity: Class
 }
