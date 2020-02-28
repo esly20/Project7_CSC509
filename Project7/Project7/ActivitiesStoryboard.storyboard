@@ -94,38 +94,35 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="EGG-tj-ED0" id="LNO-fe-fha"/>
-                            <outlet property="delegate" destination="EGG-tj-ED0" id="K2D-6j-mTe"/>
-                        </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" image="info.circle" catalog="system" id="zNw-rt-eh0">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Announcements" id="xPc-Sd-7X1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="zNw-rt-eh0">
                             <connections>
                                 <segue destination="eW5-x6-c0l" kind="show" id="C4I-Mk-27w"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" title="Announcements" id="xPc-Sd-7X1"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jB2-fA-nyz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2160.8695652173915" y="205.58035714285714"/>
         </scene>
-        <!--Announcements-->
+        <!--Activities-->
         <scene sceneID="0Xe-tK-aFT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zUT-JN-CHt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Announcements" image="tray.and.arrow.down.fill" catalog="system" id="Ms0-jv-PXW"/>
+                <navigationController storyboardIdentifier="ActivitiesViewController" automaticallyAdjustsScrollViewInsets="NO" id="zUT-JN-CHt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Activities" image="person.crop.circle.fill.badge.checkmark" catalog="system" id="7VS-5r-bZW"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9rw-IJ-tRF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EGG-tj-ED0" kind="relationship" relationship="rootViewController" id="nou-3O-ASa"/>
+                        <segue destination="EGG-tj-ED0" kind="relationship" relationship="rootViewController" id="86S-aH-iXr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6HP-fS-1dG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -135,6 +132,6 @@
     </scenes>
     <resources>
         <image name="info.circle" catalog="system" width="64" height="60"/>
-        <image name="tray.and.arrow.down.fill" catalog="system" width="64" height="56"/>
+        <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="64" height="50"/>
     </resources>
 </document>

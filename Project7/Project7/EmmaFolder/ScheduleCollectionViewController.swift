@@ -6,6 +6,7 @@
 //  Copyright © 2020 CSC509. All rights reserved.
 //
 import UIKit
+import Foundation
 
 class ScheduleCollectionViewController: UICollectionViewController {
     
@@ -44,7 +45,11 @@ class ScheduleCollectionViewController: UICollectionViewController {
             } else {
                 print("error decoding json")
             }
-            
+            let encoder = JSONEncoder()
+            if let courseData = try? encoder.encode(schedule){
+                let defaults = UserDefaults.standard
+                defaults.set(courseData, forKey: "StudentSchedule")
+            }
             print("successfully loaded data")
         }
     
@@ -76,7 +81,9 @@ class ScheduleCollectionViewController: UICollectionViewController {
         cell.locationLabel.text = course.location
         // color from Andover Bracding guidelines
         cell.backgroundColor = UIColor.init(red: 102/256, green: 173/256, blue: 220/256, alpha: 0.50)
-        return cell
+        
+    return cell
+
     }
    
 }
