@@ -10,3 +10,5 @@
 *__Note__*: The second solution on stackoverflow is the method I used. 
 2. [Collection View Tutorial](https://www.raywenderlich.com/9334-uicollectionview-tutorial-getting-started)
 *__Note__*: Followed much of the tutorial, but made signifigant edits to the project goal
+3. [User Defaults in the Schedule View](https://www.hackingwithswift.com/example-code/system/how-to-load-and-save-a-struct-in-userdefaults-using-codable)
+4. [Table View Format](https://stackoverflow.com/questions/37272040/swift-how-to-center-cell-text)

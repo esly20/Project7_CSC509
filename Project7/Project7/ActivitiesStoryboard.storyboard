@@ -16,7 +16,7 @@
             </objects>
             <point key="canvasLocation" x="2821.0144927536235" y="-42.1875"/>
         </scene>
-        <!--Announcements-->
+        <!--Activities-->
         <scene sceneID="UiV-MF-cvw">
             <objects>
                 <tableViewController id="EGG-tj-ED0" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                         </prototypes>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Announcements" id="xPc-Sd-7X1">
+                    <navigationItem key="navigationItem" title="Activities" id="xPc-Sd-7X1">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="zNw-rt-eh0">
                             <connections>
                                 <segue destination="eW5-x6-c0l" kind="show" id="C4I-Mk-27w"/>
