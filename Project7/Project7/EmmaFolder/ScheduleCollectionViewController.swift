@@ -11,7 +11,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
     
     var periods = [Schedules]()
     private let reuseIdentifier = "BlockCell"
-    private let itemsPerRow: CGFloat = 5
+    private let itemsPerRow: CGFloat = 1
     let sectionInsets = UIEdgeInsets(top: 10.0,
                                      left: 20.0,
                                      bottom: 10.0,
@@ -65,8 +65,11 @@ class ScheduleCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockCell", for: indexPath) as! ScheduleCollectionViewCell
         print(indexPath.row, periods.count)
         let schedule = periods[indexPath.row]
-        cell.textLabel.text = schedule.name
-        
+        cell.nameLabel.text = schedule.name
+        cell.timeStartLabel.text = "Begin: \(schedule.time_start)"
+        cell.timeEndLabel.text = "End: \(schedule.time_end)"
+        cell.instructorLabel.text = schedule.instructor
+        cell.locationLabel.text = schedule.location
         return cell
     }
    
