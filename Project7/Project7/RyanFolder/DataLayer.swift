@@ -83,6 +83,29 @@ class DataLayer {
     }
     
     // MARK: - More helpful functions
+    
+    func updatedP<T: Decodable>(specificURL: String, key: String) throws -> T {
+        if let url = URL(string: specificURL) {
+            if let data = try? Data(contentsOf: url) {
+                if let json = try? decoder.decode(T.self, from: data) {
+                    defaults.set(data, forKey: key)
+                    return json
+                }
+            }
+        }
+    }
+    
+//    func updatedParse(specificURL: String, preferredClass: Decodable.Protocol, key: String) {
+//        if let url = URL(string: specificURL) {
+//            if let data = try? Data(contentsOf: url) {
+//                if let json = try? decoder.decode(preferredClass.self, from: data) {
+//                    defaults.set(data, forKey: key)
+//                }
+//            }
+//        }
+//    }
+    
+    
     func parse(specificURL: String, type: DataType) -> Any {
         if let url = URL(string: specificURL) {
             if let data = try? Data(contentsOf: url) {
@@ -106,15 +129,16 @@ class DataLayer {
                         return json
                     }
                 case .Schedule:
-                    let key = "studentSchedule"
-                    print("SCHD: I'm in parse")
-                    //ERROR RIGHT HERE
-                    if let json = try? decoder.decode(Periods.self, from: data) {
-                        if let encodedUserDefaults = try? encoder.encode(json) {
-                            defaults.set(encodedUserDefaults, forKey: key)
-                        }
-                        print("SCHEDULES from server successful")
-                        return json
+//                    let key = "studentSchedule"
+//                    print("SCHD: I'm in parse")
+//                    print(data)
+//                    //ERROR RIGHT HERE
+//                    if let json = try? decoder.decode(Periods.self, from: data) {
+//                        if let encodedUserDefaults = try? encoder.encode(json) {
+//                            defaults.set(encodedUserDefaults, forKey: key)
+//                        }
+//                        print("SCHEDULES from server successful")
+//                        return json
                     }
                 }
             }
