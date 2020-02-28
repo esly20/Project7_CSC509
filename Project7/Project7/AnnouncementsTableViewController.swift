@@ -42,19 +42,18 @@ class AnnouncementsTableViewController: UITableViewController {
     let defaults = UserDefaults.standard
     var data: DataLayer = DataLayer(userID: 1)
     
-//    let abbotBlue =
-    
-//    let announcementsData = data.
-   
+    let abbotBlue: UIColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundColor = UIColor.yellow
+        self.tableView.backgroundColor = abbotBlue
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        let announcementsData = data.getAnnouncements()!
+        print(announcementsData)
+        print(type(of: announcementsData))
+    }
 
     // MARK: - Table view data source
 
@@ -74,8 +73,14 @@ class AnnouncementsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+//        let announcementsData = data.getAnnouncements()!
+//      Go steal from white house app
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell", for: indexPath)
         if let announcementCell = cell as? AnnouncementsTableViewCell {
+            
             announcementCell.titleLabel?.text = titles[indexPath.row]
             announcementCell.senderLabel?.text = senders[indexPath.row]
             announcementCell.bodyLabel?.text = bodys[indexPath.row]

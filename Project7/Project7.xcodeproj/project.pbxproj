@@ -24,6 +24,8 @@
 		3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */; };
 		3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */; };
 		3F9EFC1A2409982700C2F99C /* ActivitiesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9EFC192409982700C2F99C /* ActivitiesStoryboard.storyboard */; };
+		3F9EFC1E2409A26C00C2F99C /* course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFC1D2409A26C00C2F99C /* course.swift */; };
+		3F9EFC202409A2D500C2F99C /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9EFC1F2409A2D500C2F99C /* schedule.swift */; };
 		3FDDFF02240618AF00A462F1 /* ScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */; };
 		563C2C2924042210003A496E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2824042210003A496E /* Student.swift */; };
 		563C2C2D24042328003A496E /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2C24042328003A496E /* Faculty.swift */; };
@@ -40,6 +42,7 @@
 		892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12423FDAABF00354A6B /* MapViewController.swift */; };
 		8947677924005DC500163EA5 /* SettingsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8947677824005DC500163EA5 /* SettingsStoryboard.storyboard */; };
 		894C86C42404C46900A491DB /* BuildingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C86C32404C46900A491DB /* BuildingListTableViewController.swift */; };
+		898CF4E2240997AB00EAC534 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898CF4E1240997AB00EAC534 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +51,6 @@
 		13F537872406DAC20087447C /* SelectedAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnnouncementViewController.swift; sourceTree = SOURCE_ROOT; };
 		1FB87E2524006C9A007BC76F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = Project7/InfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewController.swift; sourceTree = "<group>"; };
-		3F57D85524045C7300CB9810 /* schedules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedules.swift; sourceTree = "<group>"; };
-		3F57D85724045C8300CB9810 /* periods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = periods.swift; sourceTree = "<group>"; };
 		3F714EE223FDA5370052B279 /* Sources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sources.md; sourceTree = "<group>"; };
 		3F7388DE23FCDDAF005E56FA /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7388E123FCDDAF005E56FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +65,8 @@
 		3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnnouncementsStoryboard.storyboard; sourceTree = "<group>"; };
 		3F9EFC192409982700C2F99C /* ActivitiesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesStoryboard.storyboard; sourceTree = "<group>"; };
+		3F9EFC1D2409A26C00C2F99C /* course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = course.swift; sourceTree = "<group>"; };
+		3F9EFC1F2409A2D500C2F99C /* schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
 		3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		563C2C2824042210003A496E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		563C2C2C24042328003A496E /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Faculty.swift; path = Project7/Faculty.swift; sourceTree = SOURCE_ROOT; };
@@ -79,6 +82,7 @@
 		892FF12423FDAABF00354A6B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8947677824005DC500163EA5 /* SettingsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsStoryboard.storyboard; sourceTree = "<group>"; };
 		894C86C32404C46900A491DB /* BuildingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingListTableViewController.swift; sourceTree = "<group>"; };
+		898CF4E1240997AB00EAC534 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,8 @@
 			children = (
 				3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */,
 				3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */,
-				3F57D85524045C7300CB9810 /* schedules.swift */,
-				3F57D85724045C8300CB9810 /* periods.swift */,
+				3F9EFC1D2409A26C00C2F99C /* course.swift */,
+				3F9EFC1F2409A2D500C2F99C /* schedule.swift */,
 			);
 			path = EmmaFolder;
 			sourceTree = "<group>";
@@ -191,6 +195,7 @@
 		892FF12123FDA9F800354A6B /* SamarFolder */ = {
 			isa = PBXGroup;
 			children = (
+				898CF4E1240997AB00EAC534 /* DetailViewController.swift */,
 				894C86C32404C46900A491DB /* BuildingListTableViewController.swift */,
 				892FF12223FDAA8300354A6B /* Marker.swift */,
 				892FF12423FDAABF00354A6B /* MapViewController.swift */,
@@ -276,11 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9EFC1E2409A26C00C2F99C /* course.swift in Sources */,
 				13F5374C24004A4F0087447C /* AnnouncementsTableViewCell.swift in Sources */,
 				1FB87E2624006C9A007BC76F /* InfoViewController.swift in Sources */,
 				3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */,
 				13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */,
 				3FDDFF02240618AF00A462F1 /* ScheduleCollectionViewCell.swift in Sources */,
+				898CF4E2240997AB00EAC534 /* DetailViewController.swift in Sources */,
 				563C2C2924042210003A496E /* Student.swift in Sources */,
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
@@ -298,6 +305,7 @@
 				56E093BD24099E5000951300 /* Announcements.swift in Sources */,
 				56E093BB24099DDB00951300 /* Announcement.swift in Sources */,
 				563C2C342407565C003A496E /* DataLayer.swift in Sources */,
+				3F9EFC202409A2D500C2F99C /* schedule.swift in Sources */,
 				563C2C2D24042328003A496E /* Faculty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
