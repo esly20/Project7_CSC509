@@ -35,128 +35,58 @@ class DataLayer {
     func getStudentInfo() -> Student? {
         let key = "studentInfo"
         //If Student already exists in UserDefaults, retrieve from UserDefaults
-        if(checkUserDefaults(key: key, type: .Info)) {
-            return decodeData(at: key, type: .Info) as? Student
+        if(checkUserDefaults(key: key)) {
+            return decodeData(key: key, type: Student.self)
         } else { //Information does not exist in UserDefaults
             //Get the information from the server
-            return parse(specificURL: urlStudentInfoString, type: .Info) as? Student
+            return parse(specificURL: urlStudentInfoString, key: key, type: Student.self)
         }
-        //this should not be executed
     }
     
     // MARK: Method to retrieve Team from server or UserDefaults
     func getStudentTeam() -> Team? {
         let key = "studentTeam"
-        print(type(of: Student.self))
-        
-        if(checkUserDefaults(key: key, type: .Team)) {
-            return decodeData(at: key, type: .Team) as? Team
+        if(checkUserDefaults(key: key)) {
+            return decodeData(key: key, type: Team.self)
         } else {
-            return parse(specificURL: urlStudentTeamString, type: .Team) as? Team
+            return parse(specificURL: urlStudentTeamString, key: key, type: Team.self)
         }
     }
     
     // MARK: Method to get announcements from sever
     func getAnnouncements() -> Announcements? {
-        if let url = URL(string: urlStudentAnnouncements) {
-            if let data = try? Data(contentsOf: url) {
-                if let json = try? decoder.decode(Announcements.self, from: data) {
-                    return json
-                }
-            }
-        }
-        return nil
+        return parse(specificURL: urlStudentAnnouncements, key: "Announcements", type: Announcements.self)
     }
     
     // MARK: - More helpful functions
-    //https://stackoverflow.com/questions/57026463/protocol-type-cannot-conform-to-protocol-because-only-concrete-types-can-conform
-//    func updatedP<T: Decodable>(specificURL: String, key: String) throws -> T {
-//        if let url = URL(string: specificURL) {
-//            if let data = try? Data(contentsOf: url) {
-//                if let json = try? decoder.decode(T.self, from: data) {
-//                    defaults.set(data, forKey: key)
-//                    return json
-//                }
-//            }
-//        }
-//    }
     
-    func parse(specificURL: String, type: DataType) -> Any {
-        if let url = URL(string: specificURL) {
-            if let data = try? Data(contentsOf: url) {
-                switch type {
-                case .Info:
-                    let key = "studentInfo"
-                    if let json = try? decoder.decode(Student.self, from: data) {
-                        if let encodedUserDefaults = try? encoder.encode(json) {
-                            defaults.set(encodedUserDefaults, forKey: key)
-                        }
-                        print("INFO from server successful")
-                        return json
-                    }
-                case .Team:
-                    let key = "studentTeam"
-                    if let json = try? decoder.decode(Team.self, from: data) {
-                        if let encodedUserDefaults = try? encoder.encode(json) {
-                            defaults.set(encodedUserDefaults, forKey: key)
-                        }
-                        print("TEAM from server successful")
-                        return json
-                    }
-                }
-            }
-        }
-        return (Any).self
+    // MARK: Method parses data from URL
+    func parse<T: Decodable>(specificURL: String, key: String, type: T.Type) -> T? {
+        guard let url = URL(string: specificURL) else { return nil }
+        guard let data = try? Data(contentsOf: url) else { return nil }
+        guard let json = try? decoder.decode(type, from: data)  else { return nil }
+        print("Data from server successful")
+        
+        defaults.set(data, forKey: key)
+        return json
     }
     
-    func decodeData(at key: String, type: DataType) -> Any {
-        if let decodedData = defaults.object(forKey: key) as? Data {
-            switch type {
-            case .Info:
-                if let studentData = try? decoder.decode(Student.self, from: decodedData) {
-                    print("Info from UD successful")
-                    //print(studentData)
-                    return studentData
-                }
-            case .Team:
-                if let jsonTeam = try? decoder.decode(Team.self, from: decodedData) {
-                    print("Team from UD successful")
-                    //print(jsonTeam)
-                    return jsonTeam
-                }
-            }
-        }
-        //Not expecting this to be called
-        return (Any).self
+    // MARK: Method decodes data from UD
+    func decodeData<T: Decodable>(key: String, type: T.Type) -> T? {
+        guard let encodedData = defaults.object(forKey: key) as? Data else { return nil }
+        guard let decodedData = try? decoder.decode(type, from: encodedData) else { return nil }
+        print("Data from UD successful")
+        
+        return decodedData
     }
 
-    //Method that checks whether the Student struct already exists in UserDefaults
-    func checkUserDefaults(key: String, type: DataType) -> Bool {
+    // MARK: Method that checks whether the Student struct already exists in UserDefaults
+    func checkUserDefaults(key: String) -> Bool {
         //Checking if the data exists in UserDefaults
-        
         if let _ = defaults.object(forKey: key) as? Data {
             return true
-//            switch type {
-//            case .Info:
-//                if let _ = try? decoder.decode(Student.self, from: decodedData) {
-//                    return true
-//                }
-//            case .Team:
-//                if let _ = try? decoder.decode(Team.self, from: decodedData) {
-//                    return true
-//                }
-//            }
         }
         return false
     }
-    
-//    func checkUserDefaults<T: Decodable>(key: String) throws -> T {
-//        if let decodedData = defaults.object(forKey: key) as? Data {
-//            if let _ = try? decoder.decode(T.self, from: decodedData) {
-//                return true
-//            }
-//        }
-//        return false
-//    }
     
 }
