@@ -3,24 +3,108 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="wfN-lq-Qd9">
+        <!--Settings Table View Controller-->
+        <scene sceneID="Nj6-Qg-IWo">
             <objects>
-                <viewController storyboardIdentifier="SettingsViewController" id="2VW-cm-Mih" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="l0S-4t-Ad3">
+                <tableViewController storyboardIdentifier="SettingsViewController" id="ImN-Jj-pcz" customClass="SettingsTableViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="B0T-lH-ixJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="cM0-OV-jaz"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VO1-Ec-Elb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection headerTitle="Reminders Settings" id="7L3-Si-iuG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QO2-Bf-uHw">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QO2-Bf-uHw" id="hz4-zz-ZE3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign-In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zno-LB-YPp">
+                                                    <rect key="frame" x="51" y="11" width="59.5" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Zno-LB-YPp" secondAttribute="height" multiplier="19:7" id="Fam-dG-7VI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XTC-5y-7j4">
+                                                    <rect key="frame" x="327.5" y="6" width="52.5" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="XTC-5y-7j4" secondAttribute="height" multiplier="49:31" id="TJk-I1-ldU"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="signInSwitch:" destination="ImN-Jj-pcz" eventType="valueChanged" id="0aE-U9-JlR"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zno-LB-YPp" firstAttribute="top" secondItem="hz4-zz-ZE3" secondAttribute="topMargin" id="7yI-3t-8LT"/>
+                                                <constraint firstAttribute="trailing" secondItem="XTC-5y-7j4" secondAttribute="trailing" constant="36" id="Qdo-4p-g4r"/>
+                                                <constraint firstItem="Zno-LB-YPp" firstAttribute="leading" secondItem="hz4-zz-ZE3" secondAttribute="leadingMargin" constant="31" id="Zhz-Aq-sri"/>
+                                                <constraint firstAttribute="bottom" secondItem="XTC-5y-7j4" secondAttribute="bottom" constant="6" id="byj-mm-K22"/>
+                                                <constraint firstItem="XTC-5y-7j4" firstAttribute="top" secondItem="hz4-zz-ZE3" secondAttribute="top" constant="6" id="kYg-BM-XmP"/>
+                                                <constraint firstItem="Zno-LB-YPp" firstAttribute="bottom" secondItem="hz4-zz-ZE3" secondAttribute="bottomMargin" id="tJP-eB-WY2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="edM-rP-ZFR">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edM-rP-ZFR" id="P4n-1E-sRv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cluster Munches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW8-gJ-ogq">
+                                                    <rect key="frame" x="51" y="11" width="139.5" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="gW8-gJ-ogq" secondAttribute="height" multiplier="19:3" id="YES-Wp-4sx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="18u-An-ubL">
+                                                    <rect key="frame" x="328.5" y="6" width="51.5" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="18u-An-ubL" secondAttribute="height" multiplier="48:31" id="knZ-Mn-zfh"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="clusterMunchSwitch:" destination="ImN-Jj-pcz" eventType="valueChanged" id="S1Z-Dc-aNK"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="18u-An-ubL" secondAttribute="bottom" constant="6" id="0JH-J0-cKM"/>
+                                                <constraint firstAttribute="trailing" secondItem="18u-An-ubL" secondAttribute="trailing" constant="36" id="aNd-2q-m0L"/>
+                                                <constraint firstItem="gW8-gJ-ogq" firstAttribute="top" secondItem="P4n-1E-sRv" secondAttribute="topMargin" id="lCt-nW-w5F"/>
+                                                <constraint firstItem="gW8-gJ-ogq" firstAttribute="bottom" secondItem="P4n-1E-sRv" secondAttribute="bottomMargin" id="mgI-Jo-LyA"/>
+                                                <constraint firstItem="gW8-gJ-ogq" firstAttribute="leading" secondItem="P4n-1E-sRv" secondAttribute="leadingMargin" constant="31" id="tA8-SF-3KR"/>
+                                                <constraint firstItem="18u-An-ubL" firstAttribute="top" secondItem="P4n-1E-sRv" secondAttribute="top" constant="6" id="zJj-ng-WAp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ImN-Jj-pcz" id="7KK-o8-drp"/>
+                            <outlet property="delegate" destination="ImN-Jj-pcz" id="Mkp-jg-Uu0"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="clusterMunchSwitchStatus" destination="18u-An-ubL" id="dQh-5f-hJX"/>
+                        <outlet property="signInSwitchStatus" destination="XTC-5y-7j4" id="fsH-Cw-9Eu"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MgA-Y6-puy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="-248"/>
+            <point key="canvasLocation" x="-1209" y="-422"/>
         </scene>
     </scenes>
 </document>
