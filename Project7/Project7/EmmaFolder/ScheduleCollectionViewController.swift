@@ -9,13 +9,13 @@ import UIKit
 
 class ScheduleCollectionViewController: UICollectionViewController {
     
-    var periods = [Schedules]()
+    var schedule = [Course]()
     private let reuseIdentifier = "BlockCell"
     private let itemsPerRow: CGFloat = 1
     let sectionInsets = UIEdgeInsets(top: 10.0,
-                                     left: 20.0,
+                                     left: 30.0,
                                      bottom: 10.0,
-                                     right: 20.0)
+                                     right: 30.0)
 //    var weekDays: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 //    var classPeriods: [String] = ["1", "2a", "2b"]
     var weekDays: [String] = ["Day"]
@@ -37,9 +37,9 @@ class ScheduleCollectionViewController: UICollectionViewController {
     
     func parse(json: Data) {
         let decoder = JSONDecoder()
-            if let jsonPeriods = try? decoder.decode(Periods.self, from: json) {
-                periods = jsonPeriods.schedule
-                print(periods)
+            if let jsonSchedule = try? decoder.decode(Schedule.self, from: json) {
+                schedule = jsonSchedule.schedule
+                print(schedule)
                 collectionView.reloadData()
             } else {
                 print("error decoding json")
@@ -58,19 +58,24 @@ class ScheduleCollectionViewController: UICollectionViewController {
         return weekDays.count
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return periods.count
+        return schedule.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockCell", for: indexPath) as! ScheduleCollectionViewCell
-        print(indexPath.row, periods.count)
-        let schedule = periods[indexPath.row]
-        cell.nameLabel.text = schedule.name
-        cell.timeStartLabel.text = "\(schedule.time_start) - \(schedule.time_end)"
-        cell.instructorLabel.text = schedule.instructor
-        cell.locationLabel.text = schedule.location
+        print(indexPath.row, schedule.count)
+        let course = schedule[indexPath.row]
+        cell.nameLabel.textAlignment = .center
+        cell.timeStartLabel.textAlignment = .center
+        cell.instructorLabel.textAlignment = .center
+        cell.locationLabel.textAlignment = .center
+
+        cell.nameLabel.text = course.name
+        cell.timeStartLabel.text = "\(course.time_start) - \(course.time_end)"
+        cell.instructorLabel.text = course.instructor
+        cell.locationLabel.text = course.location
         // color from Andover Bracding guidelines
-        cell.backgroundColor = UIColor.init(red: 102/256, green: 173/256, blue: 220/256, alpha: 0.66)
+        cell.backgroundColor = UIColor.init(red: 102/256, green: 173/256, blue: 220/256, alpha: 0.50)
         return cell
     }
    
