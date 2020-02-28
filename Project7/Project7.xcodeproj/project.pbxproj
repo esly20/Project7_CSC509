@@ -24,6 +24,7 @@
 		3F7388F823FCE306005E56FA /* ProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */; };
 		3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */; };
 		3F7388FC23FCE328005E56FA /* AnnouncementsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */; };
+		3F9EFC1A2409982700C2F99C /* ActivitiesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9EFC192409982700C2F99C /* ActivitiesStoryboard.storyboard */; };
 		3FDDFF02240618AF00A462F1 /* ScheduleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */; };
 		563C2C2924042210003A496E /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2824042210003A496E /* Student.swift */; };
 		563C2C2D24042328003A496E /* Faculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C2C24042328003A496E /* Faculty.swift */; };
@@ -59,6 +60,7 @@
 		3F7388F723FCE306005E56FA /* ProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388F923FCE319005E56FA /* ScheduleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleStoryboard.storyboard; sourceTree = "<group>"; };
 		3F7388FB23FCE328005E56FA /* AnnouncementsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnnouncementsStoryboard.storyboard; sourceTree = "<group>"; };
+		3F9EFC192409982700C2F99C /* ActivitiesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ActivitiesStoryboard.storyboard; sourceTree = "<group>"; };
 		3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewCell.swift; sourceTree = "<group>"; };
 		563C2C2824042210003A496E /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		563C2C2C24042328003A496E /* Faculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Faculty.swift; path = Project7/Faculty.swift; sourceTree = SOURCE_ROOT; };
@@ -123,6 +125,7 @@
 				3F7388E123FCDDAF005E56FA /* AppDelegate.swift */,
 				3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */,
 				3F7388E523FCDDAF005E56FA /* ViewController.swift */,
+				3F9EFC192409982700C2F99C /* ActivitiesStoryboard.storyboard */,
 				3F7388E723FCDDAF005E56FA /* Main.storyboard */,
 				3F714EE223FDA5370052B279 /* Sources.md */,
 				892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */,
@@ -246,6 +249,7 @@
 			files = (
 				8947677924005DC500163EA5 /* SettingsStoryboard.storyboard in Resources */,
 				3F7388EE23FCDDB4005E56FA /* LaunchScreen.storyboard in Resources */,
+				3F9EFC1A2409982700C2F99C /* ActivitiesStoryboard.storyboard in Resources */,
 				3F7388EB23FCDDB4005E56FA /* Assets.xcassets in Resources */,
 				3F7388FA23FCE319005E56FA /* ScheduleStoryboard.storyboard in Resources */,
 				3F7388F623FCDFAD005E56FA /* MapStoryboard.storyboard in Resources */,
