@@ -1,14 +1,14 @@
 //
-//  schedules.swift
+//  course.swift
 //  Project7
 //
-//  Created by student on 2/24/20.
+//  Created by student on 2/28/20.
 //  Copyright © 2020 CSC509. All rights reserved.
 //
 
 import Foundation
 
-struct period: Codable {
+struct Course: Codable {
     var courseid: Int
     var studentid: Int
     var name: String
