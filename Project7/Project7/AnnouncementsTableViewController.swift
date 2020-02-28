@@ -40,15 +40,12 @@ class AnnouncementsTableViewController: UITableViewController {
     
     // Variable Declarations
     let defaults = UserDefaults.standard
+    var data: DataLayer = DataLayer(userID: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let announcementsData = data.get
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     override func viewDidAppear(_ animated: Bool) {
