@@ -13,6 +13,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     
+    let defaults = UserDefaults.standard
+    let dorms: [String] = ["Day Hall", "Paul Revere Hall",  "Bartlet Hall", "Foxcroft Hall", "Smith House", "Burtt House", "Newman House", "Stuart Hall", "Fuess Hall", "Nathan Hale House", "Stimson House", "Stevens House", "Adams Hall", "Taylor Hall", "Johnson Hall", "Thompson House", "Jewett-Tucker House", "Blanchard House", "Bishop Hall", "Rockwell Hall", "Isham Dormitory", "Bancroft Hall", "Pemberton Cottage", "Eaton Cottage", "Andover Cottage", "Pease House", "Williams Hall Carriage House", "Double Brick House", "Samaritan House",  "Stearns House", "Stowe House", "French House", "Whitney House", "Carter House", "Clement House", "Draper Cottage", "America House", "Alumni House", "Bertha Bailey House", "Flagg House", "Morton House", "Allen House"]
+    let buildings: [String] = ["Oliver Wendell Holmes Library", "Morse Hall", "Gelb Science Center", "Sykes Wellness Center", "Bullfinch", "Borden and Memorial Gym", "Shuman Admissions Center", "Smith Center", "Case Memorial Cage", "Snyder Center", "Ice Rink", "Samuel Phillips Hall", "George Washington Hall", "Elson Art Center", "Addison Gallery of American Art", "Cochran Chapel", "Graves Hall", "Pearson Hall", "Robert S. Peabody Institute of Archaeology"]
+    let otherPOI: [String] = ["Phelps Park", "Tennis Courts", "Sorota Track Complex", "Phelps Stadium", "Siberia", "Graves Field", "Moncrief M. Cochran Sanctuary"]
+    
     // copied from: https://www.codementor.io/@muneebali/mapkit-user-current-location-10xdbyy1v3
     // I am unsure what the `fileprivate` means
     fileprivate let locationManager: CLLocationManager = {
@@ -198,7 +203,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         let isham = Marker(title: "Isham Dormitory", locationName: "Phillips Academy Dorm", discipline: "None", coordinate: CLLocationCoordinate2D(latitude: 42.644949, longitude: -71.136426))
         mapView.addAnnotation(isham)
         
-        let bancroft = Marker(title: "Isham Dormitory", locationName: "Phillips Academy Dorm", discipline: "None", coordinate: CLLocationCoordinate2D(latitude: 42.645500, longitude: -71.134989))
+        let bancroft = Marker(title: "Bancroft Hall", locationName: "Phillips Academy Dorm", discipline: "None", coordinate: CLLocationCoordinate2D(latitude: 42.645500, longitude: -71.134989))
         mapView.addAnnotation(bancroft)
         
         let pemberton = Marker(title: "Pemberton Cottage", locationName: "Phillips Academy Dorm", discipline: "None", coordinate: CLLocationCoordinate2D(latitude: 42.645484, longitude: -71.136800))

@@ -35,6 +35,14 @@ class InfoViewController: UIViewController, WKNavigationDelegate {
         let athleticsurl = URL(string: "https://athletics.andover.edu")!
         webView!.load(URLRequest(url: athleticsurl))
     }
+    @IBAction func addisonButtonPressed(_ sender: Any) {
+        let addisonurl = URL(string: "https://addison.andover.edu/Pages/default.aspx")!
+        webView!.load(URLRequest(url: addisonurl))
+    }
+    @IBAction func peabodyButtonPressed(_ sender: Any) {
+        let peabodyurl = URL(string: "https://peabody.andover.edu")!
+        webView!.load(URLRequest(url: peabodyurl))
+    }
     
     
 

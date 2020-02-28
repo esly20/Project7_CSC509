@@ -9,5 +9,5 @@
 import Foundation
 
 struct Periods: Codable{
-    var results: [Schedules]
+    var schedule: [Schedules]
 }

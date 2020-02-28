@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,7 @@
                     <navigationItem key="navigationItem" title="Campus Map" id="J0l-r9-eRT">
                         <barButtonItem key="rightBarButtonItem" image="list.bullet" catalog="system" id="8pg-Z8-zAv">
                             <connections>
-                                <segue destination="GP0-gR-2op" kind="show" id="kXh-m6-WA1"/>
+                                <segue destination="GP0-gR-2op" kind="show" identifier="" id="kXh-m6-WA1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -31,7 +32,7 @@
             </objects>
             <point key="canvasLocation" x="1039.1304347826087" y="153.34821428571428"/>
         </scene>
-        <!--Building List Table View Controller-->
+        <!--Building List-->
         <scene sceneID="Skm-rI-yuw">
             <objects>
                 <tableViewController id="GP0-gR-2op" customClass="BuildingListTableViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
@@ -40,25 +41,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KZX-gT-yov">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="4DW-5Q-MgY" style="IBUITableViewCellStyleDefault" id="KZX-gT-yov">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KZX-gT-yov" id="53N-ff-QgX">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4DW-5Q-MgY">
+                                            <rect key="frame" x="20" y="0.0" width="355" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="GP0-gR-2op" id="4Jt-SH-eSe"/>
                             <outlet property="delegate" destination="GP0-gR-2op" id="JsI-RP-y7D"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gWL-x4-NNu"/>
+                    <navigationItem key="navigationItem" title="Building List" id="gWL-x4-NNu"/>
+                    <connections>
+                        <segue destination="NA7-f8-Scv" kind="show" identifier="selectedCell" id="4Ju-7n-9bL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OlG-xz-ry0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937" y="149"/>
+            <point key="canvasLocation" x="1986" y="148"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="a7W-H7-dgT">
+            <objects>
+                <viewController id="NA7-f8-Scv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PUm-vW-7Kn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="b3O-R2-Jly"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="S1g-Hv-Lfu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isw-V6-VZd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2831" y="148"/>
         </scene>
         <!--Map-->
         <scene sceneID="eaL-gT-bsC">
