@@ -276,8 +276,6 @@
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
 				3F57D85624045C7300CB9810 /* schedules.swift in Sources */,
-				56621706240061640011369E /* ProfileViewController.swift in Sources */,
-				60D02CA824044BC10009325D /* SettingsTableViewCell.swift in Sources */,
 				13F537882406DAC20087447C /* SelectedAnnouncementViewController.swift in Sources */,
 				60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */,
 				894C86C42404C46900A491DB /* BuildingListTableViewController.swift in Sources */,
