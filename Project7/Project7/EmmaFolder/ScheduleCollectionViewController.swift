@@ -66,10 +66,11 @@ class ScheduleCollectionViewController: UICollectionViewController {
         print(indexPath.row, periods.count)
         let schedule = periods[indexPath.row]
         cell.nameLabel.text = schedule.name
-        cell.timeStartLabel.text = "Begin: \(schedule.time_start)"
-        cell.timeEndLabel.text = "End: \(schedule.time_end)"
+        cell.timeStartLabel.text = "\(schedule.time_start) - \(schedule.time_end)"
         cell.instructorLabel.text = schedule.instructor
         cell.locationLabel.text = schedule.location
+        // color from Andover Bracding guidelines
+        cell.backgroundColor = UIColor.init(red: 102/256, green: 173/256, blue: 220/256, alpha: 0.66)
         return cell
     }
    
