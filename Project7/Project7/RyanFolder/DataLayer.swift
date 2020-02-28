@@ -70,16 +70,16 @@ class DataLayer {
     
     // MARK: - More helpful functions
     
-    func updatedP<T: Decodable>(specificURL: String, key: String) throws -> T {
-        if let url = URL(string: specificURL) {
-            if let data = try? Data(contentsOf: url) {
-                if let json = try? decoder.decode(T.self, from: data) {
-                    defaults.set(data, forKey: key)
-                    return json
-                }
-            }
-        }
-    }
+//    func updatedP<T: Decodable>(specificURL: String, key: String) throws -> T {
+//        if let url = URL(string: specificURL) {
+//            if let data = try? Data(contentsOf: url) {
+//                if let json = try? decoder.decode(T.self, from: data) {
+//                    defaults.set(data, forKey: key)
+//                    return json
+//                }
+//            }
+//        }
+//    }
     
     func parse(specificURL: String, type: DataType) -> Any {
         if let url = URL(string: specificURL) {
