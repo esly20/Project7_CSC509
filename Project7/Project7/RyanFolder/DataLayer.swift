@@ -69,7 +69,7 @@ class DataLayer {
     }
     
     // MARK: - More helpful functions
-    
+    //https://stackoverflow.com/questions/57026463/protocol-type-cannot-conform-to-protocol-because-only-concrete-types-can-conform
 //    func updatedP<T: Decodable>(specificURL: String, key: String) throws -> T {
 //        if let url = URL(string: specificURL) {
 //            if let data = try? Data(contentsOf: url) {
@@ -106,7 +106,6 @@ class DataLayer {
                 }
             }
         }
-        print("I am about to return nothing")
         return (Any).self
     }
     
@@ -135,18 +134,29 @@ class DataLayer {
     func checkUserDefaults(key: String, type: DataType) -> Bool {
         //Checking if the data exists in UserDefaults
         
-        if let decodedData = defaults.object(forKey: key) as? Data {
-            switch type {
-            case .Info:
-                if let _ = try? decoder.decode(Student.self, from: decodedData) {
-                    return true
-                }
-            case .Team:
-                if let _ = try? decoder.decode(Team.self, from: decodedData) {
-                    return true
-                }
-            }
+        if let _ = defaults.object(forKey: key) as? Data {
+            return true
+//            switch type {
+//            case .Info:
+//                if let _ = try? decoder.decode(Student.self, from: decodedData) {
+//                    return true
+//                }
+//            case .Team:
+//                if let _ = try? decoder.decode(Team.self, from: decodedData) {
+//                    return true
+//                }
+//            }
         }
         return false
     }
+    
+//    func checkUserDefaults<T: Decodable>(key: String) throws -> T {
+//        if let decodedData = defaults.object(forKey: key) as? Data {
+//            if let _ = try? decoder.decode(T.self, from: decodedData) {
+//                return true
+//            }
+//        }
+//        return false
+//    }
+    
 }
