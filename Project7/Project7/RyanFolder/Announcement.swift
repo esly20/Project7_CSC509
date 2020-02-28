@@ -12,6 +12,8 @@ struct Announcement: Codable {
     var announcementid: Int
     var senderlastname: String?
     var senderfirstname: String
+    var title: String
     var program: String
     var body: String
+    var datetime: String
 }

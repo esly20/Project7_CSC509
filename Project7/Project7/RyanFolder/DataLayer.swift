@@ -50,6 +50,7 @@ class DataLayer {
     // MARK: Method to retrieve Team from server or UserDefaults
     func getStudentTeam() -> Team? {
         let key = "studentTeam"
+        print(type(of: Student.self))
         
         if(checkUserDefaults(key: key, type: .Team)) {
             return decodeData(at: key, type: .Team) as? Team
