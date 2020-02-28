@@ -20,8 +20,3 @@ struct Course: Codable {
 
 }
 
-//let encoder = JSONEncoder()
-//if let encoded = try? encoder.encode(Course) {
-//    let defaults = UserDefaults.standard
-//    defaults.set(encoded, forKey: "SavedPerson")
-//}
