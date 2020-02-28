@@ -18,8 +18,6 @@ class ProfileViewController: UIViewController {
         let _: Student = data.getStudentInfo()!
         let _: Team = data.getStudentTeam()!
         
-       // let _: Periods = data.getStudentSchedule()!
-        
     }
 
     override func viewDidLoad() {
