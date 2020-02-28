@@ -47,6 +47,8 @@ class BuildingListTableViewController: UITableViewController {
         } else {
             cell.textLabel!.text = otherPOI[indexPath.row]
         }
+        
+        cell.accessoryType = .disclosureIndicator
 
         return cell
     }

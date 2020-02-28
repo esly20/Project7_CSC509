@@ -50,7 +50,9 @@ class AnnouncementsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        let announcementsData = data.getAnnouncements()!
+        let announcementsData = data.getAnnouncements()!
+        print(announcementsData)
+        print(type(of: announcementsData))
     }
 
     // MARK: - Table view data source
@@ -72,11 +74,13 @@ class AnnouncementsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let announcementsData = data.getAnnouncements()!
-//        let titles: [String]  = announcementsData.announcement.title
+//        let announcementsData = data.getAnnouncements()!
+//      Go steal from white house app
+        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell", for: indexPath)
         if let announcementCell = cell as? AnnouncementsTableViewCell {
+            
             announcementCell.titleLabel?.text = titles[indexPath.row]
             announcementCell.senderLabel?.text = senders[indexPath.row]
             announcementCell.bodyLabel?.text = bodys[indexPath.row]
