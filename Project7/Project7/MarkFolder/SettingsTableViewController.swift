@@ -10,13 +10,16 @@ import UIKit
 import Foundation
 
 class SettingsTableViewController: UITableViewController {
+    
     @IBOutlet weak var signInSwitchStatus: UISwitch!
+
     @IBOutlet weak var clusterMunchSwitchStatus: UISwitch!
-    var signInNotifications: Bool = false
-    var clusterMunchNotifications: Bool = false
+    var signInNotifications: Bool = Bool()
+    var clusterMunchNotifications: Bool = Bool()
     let calendar = Calendar.current
     let rightNow = Date()
     let defaults = UserDefaults.standard
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,28 +47,34 @@ class SettingsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    func createReminders(){
+    func createSignInNotification(){
         if signInNotifications == true {
-            print(1)
-        }
-        if clusterMunchNotifications == true {
-            print(1)
-        }
-    }
-    
-    @IBAction func signInSwitchUsed(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            signInNotifications = true
-            defaults.set(true, forKey: "signIn")
-        } else {
-            signInNotifications = false
-            defaults.set(false, forKey: "signIn")
+            let signInContent = UNMutableNotificationContent()
+            signInContent.title = "Sign-In"
+            signInContent.body = "You have 5 minutes to sign-in to your dorm"
+            signInContent.sound = UNNotificationSound.default
+            
+            let mondaySignInDateComponents = DateComponents(calendar: Calendar.current,  hour: 9 , minute: 25, weekday: 0 )
+            let mondaySignInTrigger =  UNCalendarNotificationTrigger(dateMatching: mondaySignInDateComponents, repeats: false)
+            
+            let mondayRequest = UNNotificationRequest(identifier: "mondayIdentifier", content: signInContent, trigger: mondaySignInTrigger)
+            
+            UNUserNotificationCenter.current().add(mondayRequest, withCompletionHandler: nil)
         }
     }
     
-
-    @IBAction func clusterMunchSwitchUsed(_ sender: UISwitch) {
-        if (sender.isOn == true){
+    @IBAction func signInSwitchUsed(_ sender: Any) {
+            if signInSwitchStatus.isOn == true{
+                signInNotifications = true
+                defaults.set(true, forKey: "signIn")
+            } else {
+                signInNotifications = false
+                defaults.set(false, forKey: "signIn")
+            }
+        }
+        
+    @IBAction func clusterMunchSwitchUsed(_ sender: Any) {
+        if clusterMunchSwitchStatus.isOn == true{
             clusterMunchNotifications = true
             defaults.set(true, forKey: "clusterMunch")
         }else{
@@ -74,6 +83,8 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+
+
     
 
     /*

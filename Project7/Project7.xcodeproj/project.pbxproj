@@ -31,6 +31,7 @@
 		563C2C342407565C003A496E /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C332407565C003A496E /* DataLayer.swift */; };
 		563C2C36240756E4003A496E /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C35240756E4003A496E /* Team.swift */; };
 		563C2C372407588A003A496E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56621705240061640011369E /* ProfileViewController.swift */; };
+		6012E94724098DD30083BF97 /* CodeForOthers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94624098DD30083BF97 /* CodeForOthers.swift */; };
 		60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02CA52404493C0009325D /* SettingsTableViewController.swift */; };
 		892FF11623FDA00F00354A6B /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */; };
 		892FF12323FDAA8300354A6B /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12223FDAA8300354A6B /* Marker.swift */; };
@@ -67,6 +68,7 @@
 		563C2C332407565C003A496E /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
 		563C2C35240756E4003A496E /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Project7/RyanFolder/Team.swift; sourceTree = SOURCE_ROOT; };
 		56621705240061640011369E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Project7/RyanFolder/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		6012E94624098DD30083BF97 /* CodeForOthers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeForOthers.swift; sourceTree = "<group>"; };
 		60D02CA52404493C0009325D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
 		892FF12223FDAA8300354A6B /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				60D02CA52404493C0009325D /* SettingsTableViewController.swift */,
+				6012E94624098DD30083BF97 /* CodeForOthers.swift */,
 			);
 			path = MarkFolder;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
 				563C2C36240756E4003A496E /* Team.swift in Sources */,
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
+				6012E94724098DD30083BF97 /* CodeForOthers.swift in Sources */,
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
 				3F57D85624045C7300CB9810 /* schedules.swift in Sources */,
 				13F537882406DAC20087447C /* SelectedAnnouncementViewController.swift in Sources */,
