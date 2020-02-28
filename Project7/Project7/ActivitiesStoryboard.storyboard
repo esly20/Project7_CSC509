@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qSA-so-RUu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Activities-->
+        <scene sceneID="Ael-zr-5r7">
+            <objects>
+                <viewController id="jtV-7t-S3x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ocp-Ze-UST">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dzK-Iq-Tab"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Activities" image="checkmark.rectangle.fill" catalog="system" id="72B-6J-E40"/>
+                    <navigationItem key="navigationItem" id="ll8-GJ-vxu">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="zNw-rt-eh0">
+                            <connections>
+                                <segue destination="eW5-x6-c0l" kind="show" id="C4I-Mk-27w"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jho-Eo-AWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1218.840579710145" y="114.50892857142857"/>
+        </scene>
+        <!--InfoViewController-->
+        <scene sceneID="xNT-gU-o34">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="InfoViewController" storyboardName="InfoStoryboard" referencedIdentifier="InfoViewController" id="eW5-x6-c0l" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GSK-2r-J7B"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QPg-kh-p1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="-42"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3cb-li-uP3">
+            <objects>
+                <navigationController storyboardIdentifier="ActivitiesViewController" automaticallyAdjustsScrollViewInsets="NO" id="qSA-so-RUu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Qd-uU-IRG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jtV-7t-S3x" kind="relationship" relationship="rootViewController" id="xdx-KE-Dya"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXB-qQ-fyg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308.69565217391306" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.rectangle.fill" catalog="system" width="64" height="46"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
