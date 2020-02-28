@@ -39,7 +39,7 @@
                                                         <constraint firstAttribute="width" secondItem="XTC-5y-7j4" secondAttribute="height" multiplier="49:31" id="TJk-I1-ldU"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="signInSwitch:" destination="ImN-Jj-pcz" eventType="valueChanged" id="0aE-U9-JlR"/>
+                                                        <action selector="signInSwitchUsed:" destination="ImN-Jj-pcz" eventType="valueChanged" id="tRh-W6-FIO"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -75,7 +75,7 @@
                                                         <constraint firstAttribute="width" secondItem="18u-An-ubL" secondAttribute="height" multiplier="48:31" id="knZ-Mn-zfh"/>
                                                     </constraints>
                                                     <connections>
-                                                        <action selector="clusterMunchSwitch:" destination="ImN-Jj-pcz" eventType="valueChanged" id="S1Z-Dc-aNK"/>
+                                                        <action selector="clusterMunchSwitchUsed:" destination="ImN-Jj-pcz" eventType="valueChanged" id="hKb-PA-aXR"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -91,6 +91,82 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Color Settings" id="ulm-M2-QiE">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TSD-JZ-d3s">
+                                        <rect key="frame" x="0.0" y="171" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TSD-JZ-d3s" id="dju-Pf-PZE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign-In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-Yn-waT">
+                                                    <rect key="frame" x="51" y="11" width="59.5" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Yvf-Yn-waT" secondAttribute="height" multiplier="19:7" id="cUy-9v-Enl"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Yvf-Yn-waT" firstAttribute="top" secondItem="dju-Pf-PZE" secondAttribute="topMargin" id="RbC-8g-6Fx"/>
+                                                <constraint firstItem="Yvf-Yn-waT" firstAttribute="bottom" secondItem="dju-Pf-PZE" secondAttribute="bottomMargin" id="deX-rY-akb"/>
+                                                <constraint firstItem="Yvf-Yn-waT" firstAttribute="leading" secondItem="dju-Pf-PZE" secondAttribute="leadingMargin" constant="31" id="fwO-Ei-UIM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="z40-7J-ggB">
+                                        <rect key="frame" x="0.0" y="214.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z40-7J-ggB" id="0Ld-C4-sTN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cluster Munches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="263-ol-FZK">
+                                                    <rect key="frame" x="51" y="11" width="139.5" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="263-ol-FZK" secondAttribute="height" multiplier="19:3" id="BRC-aD-Gld"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="263-ol-FZK" firstAttribute="bottom" secondItem="0Ld-C4-sTN" secondAttribute="bottomMargin" id="NOv-IX-CLP"/>
+                                                <constraint firstItem="263-ol-FZK" firstAttribute="top" secondItem="0Ld-C4-sTN" secondAttribute="topMargin" id="j3O-T0-WEg"/>
+                                                <constraint firstItem="263-ol-FZK" firstAttribute="leading" secondItem="0Ld-C4-sTN" secondAttribute="leadingMargin" constant="31" id="rqF-Kw-JbH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6aF-YS-MYk">
+                                        <rect key="frame" x="0.0" y="258" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6aF-YS-MYk" id="eZl-Oz-56s">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cluster Munches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-z7-gUb">
+                                                    <rect key="frame" x="51" y="11" width="139.5" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="TbE-z7-gUb" secondAttribute="height" multiplier="19:3" id="Rwo-gJ-bKi"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TbE-z7-gUb" firstAttribute="leading" secondItem="eZl-Oz-56s" secondAttribute="leadingMargin" constant="31" id="dL1-sH-6yZ"/>
+                                                <constraint firstItem="TbE-z7-gUb" firstAttribute="bottom" secondItem="eZl-Oz-56s" secondAttribute="bottomMargin" id="h9o-9s-Ctv"/>
+                                                <constraint firstItem="TbE-z7-gUb" firstAttribute="top" secondItem="eZl-Oz-56s" secondAttribute="topMargin" id="sNF-GP-YVj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="ImN-Jj-pcz" id="7KK-o8-drp"/>
@@ -98,8 +174,8 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="clusterMunchSwitchStatus" destination="18u-An-ubL" id="dQh-5f-hJX"/>
-                        <outlet property="signInSwitchStatus" destination="XTC-5y-7j4" id="fsH-Cw-9Eu"/>
+                        <outlet property="clusterMunchSwitchStatus" destination="18u-An-ubL" id="ksn-DS-rTn"/>
+                        <outlet property="signInSwitchStatus" destination="XTC-5y-7j4" id="Dua-gb-7uZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgA-Y6-puy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

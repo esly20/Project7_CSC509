@@ -12,6 +12,7 @@ import UIKit
 enum DataType {
     case Info
     case Team
+    case Schedule
 }
 
 class DataLayer {
@@ -21,90 +22,134 @@ class DataLayer {
     let userId: Int
     let urlStudentInfoString: String
     let urlStudentTeamString: String
+    let urlStudentSchedule: String
+    let urlStudentAnnouncements: String
     
     //Initializer
     init(userID: Int) {
         self.userId = userID
         urlStudentInfoString = "https://summer-session-api.herokuapp.com/student/\(userId)/info"
         urlStudentTeamString = "https://summer-session-api.herokuapp.com/student/\(userId)/team"
+        urlStudentSchedule = "https://summer-session-api.herokuapp.com/student/\(userId)/schedule"
+        urlStudentAnnouncements = "https://summer-session-api.herokuapp.com/announcements"
     }
     
-    //Method to return the Student info in the form of the Student struct
+    // MARK: Method to retrieve Student from server or UserDefaults
     func getStudentInfo() -> Student? {
         let key = "studentInfo"
-        //If Student already exists in UserDefaults, retrieve if from UserDefaults
+        //If Student already exists in UserDefaults, retrieve from UserDefaults
         if(checkUserDefaults(key: key, type: .Info)) {
-            return decodeStudentData(at: key)
+            return decodeData(at: key, type: .Info) as? Student
         } else { //Information does not exist in UserDefaults
             //Get the information from the server
-            if let url = URL(string: urlStudentInfoString) {
-                if let data = try? Data(contentsOf: url) {
-                    do {
-                        //Parse the info and decode data
-                        let response = try decoder.decode(Student.self, from: data)
-                        //Encode Data and set it in UserDefaults
-                        if let encodedUserDefaults = try? encoder.encode(response) {
-                            defaults.set(encodedUserDefaults, forKey: key)
-                            //return the decoded data and end the method
-                            return response
-                        }
-                    } catch {
-                        print("Parsing Failed")
-                        return nil
-                    }
-                }
-            }
+            return parse(specificURL: urlStudentInfoString, type: .Info) as? Student
         }
         //this should not be executed
-        print("Error retrieving Student")
+    }
+    
+    // MARK: Method to retrieve Team from server or UserDefaults
+    func getStudentTeam() -> Team? {
+        let key = "studentTeam"
+        print(type(of: Student.self))
+        
+        if(checkUserDefaults(key: key, type: .Team)) {
+            return decodeData(at: key, type: .Team) as? Team
+        } else {
+            return parse(specificURL: urlStudentTeamString, type: .Team) as? Team
+        }
+    }
+    
+    // MARK: Method to retrieve schedules from server or UD
+    func getStudentSchedule() -> Periods? {
+        let key = "studentSchedule"
+        
+        if(checkUserDefaults(key: key, type: .Schedule)) {
+            return decodeData(at: key, type: .Schedule) as? Periods
+        } else {
+            return parse(specificURL: urlStudentTeamString, type: .Schedule) as? Periods
+        }
+    }
+    
+    // MARK: Method to get announcements from sever
+    func getAnnouncements() -> Announcements? {
+        if let url = URL(string: urlStudentAnnouncements) {
+            if let data = try? Data(contentsOf: url) {
+                if let json = try? decoder.decode(Announcements.self, from: data) {
+                    return json
+                }
+            }
+        }
         return nil
     }
     
-    func getStudentTeam() -> Team? {
-        let key = "studentTeam"
-        
-        if(checkUserDefaults(key: key, type: .Team)) {
-            return decodeStudentTeam(at: key)
-        } else {
-            if let url = URL(string: urlStudentTeamString) {
-                if let data = try? Data(contentsOf: url) {
-                    if let jsonTeam = try? decoder.decode(Team.self, from: data) {
-                        if let encodedUserDefaults = try? encoder.encode(jsonTeam) {
+    // MARK: - More helpful functions
+    func parse(specificURL: String, type: DataType) -> Any {
+        if let url = URL(string: specificURL) {
+            if let data = try? Data(contentsOf: url) {
+                switch type {
+                case .Info:
+                    let key = "studentInfo"
+                    if let json = try? decoder.decode(Student.self, from: data) {
+                        if let encodedUserDefaults = try? encoder.encode(json) {
                             defaults.set(encodedUserDefaults, forKey: key)
                         }
-                        print("getStudentTeam() successful")
-                        return jsonTeam
+                        print("INFO from server successful")
+                        return json
+                    }
+                case .Team:
+                    let key = "studentTeam"
+                    if let json = try? decoder.decode(Team.self, from: data) {
+                        if let encodedUserDefaults = try? encoder.encode(json) {
+                            defaults.set(encodedUserDefaults, forKey: key)
+                        }
+                        print("TEAM from server successful")
+                        return json
+                    }
+                case .Schedule:
+                    let key = "studentSchedule"
+                    print("SCHD: I'm in parse")
+                    //ERROR RIGHT HERE
+                    if let json = try? decoder.decode(Periods.self, from: data) {
+                        if let encodedUserDefaults = try? encoder.encode(json) {
+                            defaults.set(encodedUserDefaults, forKey: key)
+                        }
+                        print("SCHEDULES from server successful")
+                        return json
                     }
                 }
             }
         }
-        print("getStudentTeam() Failed")
-        return nil
+        print("I am about to return nothing")
+        return (Any).self
     }
     
-}
+    func decodeData(at key: String, type: DataType) -> Any {
+        if let decodedData = defaults.object(forKey: key) as? Data {
+            switch type {
+            case .Info:
+                if let studentData = try? decoder.decode(Student.self, from: decodedData) {
+                    print("Info from UD successful")
+                    //print(studentData)
+                    return studentData
+                }
+            case .Team:
+                if let jsonTeam = try? decoder.decode(Team.self, from: decodedData) {
+                    print("Team from UD successful")
+                    //print(jsonTeam)
+                    return jsonTeam
+                }
+            case .Schedule:
+                if let studentSchedule = try? decoder.decode(Periods.self, from: decodedData) {
+                    print("Schedules from UD successful")
+                    //print(jsonTeam)
+                    return studentSchedule
+                }
+            }
+        }
+        //Not expecting this to be called
+        return (Any).self
+    }
 
-extension DataLayer {
-    
-    func decodeStudentData(at key: String) -> Student? {
-        if let decodedStudentData = defaults.object(forKey: key) as? Data {
-            if let studentData = try? decoder.decode(Student.self, from: decodedStudentData) {
-                return studentData
-            }
-        }
-        return nil
-    }
-    
-    func decodeStudentTeam(at key: String) -> Team? {
-        if let decodedStudentTeam = defaults.object(forKey: key) as? Data {
-            if let jsonTeam = try? decoder.decode(Team.self, from: decodedStudentTeam) {
-                print("getStudentTeam() successful")
-                return jsonTeam
-            }
-        }
-        return nil
-    }
-    
     //Method that checks whether the Student struct already exists in UserDefaults
     func checkUserDefaults(key: String, type: DataType) -> Bool {
         //Checking if the data exists in UserDefaults
@@ -119,9 +164,12 @@ extension DataLayer {
                 if let _ = try? decoder.decode(Team.self, from: decodedData) {
                     return true
                 }
+            case .Schedule:
+                if let _ = try? decoder.decode(Periods.self, from: decodedData) {
+                    return true
+                }
             }
         }
         return false
     }
-    
 }
