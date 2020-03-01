@@ -12,7 +12,11 @@
 		13F537882406DAC20087447C /* SelectedAnnouncementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F537872406DAC20087447C /* SelectedAnnouncementViewController.swift */; };
 		1FB87E2624006C9A007BC76F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB87E2524006C9A007BC76F /* InfoViewController.swift */; };
 		3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */; };
-		3F57D85624045C7300CB9810 /* schedules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F57D85524045C7300CB9810 /* schedules.swift */; };
+		3F501535240AF64A00D8DAB1 /* activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F501534240AF64A00D8DAB1 /* activity.swift */; };
+		3F501537240AF6B300D8DAB1 /* activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F501536240AF6B300D8DAB1 /* activities.swift */; };
+		3F501539240AF73200D8DAB1 /* ActivityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F501538240AF73200D8DAB1 /* ActivityTableViewController.swift */; };
+		3F50153B240AFA6100D8DAB1 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50153A240AFA6000D8DAB1 /* ActivityTableViewCell.swift */; };
+		3F57D85624045C7300CB9810 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E123FCDDAF005E56FA /* AppDelegate.swift */; };
 		3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E323FCDDAF005E56FA /* SceneDelegate.swift */; };
 		3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7388E523FCDDAF005E56FA /* ViewController.swift */; };
@@ -32,7 +36,7 @@
 		563C2C342407565C003A496E /* DataLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C332407565C003A496E /* DataLayer.swift */; };
 		563C2C36240756E4003A496E /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C35240756E4003A496E /* Team.swift */; };
 		563C2C372407588A003A496E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56621705240061640011369E /* ProfileViewController.swift */; };
-		563C2C38240776FA003A496E /* periods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F57D85724045C8300CB9810 /* periods.swift */; };
+		563C2C38240776FA003A496E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		56E093BB24099DDB00951300 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E093BA24099DDA00951300 /* Announcement.swift */; };
 		56E093BD24099E5000951300 /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E093BC24099E5000951300 /* Announcements.swift */; };
 		6012E94724098DD30083BF97 /* CodeForOthers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94624098DD30083BF97 /* CodeForOthers.swift */; };
@@ -51,6 +55,10 @@
 		13F537872406DAC20087447C /* SelectedAnnouncementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedAnnouncementViewController.swift; sourceTree = SOURCE_ROOT; };
 		1FB87E2524006C9A007BC76F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InfoViewController.swift; path = Project7/InfoViewController.swift; sourceTree = SOURCE_ROOT; };
 		3F49E09C2400605400903EC1 /* ScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCollectionViewController.swift; sourceTree = "<group>"; };
+		3F501534240AF64A00D8DAB1 /* activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activity.swift; sourceTree = "<group>"; };
+		3F501536240AF6B300D8DAB1 /* activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activities.swift; sourceTree = "<group>"; };
+		3F501538240AF73200D8DAB1 /* ActivityTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewController.swift; sourceTree = "<group>"; };
+		3F50153A240AFA6000D8DAB1 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		3F714EE223FDA5370052B279 /* Sources.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Sources.md; sourceTree = "<group>"; };
 		3F7388DE23FCDDAF005E56FA /* Project7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project7.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7388E123FCDDAF005E56FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,10 @@
 				3FDDFF01240618AF00A462F1 /* ScheduleCollectionViewCell.swift */,
 				3F9EFC1D2409A26C00C2F99C /* course.swift */,
 				3F9EFC1F2409A2D500C2F99C /* schedule.swift */,
+				3F501538240AF73200D8DAB1 /* ActivityTableViewController.swift */,
+				3F50153A240AFA6000D8DAB1 /* ActivityTableViewCell.swift */,
+				3F501534240AF64A00D8DAB1 /* activity.swift */,
+				3F501536240AF6B300D8DAB1 /* activities.swift */,
 			);
 			path = EmmaFolder;
 			sourceTree = "<group>";
@@ -283,27 +295,31 @@
 			files = (
 				3F9EFC1E2409A26C00C2F99C /* course.swift in Sources */,
 				13F5374C24004A4F0087447C /* AnnouncementsTableViewCell.swift in Sources */,
+				3F50153B240AFA6100D8DAB1 /* ActivityTableViewCell.swift in Sources */,
 				1FB87E2624006C9A007BC76F /* InfoViewController.swift in Sources */,
 				3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */,
 				13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */,
+				3F501535240AF64A00D8DAB1 /* activity.swift in Sources */,
 				3FDDFF02240618AF00A462F1 /* ScheduleCollectionViewCell.swift in Sources */,
 				898CF4E2240997AB00EAC534 /* DetailViewController.swift in Sources */,
 				563C2C2924042210003A496E /* Student.swift in Sources */,
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
-				563C2C38240776FA003A496E /* periods.swift in Sources */,
+				563C2C38240776FA003A496E /* (null) in Sources */,
 				563C2C36240756E4003A496E /* Team.swift in Sources */,
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
 				6012E94724098DD30083BF97 /* CodeForOthers.swift in Sources */,
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
-				3F57D85624045C7300CB9810 /* schedules.swift in Sources */,
+				3F57D85624045C7300CB9810 /* (null) in Sources */,
 				13F537882406DAC20087447C /* SelectedAnnouncementViewController.swift in Sources */,
 				60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */,
 				894C86C42404C46900A491DB /* BuildingListTableViewController.swift in Sources */,
 				3F7388E423FCDDAF005E56FA /* SceneDelegate.swift in Sources */,
+				3F501539240AF73200D8DAB1 /* ActivityTableViewController.swift in Sources */,
 				563C2C372407588A003A496E /* ProfileViewController.swift in Sources */,
 				56E093BD24099E5000951300 /* Announcements.swift in Sources */,
 				56E093BB24099DDB00951300 /* Announcement.swift in Sources */,
+				3F501537240AF6B300D8DAB1 /* activities.swift in Sources */,
 				563C2C342407565C003A496E /* DataLayer.swift in Sources */,
 				3F9EFC202409A2D500C2F99C /* schedule.swift in Sources */,
 				563C2C2D24042328003A496E /* Faculty.swift in Sources */,

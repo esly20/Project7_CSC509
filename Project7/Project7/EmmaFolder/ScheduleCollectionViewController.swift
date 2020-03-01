@@ -10,6 +10,8 @@ import Foundation
 
 class ScheduleCollectionViewController: UICollectionViewController {
     
+    //var frame = CGRect.zero
+
     var schedule = [Course]()
     private let reuseIdentifier = "BlockCell"
     private let itemsPerRow: CGFloat = 1
@@ -17,7 +19,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
                                      left: 30.0,
                                      bottom: 10.0,
                                      right: 30.0)
-//    var weekDays: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    var pageDays: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 //    var classPeriods: [String] = ["1", "2a", "2b"]
     var weekDays: [String] = ["Day"]
     
@@ -34,7 +36,17 @@ class ScheduleCollectionViewController: UICollectionViewController {
             }
         }
         showError()
+//        schedulePageControl.numberOfPages = pageDays.count
+//        setupScreens()
     }
+    
+//    func setupScreens() {
+//        for index in 0..<pageDays.count {
+//            // 1.
+//            frame.origin.x = collectionView.frame.size.width * CGFloat(index)
+//            frame.size = collectionView.frame.size
+//        }
+//    }
     
     func parse(json: Data) {
         let decoder = JSONDecoder()
