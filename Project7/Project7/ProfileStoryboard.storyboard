@@ -14,8 +14,39 @@
                     <view key="view" contentMode="scaleToFill" id="tOR-Hf-GOj" customClass="ProfileViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIL-c3-bwq">
+                                <rect key="frame" x="32" y="117" width="124" height="32"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K14-5H-F9O">
+                                <rect key="frame" x="32" y="157" width="84" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PKN • Dorm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cab-dP-O4n">
+                                <rect key="frame" x="32" y="192" width="103" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZIL-c3-bwq" firstAttribute="leading" secondItem="jAd-Gh-zUK" secondAttribute="leading" constant="32" id="98w-OV-X2f"/>
+                            <constraint firstItem="ZIL-c3-bwq" firstAttribute="top" secondItem="jAd-Gh-zUK" secondAttribute="top" constant="29" id="EgE-zP-3Eu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jAd-Gh-zUK"/>
+                        <connections>
+                            <outlet property="clusterDormLabel" destination="Cab-dP-O4n" id="AoS-OS-XSO"/>
+                            <outlet property="fullNameLabel" destination="ZIL-c3-bwq" id="oaH-Ec-BYo"/>
+                            <outlet property="programLabel" destination="K14-5H-F9O" id="Xoa-Dh-0aj"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Pqj-2k-gJv"/>
                     <navigationItem key="navigationItem" id="bGs-Zz-gH6">
