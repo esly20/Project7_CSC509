@@ -17,14 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var programLabel: UILabel!
     @IBOutlet weak var clusterDormLabel: UILabel!
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        viewDidLoad()
-        
-        let mainStudent: Student = data.getStudentInfo()!
-
-        print(mainStudent)
-        
+    func loadText(mainStudent: Student) {
         fullNameLabel.textColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
         
         fullNameLabel.text =  "\(mainStudent.firstname) \(mainStudent.lastname)"
@@ -38,5 +31,9 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let mainStudent: Student = data.getStudentInfo()!
+        loadText(mainStudent: mainStudent)
+        
     }
 }
