@@ -93,10 +93,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Purpose" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YXD-P1-09x">
-                                <rect key="frame" x="25" y="233" width="364" height="40"/>
+                                <rect key="frame" x="25" y="233" width="364" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="3vW-HZ-nJd"/>
+                                    <constraint firstAttribute="height" constant="60" id="3vW-HZ-nJd"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -139,7 +139,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="qCc-lp-QjT" firstAttribute="top" secondItem="YXD-P1-09x" secondAttribute="bottom" constant="30" id="BqW-99-9eZ"/>
+                            <constraint firstItem="qCc-lp-QjT" firstAttribute="top" secondItem="YXD-P1-09x" secondAttribute="bottom" constant="10" id="BqW-99-9eZ"/>
                             <constraint firstItem="DGi-FC-HXn" firstAttribute="top" secondItem="b3O-R2-Jly" secondAttribute="top" constant="75" id="COT-Mz-oeU"/>
                             <constraint firstItem="YXD-P1-09x" firstAttribute="top" secondItem="DGi-FC-HXn" secondAttribute="bottom" constant="30" id="D8L-7N-39J"/>
                             <constraint firstItem="b3O-R2-Jly" firstAttribute="trailing" secondItem="qCc-lp-QjT" secondAttribute="trailing" constant="25" id="Gsr-jg-t1S"/>
@@ -158,6 +158,7 @@
                         <outlet property="headerText" destination="DGi-FC-HXn" id="N6L-R0-t00"/>
                         <outlet property="hours" destination="4ME-Hp-VQ6" id="75V-tP-soN"/>
                         <outlet property="hoursHeader" destination="0eo-sg-Nqu" id="hAW-Mh-ay1"/>
+                        <outlet property="navigationBar" destination="S1g-Hv-Lfu" id="Urf-aU-OG5"/>
                         <outlet property="purpose" destination="YXD-P1-09x" id="5vg-o0-dtQ"/>
                     </connections>
                 </viewController>
