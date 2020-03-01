@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-enum DataType {
-    case Info
-    case Team
-}
-
 class DataLayer {
     let defaults = UserDefaults.standard
     let decoder = JSONDecoder()
@@ -22,6 +17,7 @@ class DataLayer {
     let urlStudentInfoString: String
     let urlStudentTeamString: String
     let urlStudentAnnouncements: String
+    let urlStudentSchedule: String
     
     //Initializer
     init(userID: Int) {
@@ -29,6 +25,7 @@ class DataLayer {
         urlStudentInfoString = "https://summer-session-api.herokuapp.com/student/\(userId)/info"
         urlStudentTeamString = "https://summer-session-api.herokuapp.com/student/\(userId)/team"
         urlStudentAnnouncements = "https://summer-session-api.herokuapp.com/announcements"
+        urlStudentSchedule = "https://summer-session-api.herokuapp.com/student/\(userId)/schedule"
     }
     
     // MARK: Method to retrieve Student from server or UserDefaults
@@ -56,6 +53,16 @@ class DataLayer {
     // MARK: Method to get announcements from sever
     func getAnnouncements() -> Announcements? {
         return parse(specificURL: urlStudentAnnouncements, key: "Announcements", type: Announcements.self)
+    }
+    
+    // MARK: Method to get student schedule
+    func getSchedule() -> Schedule? {
+        let key = "studentSchedule"
+        if(checkUserDefaults(key: key)) {
+            return decodeData(key: key, type: Schedule.self)
+        } else {
+            return parse(specificURL: urlStudentSchedule, key: key, type: Schedule.self)
+        }
     }
     
     // MARK: - More helpful functions
