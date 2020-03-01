@@ -49,11 +49,12 @@ class BuildingListTableViewController: UITableViewController {
         }
         
         cell.accessoryType = .disclosureIndicator
-
+        
         return cell
     }
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        tableView.backgroundColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
         if section == 0 {
             return  "Buildings"
         } else if section == 1 {
@@ -61,6 +62,13 @@ class BuildingListTableViewController: UITableViewController {
         } else {
             return "Other"
         }
+    }
+    
+    // copied from: https://stackoverflow.com/questions/30240594/change-the-sections-header-background-color-in-uitableview-using-an-array-of-hea
+    // Changes the color of each section header's background and text
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
+        (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.white
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
