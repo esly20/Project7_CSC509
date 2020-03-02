@@ -9,5 +9,5 @@
 import Foundation
 
 struct StudentActivities: Codable{
-    var studentActivities: [StudentActivity]
+    var activities: [StudentActivity]
 }

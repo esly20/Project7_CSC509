@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ActivityTableViewController: UITableViewController {
-    
+    let defaults = UserDefaults.standard
     var activityList = [Activity]()
     var studentActivityList = [StudentActivity]()
 
@@ -63,7 +63,7 @@ class ActivityTableViewController: UITableViewController {
         let decoder = JSONDecoder()
         if let jsonStudentActivities = try? decoder.decode(StudentActivities.self, from: json) {
             studentActivityList
-                = jsonStudentActivities.studentActivities
+                = jsonStudentActivities.activities
             tableView.reloadData()
             print("successfully loaded student activity data")
 
@@ -129,7 +129,17 @@ class ActivityTableViewController: UITableViewController {
         
     }
     
-
+   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       print("\(indexPath.row) tapped")
+       
+       let storyboard = UIStoryboard(name: "ActivitiesStoryboard", bundle: nil)
+       let selectedVC = storyboard.instantiateViewController(identifier: "SelectedActivityVC") as! DetailedActivityViewController
+      
+    let slcActivity: [String] = ["\(activityList[indexPath.row].name)", "\(activityList[indexPath.row].time_start)", "\(activityList[indexPath.row].time_end)", "\(activityList[indexPath.row].description)", "\(activityList[indexPath.row].location)"]
+       
+       defaults.set(slcActivity, forKey: "slcActivity" )
+       navigationController?.pushViewController(selectedVC, animated: true)
+   }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
