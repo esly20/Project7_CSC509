@@ -41,7 +41,7 @@ class StudentTeamTableViewController: UITableViewController {
 
         if let cellWithOtherName = cell as? StudentTeamTableViewCell {
             cellWithOtherName.fullNameLabel.text = "\(team[indexPath.row].firstname) \(team[indexPath.row].lastname)"
-            cellWithOtherName.dormLabel.text = team[indexPath.row].dorm
+            cellWithOtherName.dormLabel.text = "\(team[indexPath.row].dorm) House"
             cellWithOtherName.phoneLabel.text = team[indexPath.row].phonenumber
             cellWithOtherName.emailLabel.text = team[indexPath.row].email
             
