@@ -9,12 +9,13 @@
 import UIKit
 import Foundation
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     let defaults = UserDefaults.standard
     var studentId:Int = Int()
     var isLoggedIn:Bool = Bool()
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     var studentList = [Student]()
     var firstnames = [String]()
     var lastnames = [String]()
@@ -22,6 +23,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
         
         let urlString = "https://summer-session-api.herokuapp.com/students"
             if let url = URL(string: urlString) {
@@ -42,6 +46,7 @@ class LoginViewController: UIViewController {
         if isLoggedIn == true{
             performSegue(withIdentifier: "login", sender: nil)
         }
+        registerForKeyboardNotifications()
     }
     
     @IBAction func loginPressed(_ sender: Any) {
@@ -60,6 +65,7 @@ class LoginViewController: UIViewController {
                 performSegue(withIdentifier: "login", sender: nil)
                 defaults.set(true, forKey: "loggedIn")
                 defaults.set(i+1, forKey: "user")
+                print(studentId)
             } else {
                 LoginError()
             }
@@ -87,17 +93,46 @@ class LoginViewController: UIViewController {
         }
     }
     
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      textField.resignFirstResponder()
+      return false
     }
-    */
-
+     
+    func registerForKeyboardNotifications() {
+      NotificationCenter.default.addObserver(self,
+                          selector: #selector(keyboardWasShown(_:)),
+                          name: UIResponder.keyboardDidShowNotification,
+                          object: nil)
+      NotificationCenter.default.addObserver(self,
+                          selector: #selector(keyboardWillBeHidden(_:)),
+                          name: UIResponder.keyboardWillHideNotification,
+                          object: nil)
+      NotificationCenter.default.addObserver(self,
+                          selector: #selector(keyboardWasShown(_:)),
+                          name: UIResponder.keyboardWillChangeFrameNotification,
+                          object: nil)
+    }
+     
+    @objc func keyboardWasShown(_ notificiation: NSNotification) {
+      guard let info = notificiation.userInfo,
+        let keyboardFrameValue =
+        info[UIResponder.keyboardFrameBeginUserInfoKey]
+          as? NSValue
+        else { return }
+      let keyboardFrame = keyboardFrameValue.cgRectValue
+      let keyboardSize = keyboardFrame.size
+       
+      let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0,
+                       bottom: keyboardSize.height, right: 0.0)
+      scrollView.contentInset = contentInsets
+      scrollView.scrollIndicatorInsets = contentInsets
+    }
+     
+    @objc func keyboardWillBeHidden(_ notification: NSNotification) {
+      let contentInsets = UIEdgeInsets.zero
+      scrollView.contentInset = contentInsets
+      scrollView.scrollIndicatorInsets = contentInsets
+      self.view.layoutIfNeeded()
+    }
 }
 
