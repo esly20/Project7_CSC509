@@ -24,7 +24,7 @@ class InfoViewController: UIViewController, WKNavigationDelegate {
         webView!.load(URLRequest(url: paneturl))
     }
     @IBAction func schoolWebsiteButtonPressed(_ sender: Any) {
-        let pawebsiteurl = URL(string: "https://www.andover.eduf")!
+        let pawebsiteurl = URL(string: "https://www.andover.edu")!
         webView!.load(URLRequest(url: pawebsiteurl))
     }
     @IBAction func bluebookButtonPressed(_ sender: Any) {
