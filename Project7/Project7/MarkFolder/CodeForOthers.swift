@@ -35,3 +35,7 @@ func notificationStuff(){
     
     UNUserNotificationCenter.current().add(mondayRequest, withCompletionHandler: nil)
  }
+
+
+
+
