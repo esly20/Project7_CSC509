@@ -1,21 +1,18 @@
 //
-//  schedules.swift
+//  studentActivity.swift
 //  Project7
 //
-//  Created by student on 2/24/20.
+//  Created by student on 3/1/20.
 //  Copyright © 2020 CSC509. All rights reserved.
 //
 
 import Foundation
 
-struct period: Codable {
-    var courseid: Int
-    var studentid: Int
+struct StudentActivity: Codable{
+    var activityid: Int
     var name: String
     var time_start: String
     var time_end: String
-    var instructor: String
+    var description: String
     var location: String
-    var period: String
-
 }
