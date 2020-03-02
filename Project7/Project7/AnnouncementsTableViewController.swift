@@ -16,6 +16,7 @@ class AnnouncementsTableViewController: UITableViewController {
     var data: DataLayer = DataLayer()
     let abbotBlue: UIColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
     var announcementsList: [Announcement] = []
+    var studentProgram: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +25,14 @@ class AnnouncementsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        data = DataLayer()
         let announcementsData: [Announcement] = data.getAnnouncements()!.announcements
         announcementsList = announcementsData
+        let studentProgramData: String = data.getStudentInfo()!.program
+        studentProgram = studentProgramData
+        announcementParse()
     }
     
-    private func declare() -> [Announcement] {
-        let announcementsData: [Announcement] = data.getAnnouncements()!.announcements
-        return announcementsData
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,10 +57,22 @@ class AnnouncementsTableViewController: UITableViewController {
         return date
     }
     
+    // Announcement parsing function to clean out announcements that don't pertain to the users specific program
+    func announcementParse() {
+        var timesRemoved: Int = 0
+        for i in (0...announcementsList.count-1) {
+            if announcementsList[i-timesRemoved].program == studentProgram || announcementsList[i-timesRemoved].program == "All" {
+            } else {
+                announcementsList.remove(at: (i - timesRemoved))
+                timesRemoved += 1
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnnouncementCell", for: indexPath)
         if let announcementCell = cell as? AnnouncementsTableViewCell {
-            
+//            parseAnnouncements()
             // Further date parsing for string reformatting
             let date = dateParse(inputDate: announcementsList[indexPath.row].datetime)
             let calendar = Calendar.current
