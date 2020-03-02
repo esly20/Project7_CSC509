@@ -45,6 +45,8 @@
 		56E093BD24099E5000951300 /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E093BC24099E5000951300 /* Announcements.swift */; };
 		6012E94724098DD30083BF97 /* CodeForOthers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94624098DD30083BF97 /* CodeForOthers.swift */; };
 		6012E9492409A3A10083BF97 /* SignInTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E9482409A3A10083BF97 /* SignInTimes.swift */; };
+		6012E94B240D47710083BF97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94A240D47710083BF97 /* LoginViewController.swift */; };
+		6012E94F240D74650083BF97 /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94E240D74650083BF97 /* Students.swift */; };
 		60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02CA52404493C0009325D /* SettingsTableViewController.swift */; };
 		892FF11623FDA00F00354A6B /* InfoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */; };
 		892FF12323FDAA8300354A6B /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892FF12223FDAA8300354A6B /* Marker.swift */; };
@@ -94,6 +96,8 @@
 		56E093BC24099E5000951300 /* Announcements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcements.swift; sourceTree = "<group>"; };
 		6012E94624098DD30083BF97 /* CodeForOthers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeForOthers.swift; sourceTree = "<group>"; };
 		6012E9482409A3A10083BF97 /* SignInTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTimes.swift; sourceTree = "<group>"; };
+		6012E94A240D47710083BF97 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6012E94E240D74650083BF97 /* Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Students.swift; sourceTree = "<group>"; };
 		60D02CA52404493C0009325D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		892FF11523FDA00F00354A6B /* InfoStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoStoryboard.storyboard; sourceTree = "<group>"; };
 		892FF12223FDAA8300354A6B /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				60D02CA52404493C0009325D /* SettingsTableViewController.swift */,
 				6012E9482409A3A10083BF97 /* SignInTimes.swift */,
 				6012E94624098DD30083BF97 /* CodeForOthers.swift */,
+				6012E94A240D47710083BF97 /* LoginViewController.swift */,
+				6012E94E240D74650083BF97 /* Students.swift */,
 			);
 			path = MarkFolder;
 			sourceTree = "<group>";
@@ -308,6 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6012E94B240D47710083BF97 /* LoginViewController.swift in Sources */,
+				6012E94F240D74650083BF97 /* Students.swift in Sources */,
 				3F9EFC1E2409A26C00C2F99C /* course.swift in Sources */,
 				13F5374C24004A4F0087447C /* AnnouncementsTableViewCell.swift in Sources */,
 				3F50153B240AFA6100D8DAB1 /* ActivityTableViewCell.swift in Sources */,
