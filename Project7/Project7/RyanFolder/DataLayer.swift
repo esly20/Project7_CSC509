@@ -32,7 +32,7 @@ class DataLayer {
     }
     
     init() {
-        userId = defaults.integer(forKey: "userId")
+        userId = defaults.integer(forKey: "user")
         urlStudentInfoString = "https://summer-session-api.herokuapp.com/student/\(userId)/info"
         urlStudentTeamString = "https://summer-session-api.herokuapp.com/student/\(userId)/team"
         urlStudentAnnouncements = "https://summer-session-api.herokuapp.com/announcements"
