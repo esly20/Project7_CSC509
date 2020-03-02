@@ -11,9 +11,9 @@ import Foundation
 class ScheduleCollectionViewController: UICollectionViewController {
     
     //var frame = CGRect.zero
-    var data: DataLayer = DataLayer(userID: 1)
     var scheduleList = [Course]()
-    
+
+
     private let reuseIdentifier = "BlockCell"
     private let itemsPerRow: CGFloat = 1
     let sectionInsets = UIEdgeInsets(top: 10.0,
@@ -26,7 +26,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let urlString = "https://summer-session-api.herokuapp.com/student/1/schedule"
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
