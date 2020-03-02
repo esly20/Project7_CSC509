@@ -31,6 +31,15 @@ class DataLayer {
         urlStudentActivities = "https://summer-session-api.herokuapp.com/student/\(userId)/activities"
     }
     
+    init() {
+        userId = defaults.integer(forKey: "userId")
+        urlStudentInfoString = "https://summer-session-api.herokuapp.com/student/\(userId)/info"
+        urlStudentTeamString = "https://summer-session-api.herokuapp.com/student/\(userId)/team"
+        urlStudentAnnouncements = "https://summer-session-api.herokuapp.com/announcements"
+        urlStudentSchedule = "https://summer-session-api.herokuapp.com/student/\(userId)/schedule"
+        urlStudentActivities = "https://summer-session-api.herokuapp.com/student/\(userId)/activities"
+    }
+    
     // MARK: Method to retrieve Student from server or UserDefaults
     func getStudentInfo() -> Student? {
         let key = "student\(userId)Info"
