@@ -26,21 +26,19 @@ class ActivityTableViewController: UITableViewController {
         if let url = URL(string: urlStringActivity) {
             if let data = try? Data(contentsOf: url) {
                 parseActivities(json: data)
-                return
             } else {
                 print("error getting activty data")
             }
         }
-        if let url = URL(string: urlStringStudentActivity) {
-            if let data = try? Data(contentsOf: url) {
-                parseStudentActivities(json: data)
+        if let url2 = URL(string: urlStringStudentActivity) {
+            if let data2 = try? Data(contentsOf: url2) {
+                parseStudentActivities(json: data2)
                 return
             } else {
                 print("error getting student activity data")
             }
         }
         showError()
-        
     }
 
     func parseActivities(json: Data) {
@@ -49,17 +47,15 @@ class ActivityTableViewController: UITableViewController {
                  activityList
                     = jsonActivities.activities
                  tableView.reloadData()
-                print(type(of: jsonActivities))
-
              } else {
-                 print("error decoding json")
+                 print("error decoding activity json")
              }
              let encoder = JSONEncoder()
              if let activityData = try? encoder.encode(activityList){
                  let defaults = UserDefaults.standard
                  defaults.set(activityData, forKey: "ActivityList")
              }
-             print("successfully loaded activity data")
+             print("successfully loaded  activity data")
          }
    
     func parseStudentActivities(json: Data) {
@@ -69,14 +65,14 @@ class ActivityTableViewController: UITableViewController {
                 = jsonStudentActivities.studentActivities
             tableView.reloadData()
         } else {
-            print("error decoding json")
+            print("error decoding student activity json")
         }
         let encoder = JSONEncoder()
-        if let activityData = try? encoder.encode(activityList){
+        if let studentActivityData = try? encoder.encode(studentActivityList){
             let defaults = UserDefaults.standard
-            defaults.set(activityData, forKey: "ActivityList")
+            defaults.set(studentActivityData, forKey: "StudentActivityList")
         }
-        print("successfully loaded activity data")
+        print("successfully loaded student activity data")
     }
     
      func showError() {
@@ -103,12 +99,23 @@ class ActivityTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! ActivityTableViewCell
-        let activityItem = activityList[indexPath.row]
-        cell.nameLabel.text = activityItem.name
-        cell.locationLabel.text = activityItem.location
-        cell.descriptionLabel.text = activityItem.description
-        cell.timeLabel.text = "\(activityItem.time_start) - \(activityItem.time_end)"
-        return cell
+        if indexPath.section == 0 {
+            let activityItem = activityList[indexPath.row]
+            cell.nameLabel.text = activityItem.name
+            cell.locationLabel.text = activityItem.location
+            cell.descriptionLabel.text = activityItem.description
+            cell.timeLabel.text = "\(activityItem.time_start) - \(activityItem.time_end)"
+            return cell
+        } else if indexPath.section == 1{
+            let studentActivityItem = studentActivityList[indexPath.row]
+            cell.nameLabel.text = studentActivityItem.name
+            cell.locationLabel.text = studentActivityItem.location
+            cell.descriptionLabel.text = studentActivityItem.description
+            cell.timeLabel.text = "\(studentActivityItem.time_start) - \(studentActivityItem.time_end)"
+            return cell
+        } else{
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

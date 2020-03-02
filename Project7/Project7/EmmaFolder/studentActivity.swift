@@ -7,11 +7,12 @@
 //
 
 import Foundation
+
 struct StudentActivity: Codable{
-        var activityid: Int
-        var name: String
-        var time_start: String
-        var time_end: String
-        var description: String
-        var location: String
-    }
+    var activityid: Int
+    var name: String
+    var time_start: String
+    var time_end: String
+    var description: String
+    var location: String
+}
