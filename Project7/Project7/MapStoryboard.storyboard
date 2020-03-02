@@ -82,7 +82,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Additional Info" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DGi-FC-HXn">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Additional Info" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DGi-FC-HXn">
                                 <rect key="frame" x="50" y="163" width="314" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -92,7 +92,7 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Purpose" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YXD-P1-09x">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Purpose" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YXD-P1-09x">
                                 <rect key="frame" x="25" y="233" width="364" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -105,7 +105,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qCc-lp-QjT">
                                 <rect key="frame" x="25" y="303" width="364" height="410"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hours:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0eo-sg-Nqu">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hours:" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0eo-sg-Nqu">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="30"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -118,14 +118,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-uf-uty">
                                         <rect key="frame" x="0.0" y="30" width="364" height="380"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Days of the week" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNm-wd-6Xj">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Days of the week" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNm-wd-6Xj">
                                                 <rect key="frame" x="0.0" y="0.0" width="182" height="380"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hours for each day" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ME-Hp-VQ6">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hours for each day" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4ME-Hp-VQ6">
                                                 <rect key="frame" x="182" y="0.0" width="182" height="380"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
