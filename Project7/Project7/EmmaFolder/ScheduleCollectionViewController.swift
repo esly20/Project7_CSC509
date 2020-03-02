@@ -11,8 +11,9 @@ import Foundation
 class ScheduleCollectionViewController: UICollectionViewController {
     
     //var frame = CGRect.zero
-
-    var schedule = [Course]()
+    var data: DataLayer = DataLayer(userID: 1)
+    var scheduleList = [Course]()
+    
     private let reuseIdentifier = "BlockCell"
     private let itemsPerRow: CGFloat = 1
     let sectionInsets = UIEdgeInsets(top: 10.0,
@@ -51,14 +52,14 @@ class ScheduleCollectionViewController: UICollectionViewController {
     func parse(json: Data) {
         let decoder = JSONDecoder()
             if let jsonSchedule = try? decoder.decode(Schedule.self, from: json) {
-                schedule = jsonSchedule.schedule
+                scheduleList = jsonSchedule.schedule
                 //print(schedule)
                 collectionView.reloadData()
             } else {
                 print("error decoding json")
             }
             let encoder = JSONEncoder()
-            if let courseData = try? encoder.encode(schedule){
+            if let courseData = try? encoder.encode(scheduleList){
                 let defaults = UserDefaults.standard
                 defaults.set(courseData, forKey: "StudentSchedule")
             }
@@ -75,13 +76,13 @@ class ScheduleCollectionViewController: UICollectionViewController {
         return weekDays.count
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return schedule.count
+        return scheduleList.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockCell", for: indexPath) as! ScheduleCollectionViewCell
         //print(indexPath.row, schedule.count)
-        let course = schedule[indexPath.row]
+        let course = scheduleList[indexPath.row]
         cell.nameLabel.textAlignment = .center
         cell.timeStartLabel.textAlignment = .center
         cell.instructorLabel.textAlignment = .center
