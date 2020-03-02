@@ -10,6 +10,8 @@ import UIKit
 import Foundation
 
 class SettingsTableViewController: UITableViewController {
+    var data: DataLayer = DataLayer(userID: 1)
+   
     
     @IBOutlet weak var signInSwitchStatus: UISwitch!
 
@@ -24,6 +26,7 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,6 +34,8 @@ class SettingsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     override func viewWillAppear(_ animated: Bool) {
+        
+        
         //if signInNotifications == true {
             //signInSwitchStatus.isOn = true
         //}else{
@@ -42,25 +47,25 @@ class SettingsTableViewController: UITableViewController {
             //clusterMunchSwitchStatus.isOn = false
      //   }
         
+        
         signInNotifications = defaults.bool(forKey: "signIn")
         clusterMunchNotifications = defaults.bool(forKey: "clusterMunch")
     }
 
     // MARK: - Table view data source
-    func createSignInNotification(){
-        if signInNotifications == true {
+    func createSignInNotification(weekday: Int){
+        
             let signInContent = UNMutableNotificationContent()
             signInContent.title = "Sign-In"
             signInContent.body = "You have 5 minutes to sign-in to your dorm"
             signInContent.sound = UNNotificationSound.default
             
-            let mondaySignInDateComponents = DateComponents(calendar: Calendar.current,  hour: 9 , minute: 25, weekday: 0 )
-            let mondaySignInTrigger =  UNCalendarNotificationTrigger(dateMatching: mondaySignInDateComponents, repeats: false)
+            let signInDateComponents = DateComponents(calendar: Calendar.current,  hour: 9 , minute: 25, weekday: weekday )
+            let signInTrigger =  UNCalendarNotificationTrigger(dateMatching: signInDateComponents, repeats: false)
             
-            let mondayRequest = UNNotificationRequest(identifier: "mondayIdentifier", content: signInContent, trigger: mondaySignInTrigger)
-            
-            UNUserNotificationCenter.current().add(mondayRequest, withCompletionHandler: nil)
-        }
+            let signInRequest = UNNotificationRequest(identifier: "mondayIdentifier", content: signInContent, trigger: signInTrigger)
+            UNUserNotificationCenter.current().add(signInRequest, withCompletionHandler: nil)
+        
     }
     
     @IBAction func signInSwitchUsed(_ sender: Any) {

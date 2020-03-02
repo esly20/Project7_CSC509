@@ -48,16 +48,16 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhe-R4-V3g">
-                                            <rect key="frame" x="313" y="90" width="77" height="21"/>
+                                            <rect key="frame" x="275" y="90" width="115" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="77" id="8aZ-oj-MuX"/>
+                                                <constraint firstAttribute="width" constant="115" id="8aZ-oj-MuX"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uw3-Gj-flJ">
-                                            <rect key="frame" x="20" y="90" width="324" height="15"/>
+                                            <rect key="frame" x="20" y="90" width="219" height="15"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -74,7 +74,7 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="jhe-R4-V3g" firstAttribute="leading" secondItem="uw3-Gj-flJ" secondAttribute="trailing" constant="-31" id="0KP-BC-yIj"/>
+                                        <constraint firstItem="jhe-R4-V3g" firstAttribute="leading" secondItem="uw3-Gj-flJ" secondAttribute="trailing" constant="36" id="0KP-BC-yIj"/>
                                         <constraint firstItem="4qY-eD-gX6" firstAttribute="leading" secondItem="Rmi-8m-koA" secondAttribute="leadingMargin" id="4yo-Qq-oFb"/>
                                         <constraint firstItem="gBl-3O-nzP" firstAttribute="trailing" secondItem="yES-5e-Twx" secondAttribute="trailing" id="6Rr-WR-yxH"/>
                                         <constraint firstItem="P2k-1A-X82" firstAttribute="top" secondItem="Rmi-8m-koA" secondAttribute="top" id="Csr-EZ-e3f"/>
@@ -83,7 +83,7 @@
                                         <constraint firstItem="gBl-3O-nzP" firstAttribute="top" secondItem="4qY-eD-gX6" secondAttribute="bottom" constant="8" symbolic="YES" id="Pc5-N2-4WQ"/>
                                         <constraint firstItem="gBl-3O-nzP" firstAttribute="leading" secondItem="yES-5e-Twx" secondAttribute="leading" id="RAk-Z2-ZJX"/>
                                         <constraint firstItem="uw3-Gj-flJ" firstAttribute="top" secondItem="yES-5e-Twx" secondAttribute="bottom" constant="8" symbolic="YES" id="Tsf-CZ-mhW"/>
-                                        <constraint firstItem="jhe-R4-V3g" firstAttribute="leading" secondItem="P2k-1A-X82" secondAttribute="trailing" constant="46" id="Xol-g4-pwI"/>
+                                        <constraint firstItem="jhe-R4-V3g" firstAttribute="leading" secondItem="P2k-1A-X82" secondAttribute="trailing" constant="8" id="Xol-g4-pwI"/>
                                         <constraint firstItem="4qY-eD-gX6" firstAttribute="leading" secondItem="gBl-3O-nzP" secondAttribute="leading" id="cQR-oF-Fuz"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="jhe-R4-V3g" secondAttribute="bottom" constant="-5" id="jEH-vo-te6"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="jhe-R4-V3g" secondAttribute="trailing" constant="4" id="k34-Py-4r8"/>
@@ -155,16 +155,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1AH-nW-JK7">
                                 <rect key="frame" x="0.0" y="52" width="414" height="722"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0W-dY-MWS">
-                                        <rect key="frame" x="20" y="8" width="55" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0W-dY-MWS">
+                                        <rect key="frame" x="20" y="8" width="272" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je3-5e-RQo">
-                                        <rect key="frame" x="334" y="8" width="60" height="21"/>
+                                        <rect key="frame" x="300" y="8" width="94" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="pzG-U1-eum"/>
+                                            <constraint firstAttribute="width" constant="94" id="pzG-U1-eum"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
