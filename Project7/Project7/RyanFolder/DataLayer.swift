@@ -30,11 +30,10 @@ class DataLayer {
     
     // MARK: Method to retrieve Student from server or UserDefaults
     func getStudentInfo() -> Student? {
-        let key = "studentInfo"
-        //If Student already exists in UserDefaults, retrieve from UserDefaults
+        let key = "student\(userId)Info"
         if(checkUserDefaults(key: key)) {
             return decodeData(key: key, type: Student.self)
-        } else { //Information does not exist in UserDefaults
+        } else {
             //Get the information from the server
             return parse(specificURL: urlStudentInfoString, key: key, type: Student.self)
         }
@@ -42,7 +41,7 @@ class DataLayer {
     
     // MARK: Method to retrieve Team from server or UserDefaults
     func getStudentTeam() -> Team? {
-        let key = "studentTeam"
+        let key = "student\(userId)Team"
         if(checkUserDefaults(key: key)) {
             return decodeData(key: key, type: Team.self)
         } else {
@@ -72,7 +71,7 @@ class DataLayer {
         guard let url = URL(string: specificURL) else { return nil }
         guard let data = try? Data(contentsOf: url) else { return nil }
         guard let json = try? decoder.decode(type, from: data)  else { return nil }
-        print("Data from server successful")
+        //print("Data from server successful")
         
         defaults.set(data, forKey: key)
         return json
@@ -82,14 +81,13 @@ class DataLayer {
     func decodeData<T: Decodable>(key: String, type: T.Type) -> T? {
         guard let encodedData = defaults.object(forKey: key) as? Data else { return nil }
         guard let decodedData = try? decoder.decode(type, from: encodedData) else { return nil }
-        print("Data from UD successful")
+        //print("Data from UD successful")
         
         return decodedData
     }
 
     // MARK: Method that checks whether the Student struct already exists in UserDefaults
     func checkUserDefaults(key: String) -> Bool {
-        //Checking if the data exists in UserDefaults
         if let _ = defaults.object(forKey: key) as? Data {
             return true
         }
