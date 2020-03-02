@@ -13,7 +13,7 @@ class AnnouncementsTableViewController: UITableViewController {
     
     // Variable Declarations
     let defaults = UserDefaults.standard
-    var data: DataLayer = DataLayer(userID: 1)
+    var data: DataLayer = DataLayer()
     let abbotBlue: UIColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
     var announcementsList: [Announcement] = []
     

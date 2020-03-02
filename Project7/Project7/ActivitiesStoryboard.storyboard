@@ -81,6 +81,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="0.40000000000000002" green="0.67843137249999996" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpPressed:" destination="PdE-2N-lxg" eventType="touchUpInside" id="1UK-xK-uZX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -114,7 +117,7 @@
         <!--Activities-->
         <scene sceneID="UiV-MF-cvw">
             <objects>
-                <tableViewController id="EGG-tj-ED0" customClass="ActivityTableViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ActivitySB" id="EGG-tj-ED0" customClass="ActivityTableViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EzQ-dm-95P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
