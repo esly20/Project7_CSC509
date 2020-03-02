@@ -89,7 +89,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Button set up
+        //Button design set up
         studentTeamButton.backgroundColor = abbotBlue
         studentTeamButton.layer.cornerRadius = 20
         
