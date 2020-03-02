@@ -17,8 +17,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationItem!
     
     let dorms: [String] = ["Day Hall", "Paul Revere Hall", "Allen House",  "Bartlet Hall", "Foxcroft Hall", "Smith House", "Burtt House", "Newman House", "Stuart Hall", "Fuess Hall", "Nathan Hale House", "Stimson House", "Stevens House", "Adams Hall", "Johnson Hall", "Blanchard House", "Taylor Hall", "Thompson House", "Jewett-Tucker House", "Bishop Hall", "Rockwell Hall", "Pemberton Cottage",  "Pease House", "Isham Dormitory", "Bancroft Hall", "Eaton Cottage", "Andover Cottage", "Williams Hall Carriage House", "French House", "Stowe House", "America House", "Alumni House", "Bertha Bailey House", "Flagg House", "Morton House", "Double Brick House", "Samaritan House",  "Stearns House", "Whitney House", "Carter House", "Clement House", "Draper Cottage"]
-    let buildings: [String] = ["Oliver Wendell Holmes Library", "Morse Hall", "Gelb Science Center", "Sykes Wellness Center", "Bullfinch", "Borden and Memorial Gym", "Shuman Admissions Center", "Smith Center", "Case Memorial Cage", "Snyder Center", "Ice Rink", "Samuel Phillips Hall", "George Washington Hall", "Elson Art Center", "Addison Gallery of American Art", "Cochran Chapel", "Graves Hall", "Pearson Hall", "Robert S. Peabody Institute of Archaeology"]
-    let otherPOI: [String] = ["Phelps Park", "Tennis Courts", "Sorota Track Complex", "Phelps Stadium", "Siberia", "Graves Field", "Moncrief M. Cochran Sanctuary", "Ice Rink"]
+    let buildings: [String] = ["Oliver Wendell Holmes Library", "Morse Hall", "Gelb Science Center", "Sykes Wellness Center", "Bullfinch", "Borden and Memorial Gym", "Shuman Admissions Center", "Smith Center", "Case Memorial Cage", "Snyder Center", "Ice Rink", "Samuel Phillips Hall", "George Washington Hall", "Elson Art Center", "Addison Gallery of American Art", "Cochran Chapel", "Graves Hall", "Pearson Hall", "Robert S. Peabody Institute of Archaeology", "Ice Rink"]
+    let otherPOI: [String] = ["Phelps Park", "Tennis Courts", "Sorota Track Complex", "Phelps Stadium", "Siberia", "Graves Field", "Moncrief M. Cochran Sanctuary"]
     
     @IBOutlet weak var headerText: UITextView!
     @IBOutlet weak var purpose: UITextView!
@@ -265,6 +265,18 @@ class DetailViewController: UIViewController {
                 """
             case 18:
                 purpose.text = "Purpose: Archaeology Museum"
+                hours.text =
+                """
+                9-5
+                9-5
+                9-5
+                9-5
+                9-5
+                9-5
+                9-5
+                """
+            case 19:
+                purpose.text = "Purpose: Ice Rink"
                 hours.text =
                 """
                 9-5

@@ -26,7 +26,6 @@ class AnnouncementsTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         let announcementsData: [Announcement] = data.getAnnouncements()!.announcements
         announcementsList = announcementsData
-        print(announcementsList[0].title)
     }
     
     private func declare() -> [Announcement] {
