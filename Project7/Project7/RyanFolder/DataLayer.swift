@@ -56,7 +56,7 @@ class DataLayer {
     
     // MARK: Method to get student schedule
     func getSchedule() -> Schedule? {
-        let key = "studentSchedule"
+        let key = "student\(userId)Schedule"
         if(checkUserDefaults(key: key)) {
             return decodeData(key: key, type: Schedule.self)
         } else {
