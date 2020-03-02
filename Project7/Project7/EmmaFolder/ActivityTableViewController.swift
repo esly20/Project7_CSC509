@@ -33,6 +33,7 @@ class ActivityTableViewController: UITableViewController {
         if let url2 = URL(string: urlStringStudentActivity) {
             if let data2 = try? Data(contentsOf: url2) {
                 parseStudentActivities(json: data2)
+               print("succeccfully getting student activity data")
                 return
             } else {
                 print("error getting student activity data")
@@ -42,21 +43,21 @@ class ActivityTableViewController: UITableViewController {
     }
 
     func parseActivities(json: Data) {
-         let decoder = JSONDecoder()
-             if let jsonActivities = try? decoder.decode(Activities.self, from: json) {
-                 activityList
-                    = jsonActivities.activities
-                 tableView.reloadData()
-             } else {
-                 print("error decoding activity json")
-             }
-             let encoder = JSONEncoder()
-             if let activityData = try? encoder.encode(activityList){
-                 let defaults = UserDefaults.standard
-                 defaults.set(activityData, forKey: "ActivityList")
-             }
-             print("successfully loaded  activity data")
-         }
+        let decoder = JSONDecoder()
+        if let jsonActivities = try? decoder.decode(Activities.self, from: json) {
+            activityList
+                = jsonActivities.activities
+            tableView.reloadData()
+            print("successfully loaded  activity data")
+        } else {
+            print("error decoding activity json")
+        }
+        let encoder = JSONEncoder()
+        if let activityData = try? encoder.encode(activityList){
+            let defaults = UserDefaults.standard
+            defaults.set(activityData, forKey: "ActivityList")
+        }
+    }
    
     func parseStudentActivities(json: Data) {
         let decoder = JSONDecoder()
@@ -64,6 +65,8 @@ class ActivityTableViewController: UITableViewController {
             studentActivityList
                 = jsonStudentActivities.studentActivities
             tableView.reloadData()
+            print("successfully loaded student activity data")
+
         } else {
             print("error decoding student activity json")
         }
@@ -72,7 +75,6 @@ class ActivityTableViewController: UITableViewController {
             let defaults = UserDefaults.standard
             defaults.set(studentActivityData, forKey: "StudentActivityList")
         }
-        print("successfully loaded student activity data")
     }
     
      func showError() {
