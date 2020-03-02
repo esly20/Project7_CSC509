@@ -136,10 +136,18 @@ class ActivityTableViewController: UITableViewController {
        let selectedVC = storyboard.instantiateViewController(identifier: "SelectedActivityVC") as! DetailedActivityViewController
       
     let slcActivity: [String] = ["\(activityList[indexPath.row].name)", "\(activityList[indexPath.row].time_start)", "\(activityList[indexPath.row].time_end)", "\(activityList[indexPath.row].description)", "\(activityList[indexPath.row].location)"]
-       
        defaults.set(slcActivity, forKey: "slcActivity" )
-       navigationController?.pushViewController(selectedVC, animated: true)
+      
+    navigationController?.pushViewController(selectedVC, animated: true)
    }
+    
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                studentActivityList.remove(at: indexPath.row)
+                defaults.set(studentActivityList, forKey: "StudentActivityList")
+                tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

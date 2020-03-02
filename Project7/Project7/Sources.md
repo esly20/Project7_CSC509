@@ -13,3 +13,4 @@
 *__Note__*: Followed much of the tutorial, but made signifigant edits to the project goal
 3. [User Defaults in the Schedule View](https://www.hackingwithswift.com/example-code/system/how-to-load-and-save-a-struct-in-userdefaults-using-codable)
 4. [Table View Format](https://stackoverflow.com/questions/37272040/swift-how-to-center-cell-text)
+5. [Dissmissing from an Alert](https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/)
