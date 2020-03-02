@@ -77,7 +77,7 @@ class DataLayer {
         return parse(specificURL: urlActivities, key: "activities", type: Activities.self)
     }
     
-    // MARK: - More helpful functions
+    // MARK: - Functions for parsing and decoding data below
     
     // MARK: Method parses data from URL
     func parse<T: Decodable>(specificURL: String, key: String, type: T.Type) -> T? {

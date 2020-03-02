@@ -39,6 +39,8 @@
 		563C2C36240756E4003A496E /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563C2C35240756E4003A496E /* Team.swift */; };
 		563C2C372407588A003A496E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56621705240061640011369E /* ProfileViewController.swift */; };
 		563C2C38240776FA003A496E /* (null) in Sources */ = {isa = PBXBuildFile; };
+		56C610AB240CCCC6008F83F1 /* StudentTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C610AA240CCCC6008F83F1 /* StudentTeamTableViewController.swift */; };
+		56C610AD240CD30C008F83F1 /* StudentTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C610AC240CD30C008F83F1 /* StudentTeamTableViewCell.swift */; };
 		56E093BB24099DDB00951300 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E093BA24099DDA00951300 /* Announcement.swift */; };
 		56E093BD24099E5000951300 /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E093BC24099E5000951300 /* Announcements.swift */; };
 		6012E94724098DD30083BF97 /* CodeForOthers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94624098DD30083BF97 /* CodeForOthers.swift */; };
@@ -85,6 +87,8 @@
 		563C2C332407565C003A496E /* DataLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayer.swift; sourceTree = "<group>"; };
 		563C2C35240756E4003A496E /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Project7/RyanFolder/Team.swift; sourceTree = SOURCE_ROOT; };
 		56621705240061640011369E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Project7/RyanFolder/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		56C610AA240CCCC6008F83F1 /* StudentTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTeamTableViewController.swift; sourceTree = "<group>"; };
+		56C610AC240CD30C008F83F1 /* StudentTeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTeamTableViewCell.swift; sourceTree = "<group>"; };
 		56E093BA24099DDA00951300 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		56E093BC24099E5000951300 /* Announcements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcements.swift; sourceTree = "<group>"; };
 		6012E94624098DD30083BF97 /* CodeForOthers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeForOthers.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 		566217072400616D0011369E /* RyanFolder */ = {
 			isa = PBXGroup;
 			children = (
+				56C610AA240CCCC6008F83F1 /* StudentTeamTableViewController.swift */,
+				56C610AC240CD30C008F83F1 /* StudentTeamTableViewCell.swift */,
 				563C2C35240756E4003A496E /* Team.swift */,
 				563C2C332407565C003A496E /* DataLayer.swift */,
 				56E093BA24099DDA00951300 /* Announcement.swift */,
@@ -302,8 +308,10 @@
 				3F9EFC1E2409A26C00C2F99C /* course.swift in Sources */,
 				13F5374C24004A4F0087447C /* AnnouncementsTableViewCell.swift in Sources */,
 				3F50153B240AFA6100D8DAB1 /* ActivityTableViewCell.swift in Sources */,
+				56C610AB240CCCC6008F83F1 /* StudentTeamTableViewController.swift in Sources */,
 				1FB87E2624006C9A007BC76F /* InfoViewController.swift in Sources */,
 				3F49E09D2400605400903EC1 /* ScheduleCollectionViewController.swift in Sources */,
+				56C610AD240CD30C008F83F1 /* StudentTeamTableViewCell.swift in Sources */,
 				13F5374A24004A3D0087447C /* AnnouncementsTableViewController.swift in Sources */,
 				3F501535240AF64A00D8DAB1 /* activity.swift in Sources */,
 				3FDDFF02240618AF00A462F1 /* ScheduleCollectionViewCell.swift in Sources */,
