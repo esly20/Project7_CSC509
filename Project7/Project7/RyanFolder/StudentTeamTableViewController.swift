@@ -13,7 +13,7 @@ class StudentTeamTableViewController: UITableViewController {
     @IBOutlet weak var navigationTitle: UINavigationItem!
     
     //Setup
-    var data = DataLayer(userID: 1)
+    var data = DataLayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
