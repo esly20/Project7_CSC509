@@ -12,16 +12,20 @@ class ActivityTableViewController: UITableViewController {
     let defaults = UserDefaults.standard
     var activityList = [Activity]()
     var studentActivityList = [StudentActivity]()
-
+    var userid: Int = 0
     let abbotBlue: UIColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = abbotBlue
-
+        
+        if let user =
+            defaults.array(forKey: "user") as? [Int] {
+            userid = user[0]
+        }
+        
         let urlStringActivity = "https://summer-session-api.herokuapp.com/activities"
-       // where is the studnet ID?
-        let urlStringStudentActivity = "https://summer-session-api.herokuapp.com/student/1/activities"
+        let urlStringStudentActivity = "https://summer-session-api.herokuapp.com/student/\(userid)/activities"
         
         if let url = URL(string: urlStringActivity) {
             if let data = try? Data(contentsOf: url) {
