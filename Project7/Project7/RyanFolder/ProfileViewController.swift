@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController {
         contactInfoLabel.textColor = abbotBlue
         coursesActivitiesLabel.textColor = abbotBlue
         
-        fullNameLabel.text =  "\(mainStudent.firstname) \(mainStudent.lastname)"
+        fullNameLabel.text =  "Hi, \(mainStudent.firstname) \(mainStudent.lastname)"
         programLabel.text = mainStudent.program
         if mainStudent.boarder == true {
             clusterDormLabel.text = "\(mainStudent.cluster) • \(mainStudent.dorm)"
