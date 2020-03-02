@@ -36,7 +36,7 @@ class ProfileViewController: UIViewController {
         fullNameLabel.text =  "Hi, \(mainStudent.firstname) \(mainStudent.lastname)"
         programLabel.text = mainStudent.program
         if mainStudent.boarder == true {
-            clusterDormLabel.text = "\(mainStudent.cluster) • \(mainStudent.dorm)"
+            clusterDormLabel.text = "\(mainStudent.cluster) • \(mainStudent.dorm) House"
         } else {
             clusterDormLabel.text = "\(mainStudent.cluster) • Day Student"
         }

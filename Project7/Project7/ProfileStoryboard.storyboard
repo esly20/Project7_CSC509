@@ -132,6 +132,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="Pqj-2k-gJv"/>
                     <navigationItem key="navigationItem" id="bGs-Zz-gH6">
+                        <barButtonItem key="leftBarButtonItem" image="info.circle" catalog="system" id="dQ7-lF-II4">
+                            <connections>
+                                <segue destination="0xi-ZQ-JHF" kind="show" id="Upg-H5-PoT"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="gear" catalog="system" id="bBs-Y1-a7Q">
                             <connections>
                                 <segue destination="PuO-lP-oMp" kind="show" id="MEz-ZQ-m8X"/>
@@ -168,22 +173,86 @@
             </objects>
             <point key="canvasLocation" x="1654" y="-213"/>
         </scene>
-        <!--Table View Controller-->
+        <!--InfoViewController-->
+        <scene sceneID="Riq-U5-Ehv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoStoryboard" referencedIdentifier="InfoViewController" id="0xi-ZQ-JHF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hQe-K0-IEl"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AfC-hi-IUp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="-158"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="H9M-tt-cSq">
             <objects>
-                <tableViewController id="czM-y7-nfe" sceneMemberID="viewController">
+                <tableViewController id="czM-y7-nfe" customClass="StudentTeamTableViewController" customModule="Project7" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lZy-C8-vSh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NFJ-l7-MRR">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentTeamReuseIdentifier" rowHeight="145" id="NFJ-l7-MRR" customClass="StudentTeamTableViewCell" customModule="Project7" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NFJ-l7-MRR" id="IXS-PN-XDT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfR-4l-qsc">
+                                            <rect key="frame" x="6" y="-1" width="313" height="145"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9l-bp-knX">
+                                                    <rect key="frame" x="28" y="28" width="93" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1C-XN-h4N">
+                                                    <rect key="frame" x="28" y="80.5" width="41" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Z1-R5-VVW">
+                                                    <rect key="frame" x="28" y="109.5" width="49" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dorm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnF-oR-AGK">
+                                                    <rect key="frame" x="28" y="55" width="46" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tnF-oR-AGK" firstAttribute="top" secondItem="t9l-bp-knX" secondAttribute="bottom" constant="3" id="1lp-He-uyb"/>
+                                                <constraint firstItem="o1C-XN-h4N" firstAttribute="leading" secondItem="tnF-oR-AGK" secondAttribute="leading" id="25S-Oy-Uon"/>
+                                                <constraint firstItem="o1C-XN-h4N" firstAttribute="top" secondItem="tnF-oR-AGK" secondAttribute="bottom" constant="4" id="8rU-Pw-zbb"/>
+                                                <constraint firstItem="t9l-bp-knX" firstAttribute="top" secondItem="HfR-4l-qsc" secondAttribute="topMargin" constant="20" id="9Yl-rB-yL1"/>
+                                                <constraint firstItem="o1C-XN-h4N" firstAttribute="leading" secondItem="1Z1-R5-VVW" secondAttribute="leading" id="LfW-4y-1m3"/>
+                                                <constraint firstAttribute="height" constant="145" id="Spn-dK-kSU"/>
+                                                <constraint firstItem="1Z1-R5-VVW" firstAttribute="top" secondItem="o1C-XN-h4N" secondAttribute="bottom" constant="8" id="aEN-lJ-qpD"/>
+                                                <constraint firstItem="t9l-bp-knX" firstAttribute="leading" secondItem="HfR-4l-qsc" secondAttribute="leadingMargin" constant="20" id="dDv-zg-Uoi"/>
+                                                <constraint firstItem="o1C-XN-h4N" firstAttribute="leading" secondItem="t9l-bp-knX" secondAttribute="leading" id="yUH-2R-qmg"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="HfR-4l-qsc" secondAttribute="bottom" constant="-10" id="HkF-Lw-Jxq"/>
+                                        <constraint firstItem="HfR-4l-qsc" firstAttribute="top" secondItem="IXS-PN-XDT" secondAttribute="topMargin" constant="-12" id="KGE-aP-PO4"/>
+                                        <constraint firstItem="HfR-4l-qsc" firstAttribute="leading" secondItem="IXS-PN-XDT" secondAttribute="leadingMargin" constant="-14" id="mIV-sb-YNp"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="HfR-4l-qsc" secondAttribute="trailing" constant="75" id="zDQ-18-fvv"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dormLabel" destination="tnF-oR-AGK" id="dwy-T4-2KX"/>
+                                    <outlet property="emailLabel" destination="o1C-XN-h4N" id="ObZ-xc-3VA"/>
+                                    <outlet property="fullNameLabel" destination="t9l-bp-knX" id="OsT-HW-fTF"/>
+                                    <outlet property="phoneLabel" destination="1Z1-R5-VVW" id="ORI-Yf-6ao"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -191,11 +260,14 @@
                             <outlet property="delegate" destination="czM-y7-nfe" id="vS4-72-t3T"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="zzo-gw-Ll8"/>
+                    <navigationItem key="navigationItem" title="Title" id="HMi-PJ-7ei"/>
+                    <connections>
+                        <outlet property="navigationTitle" destination="HMi-PJ-7ei" id="GIf-nz-4w0"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RiM-2b-cHV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2341" y="84"/>
+            <point key="canvasLocation" x="2339.130434782609" y="83.705357142857139"/>
         </scene>
         <!--Profile-->
         <scene sceneID="1WA-K3-Sad">
@@ -219,6 +291,7 @@
     </scenes>
     <resources>
         <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="info.circle" catalog="system" width="64" height="60"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>

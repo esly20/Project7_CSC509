@@ -18,10 +18,9 @@ class SelectedAnnouncementViewController: UIViewController {
     @IBOutlet weak var slcGroupLabel: UILabel!
     @IBOutlet weak var slcTimeLabel: UILabel!
     
-    //Defaults Variables
+    // Variable Instantiation
     let defaults = UserDefaults.standard
     var announcement: [String] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +28,11 @@ class SelectedAnnouncementViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        // Defaults grab
         if let slcAnnouncement = defaults.array(forKey: "slcAnnouncement") as? [String] {
             announcement = slcAnnouncement
         }
+        // Label population
         slcTitleLabel?.text = announcement[0]
         slcSenderLabel?.text = announcement[1]
         slcBodyLabel?.text = announcement[2]
