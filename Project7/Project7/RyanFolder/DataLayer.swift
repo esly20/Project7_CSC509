@@ -13,7 +13,7 @@ class DataLayer {
     let defaults = UserDefaults.standard
     let decoder = JSONDecoder()
     let encoder = JSONEncoder()
-    let userId: Int
+    var userId: Int
     let urlStudentInfoString: String
     let urlStudentTeamString: String
     let urlStudentAnnouncements: String
@@ -38,6 +38,10 @@ class DataLayer {
         urlStudentAnnouncements = "https://summer-session-api.herokuapp.com/announcements"
         urlStudentSchedule = "https://summer-session-api.herokuapp.com/student/\(userId)/schedule"
         urlStudentActivities = "https://summer-session-api.herokuapp.com/student/\(userId)/activities"
+    }
+    
+    func updateUserId(newUserId: Int) {
+        self.userId = newUserId
     }
     
     // MARK: Method to retrieve Student from server or UserDefaults
