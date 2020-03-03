@@ -26,12 +26,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var courseFiveLabel: UILabel!
     @IBOutlet weak var studentTeamButton: UIButton!
     
-    
+    // Poplates unique text
     func loadText(mainStudent: Student, mainStudentSchedule: Schedule) {
         fullNameLabel.textColor = abbotBlue
         contactInfoLabel.textColor = abbotBlue
         coursesActivitiesLabel.textColor = abbotBlue
-        
         fullNameLabel.text =  "Hi, \(mainStudent.firstname) \(mainStudent.lastname)"
         programLabel.text = mainStudent.program
         if mainStudent.boarder == true {

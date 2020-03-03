@@ -11,8 +11,10 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
 
+    // Outlets
     @IBOutlet weak var mapView: MKMapView!
     
+    // Variable Declarations
     let defaults = UserDefaults.standard
     let dorms: [String] = ["Day Hall", "Paul Revere Hall",  "Bartlet Hall", "Foxcroft Hall", "Smith House", "Burtt House", "Newman House", "Stuart Hall", "Fuess Hall", "Nathan Hale House", "Stimson House", "Stevens House", "Adams Hall", "Taylor Hall", "Johnson Hall", "Thompson House", "Jewett-Tucker House", "Blanchard House", "Bishop Hall", "Rockwell Hall", "Isham Dormitory", "Bancroft Hall", "Pemberton Cottage", "Eaton Cottage", "Andover Cottage", "Pease House", "Williams Hall Carriage House", "Double Brick House", "Samaritan House",  "Stearns House", "Stowe House", "French House", "Whitney House", "Carter House", "Clement House", "Draper Cottage", "America House", "Alumni House", "Bertha Bailey House", "Flagg House", "Morton House", "Allen House"]
     let buildings: [String] = ["Oliver Wendell Holmes Library", "Morse Hall", "Gelb Science Center", "Sykes Wellness Center", "Bullfinch", "Borden and Memorial Gym", "Shuman Admissions Center", "Smith Center", "Case Memorial Cage", "Snyder Center", "Ice Rink", "Samuel Phillips Hall", "George Washington Hall", "Elson Art Center", "Addison Gallery of American Art", "Cochran Chapel", "Graves Hall", "Pearson Hall", "Robert S. Peabody Institute of Archaeology"]
@@ -29,7 +31,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // setting up the map view
+        // Setting up the map view
         mapView.delegate = self // needed for pop-up window
         mapView.showsUserLocation = true
         mapView.showsCompass = true
@@ -282,7 +284,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
        locationManager.startUpdatingLocation()
     }
     
-    // takes current location or last known current location and centers the mapView there
+    // Takes current location or last known current location and centers the mapView there
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
        let location = locations.last! as CLLocation
        let currentLocation = location.coordinate
@@ -297,11 +299,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
 }
 
-// copied from https://www.raywenderlich.com/548-mapkit-tutorial-getting-started#toc-anchor-011
-// necessary for the pop up view when you click on the marker
+// Copied from https://www.raywenderlich.com/548-mapkit-tutorial-getting-started#toc-anchor-011
+// Necessary for the pop up view when you click on the marker
 extension MapViewController: MKMapViewDelegate {
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    // if the annotation on the map is not a location marker of the type "Marker" this function will not do anything
+    // If the annotation on the map is not a location marker of the type "Marker" this function will not do anything
     // I left this in case I later want to have different types of markers for different types of buildings but it is not necessary right now since I only have one type of marker
     guard let annotation = annotation as? Marker else { return nil }
     let identifier = "marker"
@@ -320,7 +322,7 @@ extension MapViewController: MKMapViewDelegate {
     return view
   }
     
-    // if the "i" on the pop up is clicked, this will take you to the maps app and give you directions to that location
+    // If the "i" on the pop up is clicked, this will take you to the maps app and give you directions to that location
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView,
         calloutAccessoryControlTapped control: UIControl) {
       let location = view.annotation as! Marker

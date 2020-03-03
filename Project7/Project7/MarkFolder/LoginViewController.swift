@@ -10,17 +10,19 @@ import UIKit
 import Foundation
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    // Variable declarations
     let defaults = UserDefaults.standard
     var studentId:Int = Int()
     var isLoggedIn:Bool = Bool()
+    var studentList = [Student]()
+    var firstnames = [String]()
+    var lastnames = [String]()
+    
+    // Outlets
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
-    var studentList = [Student]()
-    var firstnames = [String]()
-    var lastnames = [String]()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         
+        // API parsing
         let urlString = "https://summer-session-api.herokuapp.com/students"
             if let url = URL(string: urlString) {
               if let data = try? Data(contentsOf: url) {
@@ -36,23 +39,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 print("error getting data")
               }
             }
-        for student in studentList{
+        
+        for student in studentList {
             firstnames.append(student.firstname)
             lastnames.append(student.lastname)
             print(studentList.count)
         }
-
+        
+        // Defaults
         studentId = defaults.integer(forKey: "user")
         isLoggedIn = defaults.bool(forKey: "loggedIn")
         if isLoggedIn == true{
             performSegue(withIdentifier: "login", sender: nil)
         }
-    loginButton.layer.cornerRadius = 20
+        // Styling
+        loginButton.layer.cornerRadius = 20
         registerForKeyboardNotifications()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         let urlString = "https://summer-session-api.herokuapp.com/students"
                 if let url = URL(string: urlString) {
                   if let data = try? Data(contentsOf: url) {
@@ -61,21 +66,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     print("error getting data")
                   }
                 }
-            for student in studentList{
-                firstnames.append(student.firstname)
-                lastnames.append(student.lastname)
-                print(studentList.count)
+        for student in studentList{
+            firstnames.append(student.firstname)
+            lastnames.append(student.lastname)
+            /// print(studentList.count)
             }
-
-            studentId = defaults.integer(forKey: "user")
-            isLoggedIn = defaults.bool(forKey: "loggedIn")
-            if isLoggedIn == true{
-                performSegue(withIdentifier: "login", sender: nil)
-            }
+        
+        // Defaults
+        studentId = defaults.integer(forKey: "user")
+        isLoggedIn = defaults.bool(forKey: "loggedIn")
+        if isLoggedIn == true{
+            performSegue(withIdentifier: "login", sender: nil)
+        }
+        
+        // Styling
         loginButton.layer.cornerRadius = 20
-            registerForKeyboardNotifications()
+        
+        // Keyboard handling
+        registerForKeyboardNotifications()
     }
     
+    // Log in
     @IBAction func loginPressed(_ sender: Any) {
         let firstname = firstNameTextField.text
         let lastname = lastNameTextField.text
@@ -85,6 +96,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         DoLogin(firstname!, lastname!)
     }
+    
+    // Login set up
     func DoLogin(_ first:String,_ last:String){
         if let i: Int = firstnames.firstIndex(of: first)  {
             let lastname = lastnames[i]
@@ -100,20 +113,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             LoginError()
         }
     }
+    
+    // Login error handling
     func LoginError(){
         let invalidLoginAlert = UIAlertController(title: "Login Failed", message:
             "invalid first name or last name", preferredStyle: .alert)
         invalidLoginAlert.addAction(UIAlertAction(title: "Ok", style: .default))
-        
         self.present(invalidLoginAlert, animated: true, completion: nil)
     }
     
-    
+    // Parsing
     func parseStudents(json: Data) {
     let decoder = JSONDecoder()
     if let jsonStudents = try? decoder.decode(Students.self, from: json) {
         studentList = jsonStudents.students
-        
         print("successfully loaded student name data")
         } else {
             print("error decoding student name json")
@@ -125,6 +138,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       return false
     }
      
+    // Keyboard handling
     func registerForKeyboardNotifications() {
       NotificationCenter.default.addObserver(self,
                           selector: #selector(keyboardWasShown(_:)),
@@ -139,7 +153,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                           name: UIResponder.keyboardWillChangeFrameNotification,
                           object: nil)
     }
-     
+    
     @objc func keyboardWasShown(_ notificiation: NSNotification) {
       guard let info = notificiation.userInfo,
         let keyboardFrameValue =

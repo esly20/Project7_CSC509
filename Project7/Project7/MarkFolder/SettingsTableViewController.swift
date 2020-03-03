@@ -10,12 +10,8 @@ import UIKit
 import Foundation
 
 class SettingsTableViewController: UITableViewController {
+    // Variable declaration
     var userId: Int = Int()
-    
-    
-    @IBOutlet weak var signInSwitchStatus: UISwitch!
-
-    @IBOutlet weak var clusterMunchSwitchStatus: UISwitch!
     var signInNotifications: Bool = true
     var clusterMunchNotifications: Bool = true
     let defaults = UserDefaults.standard
@@ -23,14 +19,21 @@ class SettingsTableViewController: UITableViewController {
     let finalMessage = "You have 5 minutes until final sign-in"
     let signin = "Sign-In"
     let munch = "Cluster Munch!"
-
     
+    // Outlets
+    @IBOutlet weak var signInSwitchStatus: UISwitch!
+    @IBOutlet weak var clusterMunchSwitchStatus: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Color Styling
         self.tableView.backgroundColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
     }
+    
     override func viewDidAppear(_ animated: Bool) {
+        
+        // Settings setup
         signInNotifications = defaults.bool(forKey: "signIn")
         clusterMunchNotifications = defaults.bool(forKey: "clusterMunch")
         
@@ -49,6 +52,7 @@ class SettingsTableViewController: UITableViewController {
         let data = DataLayer(userID: userId)
         let student = data.getStudentInfo()
         
+        // Notifications
         if student!.boarder == true{
             if signInNotifications == true{
                 if (student!.program == "Upper School") || (student!.program == "ELL") || (student!.program == "MS^2"){
@@ -69,27 +73,22 @@ class SettingsTableViewController: UITableViewController {
             createNotification(weekday: 4, hour:20, min: 40, title: munch, message: "\(student!.cluster) cluster munch in 5 minutes")
         }
     }
-        
-        
-        
     
-
     // MARK: - Table view data source
+    
+    // Notification Creation
     func createNotification(weekday: Int, hour: Int, min: Int, title: String, message: String){
-        
-            let content = UNMutableNotificationContent()
+        let content = UNMutableNotificationContent()
             content.title = title
         content.body = message
             content.sound = UNNotificationSound.default
-            
-            let dateComponents = DateComponents(calendar: Calendar.current,  hour: hour , minute: min, weekday: weekday )
-            let trigger =  UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-            
-            let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
+        let dateComponents = DateComponents(calendar: Calendar.current,  hour: hour , minute: min, weekday: weekday )
+        let trigger =  UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        
     }
     
+    // Settings switches
     @IBAction func signInSwitchUsed(_ sender: Any) {
             if signInSwitchStatus.isOn == true{
                 signInNotifications = true
@@ -110,6 +109,7 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
+    // Log out
     @IBAction func logOutPressed(_ sender: Any) {
         let logOutAlert = UIAlertController(title: "Log Out?", message: "are you sure you want to log out?", preferredStyle: .alert)
         logOutAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak logOutAlert] (_) in
@@ -118,12 +118,12 @@ class SettingsTableViewController: UITableViewController {
         self.dismiss(animated: true, completion: {});
         }))
         logOutAlert.addAction(UIAlertAction(title: "Cancel", style: .default))
-        
         self.present(logOutAlert, animated: true, completion: nil)
     }
     
+    // Styling
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
         (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.white
-}
+    }
 }

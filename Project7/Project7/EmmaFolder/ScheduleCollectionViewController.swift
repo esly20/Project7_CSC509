@@ -30,15 +30,16 @@ class ScheduleCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         data = DataLayer()
+        scheduleList = data.getSchedule()!
+        collectionView.reloadData()
+    }
+    
+    // Not sure if this here is important, don't want to delete
+        /*
 //        if let user =
 //            defaults.array(forKey: "user") as? [Int] {
 //            userid = user[0]
 //        }
-
-
-        scheduleList = data.getSchedule()!
-        collectionView.reloadData()
-        
 //        let urlString = "https://summer-session-api.herokuapp.com/student/1/schedule"
 //        if let url = URL(string: urlString) {
 //            if let data = try? Data(contentsOf: url) {
@@ -48,11 +49,9 @@ class ScheduleCollectionViewController: UICollectionViewController {
 //                print("error getting data")
 //            }
 //        }
-        
         //showError()
 //        schedulePageControl.numberOfPages = pageDays.count
 //        setupScreens()
-    }
     
 //    func setupScreens() {
 //        for index in 0..<pageDays.count {
@@ -84,6 +83,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
 //        ac.addAction(UIAlertAction(title: "OK", style: .default))
 //        present(ac, animated: true)
 //    }
+    */
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return weekDays.count
@@ -95,27 +95,24 @@ class ScheduleCollectionViewController: UICollectionViewController {
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
+        // Cell setup
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BlockCell", for: indexPath) as! ScheduleCollectionViewCell
-        //print(indexPath.row, schedule.count)
         let course = scheduleList.schedule[indexPath.row]
         cell.nameLabel.textAlignment = .center
         cell.timeStartLabel.textAlignment = .center
         cell.instructorLabel.textAlignment = .center
         cell.locationLabel.textAlignment = .center
-
         cell.nameLabel.text = course.name
         cell.timeStartLabel.text = "\(course.time_start) - \(course.time_end)"
         cell.instructorLabel.text = course.instructor
         cell.locationLabel.text = course.location
-        // color from Andover Bracding guidelines
+        // Styling
         cell.backgroundColor = UIColor.init(red: 102/256, green: 173/256, blue: 220/256, alpha: 0.50)
-        
-    return cell
-
+        return cell
     }
-   
 }
 
+// Collection View setup
 extension ScheduleCollectionViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

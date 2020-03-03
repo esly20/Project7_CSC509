@@ -10,10 +10,13 @@ import UIKit
 
 class DetailedActivityViewController: UIViewController {
 
+    // Outlets
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var descriptionLabel: UITextView!
+    
+    // Variable declarations
     let defaults = UserDefaults.standard
     var activity: [String] = []
     var alertText: String = ""
@@ -22,45 +25,43 @@ class DetailedActivityViewController: UIViewController {
     var slcstudentActivity: [String] = []
     var studentID: [String] = []
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         if let user = defaults.array(forKey: "user") as? [String] {
             studentID = user
         }
         viewDidAppear(true)
-
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         if let slcActivity = defaults.array(forKey: "slcActivity") as? [String] {
                 activity = slcActivity
             }
-//        if let slcstudentActivityList = defaults.array(forKey: "slcstudentActivity") as? [String] {
-//            slcstudentActivity = slcstudentActivityList
-//        }
-          // print(activity)
+        // Text population
         nameLabel.text = activity[0]
-            timeLabel.text = "\(activity[1]) - \(activity[2])"
-            descriptionLabel.text = activity[3]
-            locationLabel.text = activity[4]
+        timeLabel.text = "\(activity[1]) - \(activity[2])"
+        descriptionLabel.text = activity[3]
+        locationLabel.text = activity[4]
         alertText = "You have signed up for \(activity[0])"
         alertText2 = "You have already signed up for \(activity[0])"
     }
     
     @IBAction func signUpPressed(_ sender: UIButton) {
+        
+        // Not sure if important
 //        let alert = UIAlertController(title: "Sign Up", message: self.alertText, preferredStyle: .alert)
 //        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler:{ action in
 //            self.navigationController?.popViewController(animated: true)
 //        }))
 //        self.present(alert, animated: true, completion: nil)
-    
         //need to make studnet id from user defaults
-        print(studentID)
-        //postRequest(urlString: "https://summer-session-api.herokuapp.com/activities/\(activity[5])/student/\(studentID[0])", data: nil)
+        /// print(studentID)
+        // postRequest(urlString: "https://summer-session-api.herokuapp.com/activities/\(activity[5])/student/\(studentID[0])", data: nil)
+        
         postRequest(urlString: "https://summer-session-api.herokuapp.com/activities/\(activity[5])/student/2", data: nil)
     }
     
-    
+    // Post request
     func postRequest(urlString: String, data: Data?) {
         let url = URL(string: urlString)!
         var request = URLRequest(url: url)
