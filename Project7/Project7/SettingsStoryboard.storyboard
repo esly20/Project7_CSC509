@@ -24,10 +24,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign-In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zno-LB-YPp">
-                                                    <rect key="frame" x="51" y="11" width="59.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign-In Reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zno-LB-YPp">
+                                                    <rect key="frame" x="51" y="11" width="141" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Zno-LB-YPp" secondAttribute="height" multiplier="19:7" id="Fam-dG-7VI"/>
+                                                        <constraint firstAttribute="width" secondItem="Zno-LB-YPp" secondAttribute="height" multiplier="141:22" id="c7v-K5-aoG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -60,10 +60,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cluster Munches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW8-gJ-ogq">
-                                                    <rect key="frame" x="51" y="11" width="139.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cluster Munch Reminders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW8-gJ-ogq">
+                                                    <rect key="frame" x="51" y="11" width="220" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="gW8-gJ-ogq" secondAttribute="height" multiplier="19:3" id="YES-Wp-4sx"/>
+                                                        <constraint firstAttribute="width" secondItem="gW8-gJ-ogq" secondAttribute="height" multiplier="10:1" id="m8k-Th-SaG"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -91,7 +91,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Color Settings" id="ulm-M2-QiE">
+                            <tableViewSection headerTitle="Log-Out" id="ulm-M2-QiE">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TSD-JZ-d3s">
                                         <rect key="frame" x="0.0" y="171" width="414" height="43.5"/>
@@ -117,54 +117,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="z40-7J-ggB">
-                                        <rect key="frame" x="0.0" y="214.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z40-7J-ggB" id="0Ld-C4-sTN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cluster Munches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="263-ol-FZK">
-                                                    <rect key="frame" x="51" y="11" width="139.5" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="263-ol-FZK" secondAttribute="height" multiplier="19:3" id="BRC-aD-Gld"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="263-ol-FZK" firstAttribute="bottom" secondItem="0Ld-C4-sTN" secondAttribute="bottomMargin" id="NOv-IX-CLP"/>
-                                                <constraint firstItem="263-ol-FZK" firstAttribute="top" secondItem="0Ld-C4-sTN" secondAttribute="topMargin" id="j3O-T0-WEg"/>
-                                                <constraint firstItem="263-ol-FZK" firstAttribute="leading" secondItem="0Ld-C4-sTN" secondAttribute="leadingMargin" constant="31" id="rqF-Kw-JbH"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6aF-YS-MYk">
-                                        <rect key="frame" x="0.0" y="258" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6aF-YS-MYk" id="eZl-Oz-56s">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cluster Munches" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-z7-gUb">
-                                                    <rect key="frame" x="51" y="11" width="139.5" height="22"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="TbE-z7-gUb" secondAttribute="height" multiplier="19:3" id="Rwo-gJ-bKi"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="TbE-z7-gUb" firstAttribute="leading" secondItem="eZl-Oz-56s" secondAttribute="leadingMargin" constant="31" id="dL1-sH-6yZ"/>
-                                                <constraint firstItem="TbE-z7-gUb" firstAttribute="bottom" secondItem="eZl-Oz-56s" secondAttribute="bottomMargin" id="h9o-9s-Ctv"/>
-                                                <constraint firstItem="TbE-z7-gUb" firstAttribute="top" secondItem="eZl-Oz-56s" secondAttribute="topMargin" id="sNF-GP-YVj"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -180,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgA-Y6-puy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1209" y="-422"/>
+            <point key="canvasLocation" x="-1210.144927536232" y="-422.54464285714283"/>
         </scene>
     </scenes>
 </document>

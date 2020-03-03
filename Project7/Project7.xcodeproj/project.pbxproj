@@ -44,8 +44,6 @@
 		56C610AD240CD30C008F83F1 /* StudentTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C610AC240CD30C008F83F1 /* StudentTeamTableViewCell.swift */; };
 		56E093BB24099DDB00951300 /* Announcement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E093BA24099DDA00951300 /* Announcement.swift */; };
 		56E093BD24099E5000951300 /* Announcements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E093BC24099E5000951300 /* Announcements.swift */; };
-		6012E94724098DD30083BF97 /* CodeForOthers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94624098DD30083BF97 /* CodeForOthers.swift */; };
-		6012E9492409A3A10083BF97 /* SignInTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E9482409A3A10083BF97 /* SignInTimes.swift */; };
 		6012E94B240D47710083BF97 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94A240D47710083BF97 /* LoginViewController.swift */; };
 		6012E94F240D74650083BF97 /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6012E94E240D74650083BF97 /* Students.swift */; };
 		60D02CA62404493C0009325D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02CA52404493C0009325D /* SettingsTableViewController.swift */; };
@@ -96,8 +94,6 @@
 		56C610AC240CD30C008F83F1 /* StudentTeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTeamTableViewCell.swift; sourceTree = "<group>"; };
 		56E093BA24099DDA00951300 /* Announcement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcement.swift; sourceTree = "<group>"; };
 		56E093BC24099E5000951300 /* Announcements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Announcements.swift; sourceTree = "<group>"; };
-		6012E94624098DD30083BF97 /* CodeForOthers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeForOthers.swift; sourceTree = "<group>"; };
-		6012E9482409A3A10083BF97 /* SignInTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInTimes.swift; sourceTree = "<group>"; };
 		6012E94A240D47710083BF97 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6012E94E240D74650083BF97 /* Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Students.swift; sourceTree = "<group>"; };
 		60D02CA52404493C0009325D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -212,8 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				60D02CA52404493C0009325D /* SettingsTableViewController.swift */,
-				6012E9482409A3A10083BF97 /* SignInTimes.swift */,
-				6012E94624098DD30083BF97 /* CodeForOthers.swift */,
 				6012E94A240D47710083BF97 /* LoginViewController.swift */,
 				6012E94E240D74650083BF97 /* Students.swift */,
 			);
@@ -332,13 +326,11 @@
 				898CF4E2240997AB00EAC534 /* DetailViewController.swift in Sources */,
 				563C2C2924042210003A496E /* Student.swift in Sources */,
 				3F7388E623FCDDAF005E56FA /* ViewController.swift in Sources */,
-				6012E9492409A3A10083BF97 /* SignInTimes.swift in Sources */,
 				892FF12323FDAA8300354A6B /* Marker.swift in Sources */,
 				563C2C38240776FA003A496E /* (null) in Sources */,
 				563C2C36240756E4003A496E /* Team.swift in Sources */,
 				3F50153F240C5D4F00D8DAB1 /* studentActivities.swift in Sources */,
 				3F7388E223FCDDAF005E56FA /* AppDelegate.swift in Sources */,
-				6012E94724098DD30083BF97 /* CodeForOthers.swift in Sources */,
 				3F50153D240C5CDF00D8DAB1 /* studentActivity.swift in Sources */,
 				892FF12523FDAABF00354A6B /* MapViewController.swift in Sources */,
 				3F57D85624045C7300CB9810 /* (null) in Sources */,

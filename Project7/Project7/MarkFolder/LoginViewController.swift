@@ -47,7 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if isLoggedIn == true{
             performSegue(withIdentifier: "login", sender: nil)
         }
-    loginButton.layer.cornerRadius = 10
+    loginButton.layer.cornerRadius = 20
         registerForKeyboardNotifications()
     }
     
@@ -76,8 +76,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     func LoginError(){
-        let invalidLoginAlert = UIAlertController(title: "Uh Oh", message:
-            "Either your username or password are incorrect", preferredStyle: .alert)
+        let invalidLoginAlert = UIAlertController(title: "Login Failed", message:
+            "invalid first name or last name", preferredStyle: .alert)
         invalidLoginAlert.addAction(UIAlertAction(title: "Ok", style: .default))
         
         self.present(invalidLoginAlert, animated: true, completion: nil)

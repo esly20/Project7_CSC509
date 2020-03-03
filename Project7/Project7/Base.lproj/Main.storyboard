@@ -70,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X8x-Bn-NLf">
-                                        <rect key="frame" x="119.5" y="468" width="175" height="40"/>
+                                        <rect key="frame" x="125.5" y="468" width="175" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="175" id="L8G-hO-y6z"/>
                                             <constraint firstAttribute="height" constant="40" id="ZKz-Xo-3Ip"/>
@@ -79,7 +79,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWI-gk-zDg">
-                                        <rect key="frame" x="137" y="628" width="140" height="40"/>
+                                        <rect key="frame" x="143" y="628" width="140" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="Ree-QN-3p6"/>
@@ -93,7 +93,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mh0-kM-UxJ">
-                                        <rect key="frame" x="119.5" y="398" width="175" height="40"/>
+                                        <rect key="frame" x="125.5" y="398" width="175" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="175" id="4CK-7n-o7U"/>
                                             <constraint firstAttribute="height" constant="40" id="FAG-Yh-ydm"/>
@@ -102,7 +102,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ6-Tj-O5r">
-                                        <rect key="frame" x="115" y="255" width="184" height="63"/>
+                                        <rect key="frame" x="115" y="251" width="196" height="67"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="CJ6-Tj-O5r" secondAttribute="height" multiplier="181:62" id="5uZ-Nd-ocD"/>
                                         </constraints>
@@ -111,7 +111,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="New Banner" translatesAutoresizingMaskIntoConstraints="NO" id="UEr-TO-gcW">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="165"/>
+                                        <rect key="frame" x="0.0" y="50" width="426" height="161"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UEr-TO-gcW" secondAttribute="height" multiplier="416:87" id="Qzq-IR-v4w"/>
                                         </constraints>
