@@ -10,8 +10,8 @@ import UIKit
 
 class ActivityTableViewController: UITableViewController {
     let defaults = UserDefaults.standard
-    var activityList: Activities = Activities(activities: [Activity]())
-    var studentActivityList: Activities = Activities(activities: [Activity]())
+    var activityList: [Activity] = [Activity]()
+    var studentActivityList: [Activity] = [Activity]()
     let abbotBlue: UIColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
     var data = DataLayer()
     
@@ -19,8 +19,8 @@ class ActivityTableViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.backgroundColor = abbotBlue
         
-        activityList = data.getActivities()!
-        studentActivityList = data.getStudentActivities()!
+        activityList = data.getActivities()!.activities
+        studentActivityList = data.getStudentActivities()!.activities
         tableView.reloadData()
 //        let urlStringActivity = "https://summer-session-api.herokuapp.com/activities"
 //        let urlStringStudentActivity = "https://summer-session-api.herokuapp.com/student/1/activities"
