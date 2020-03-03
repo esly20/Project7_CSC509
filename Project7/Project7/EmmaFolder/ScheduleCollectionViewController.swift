@@ -13,7 +13,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
     //var userid: Int = 0
     //var frame = CGRect.zero
     //var scheduleList = [Course]()
-    let data = DataLayer()
+    var data = DataLayer()
     var scheduleList: Schedule = Schedule(schedule: [Course]())
 
     let reuseIdentifier = "BlockCell"
@@ -28,6 +28,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        data = DataLayer()
 //        if let user =
 //            defaults.array(forKey: "user") as? [Int] {
 //            userid = user[0]
@@ -77,11 +78,11 @@ class ScheduleCollectionViewController: UICollectionViewController {
 //            print("successfully loaded data")
 //    }
     
-    func showError() {
-        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-    }
+//    func showError() {
+//        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+//        ac.addAction(UIAlertAction(title: "OK", style: .default))
+//        present(ac, animated: true)
+//    }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return weekDays.count
