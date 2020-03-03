@@ -51,6 +51,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         registerForKeyboardNotifications()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let urlString = "https://summer-session-api.herokuapp.com/students"
+                if let url = URL(string: urlString) {
+                  if let data = try? Data(contentsOf: url) {
+                    parseStudents(json: data)
+                  } else {
+                    print("error getting data")
+                  }
+                }
+            for student in studentList{
+                firstnames.append(student.firstname)
+                lastnames.append(student.lastname)
+                print(studentList.count)
+            }
+
+            studentId = defaults.integer(forKey: "user")
+            isLoggedIn = defaults.bool(forKey: "loggedIn")
+            if isLoggedIn == true{
+                performSegue(withIdentifier: "login", sender: nil)
+            }
+        loginButton.layer.cornerRadius = 20
+            registerForKeyboardNotifications()
+    }
+    
     @IBAction func loginPressed(_ sender: Any) {
         let firstname = firstNameTextField.text
         let lastname = lastNameTextField.text

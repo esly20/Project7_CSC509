@@ -14,6 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.40000000000000002" green="0.67843137254901964" blue="0.86274509803921573" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Reminders Settings" id="7L3-Si-iuG">
                                 <cells>
@@ -100,20 +101,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign-In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-Yn-waT">
-                                                    <rect key="frame" x="51" y="11" width="59.5" height="22"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOM-WT-Enf">
+                                                    <rect key="frame" x="113" y="6" width="188" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Yvf-Yn-waT" secondAttribute="height" multiplier="19:7" id="cUy-9v-Enl"/>
+                                                        <constraint firstAttribute="width" secondItem="NOM-WT-Enf" secondAttribute="height" multiplier="94:15" id="9wi-OB-GpY"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <state key="normal" title="Log-Out"/>
+                                                    <connections>
+                                                        <action selector="logOutPressed:" destination="ImN-Jj-pcz" eventType="touchUpInside" id="I8n-CU-iEi"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Yvf-Yn-waT" firstAttribute="top" secondItem="dju-Pf-PZE" secondAttribute="topMargin" id="RbC-8g-6Fx"/>
-                                                <constraint firstItem="Yvf-Yn-waT" firstAttribute="bottom" secondItem="dju-Pf-PZE" secondAttribute="bottomMargin" id="deX-rY-akb"/>
-                                                <constraint firstItem="Yvf-Yn-waT" firstAttribute="leading" secondItem="dju-Pf-PZE" secondAttribute="leadingMargin" constant="31" id="fwO-Ei-UIM"/>
+                                                <constraint firstItem="NOM-WT-Enf" firstAttribute="leading" secondItem="dju-Pf-PZE" secondAttribute="leading" constant="113" id="7eD-4L-hip"/>
+                                                <constraint firstAttribute="trailing" secondItem="NOM-WT-Enf" secondAttribute="trailing" constant="113" id="qHx-Yu-GFV"/>
+                                                <constraint firstItem="NOM-WT-Enf" firstAttribute="top" secondItem="dju-Pf-PZE" secondAttribute="top" constant="6" id="vsQ-xy-gaw"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -132,7 +134,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgA-Y6-puy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1210.144927536232" y="-422.54464285714283"/>
+            <point key="canvasLocation" x="-1025" y="-425"/>
         </scene>
     </scenes>
 </document>

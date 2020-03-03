@@ -23,13 +23,12 @@ class SettingsTableViewController: UITableViewController {
     let finalMessage = "You have 5 minutes until final sign-in"
     let signin = "Sign-In"
     let munch = "Cluster Munch!"
-    
-    
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.backgroundColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
     }
     override func viewDidAppear(_ animated: Bool) {
         signInNotifications = defaults.bool(forKey: "signIn")
@@ -110,4 +109,21 @@ class SettingsTableViewController: UITableViewController {
             defaults.set(false, forKey: "clusterMunch")
         }
     }
+    
+    @IBAction func logOutPressed(_ sender: Any) {
+        let logOutAlert = UIAlertController(title: "Log Out?", message: "are you sure you want to log out?", preferredStyle: .alert)
+        logOutAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak logOutAlert] (_) in
+        self.defaults.set(false, forKey: "loggedIn")
+        self.defaults.set(0, forKey: "user")
+        self.dismiss(animated: true, completion: {});
+        }))
+        logOutAlert.addAction(UIAlertAction(title: "Cancel", style: .default))
+        
+        self.present(logOutAlert, animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        (view as! UITableViewHeaderFooterView).contentView.backgroundColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
+        (view as! UITableViewHeaderFooterView).textLabel?.textColor = UIColor.white
+}
 }
