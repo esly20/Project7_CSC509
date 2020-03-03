@@ -51,7 +51,6 @@ class InfoViewController: UIViewController, WKNavigationDelegate {
         UIApplication.shared.open(peabodyurl)
     }
 }
-    
 
     /*
     // MARK: - Navigation
