@@ -53,7 +53,7 @@ class SettingsTableViewController: UITableViewController {
         let data = DataLayer(userID: userId)
         let student = data.getStudentInfo()
         
-        // Notifications
+        // Notifications- based on sign-in info in the google drive folder- https://drive.google.com/drive/folders/1xEKdjBWc6oDO6DsTL8SYQ79gUUcW3Cn5
         if student!.boarder == true{
             if signInNotifications == true{
                 if (student!.program == "Upper School") || (student!.program == "ELL") || (student!.program == "MS^2"){
@@ -70,6 +70,7 @@ class SettingsTableViewController: UITableViewController {
                 }
             }
         }
+        //based on regular Andover Munch times, no times were provided in google drive
         if clusterMunchNotifications == true{
             createNotification(weekday: 4, hour:20, min: 40, title: munch, message: "\(student!.cluster) cluster munch in 5 minutes")
         }
