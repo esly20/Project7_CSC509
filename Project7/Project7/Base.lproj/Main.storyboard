@@ -98,7 +98,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="New Banner" translatesAutoresizingMaskIntoConstraints="NO" id="UEr-TO-gcW">
+                                        <rect key="frame" x="0.0" y="58" width="416" height="227"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="bWI-gk-zDg" firstAttribute="centerX" secondItem="QMW-9Z-QYP" secondAttribute="centerX" id="2JU-c6-Qyc"/>
                                     <constraint firstItem="zPH-Yt-k1b" firstAttribute="bottom" secondItem="bWI-gk-zDg" secondAttribute="bottom" constant="150" id="JgV-Ek-PTR"/>
@@ -133,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YPE-AH-2cn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944.92753623188412" y="-160.04464285714286"/>
+            <point key="canvasLocation" x="952" y="-167"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="9fg-lV-1Es">
@@ -164,4 +169,7 @@
             <point key="canvasLocation" x="1797" y="-160"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="New Banner" width="926" height="170"/>
+    </resources>
 </document>

@@ -12,16 +12,20 @@ class ActivityTableViewController: UITableViewController {
     let defaults = UserDefaults.standard
     var activityList = [Activity]()
     var studentActivityList = [StudentActivity]()
-
+    var userid: Int = 0
     let abbotBlue: UIColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = abbotBlue
-
+        
+        if let user =
+            defaults.array(forKey: "user") as? [Int] {
+            userid = user[0]
+        }
+        
         let urlStringActivity = "https://summer-session-api.herokuapp.com/activities"
-       // where is the studnet ID?
-        let urlStringStudentActivity = "https://summer-session-api.herokuapp.com/student/1/activities"
+        let urlStringStudentActivity = "https://summer-session-api.herokuapp.com/student/\(userid)/activities"
         
         if let url = URL(string: urlStringActivity) {
             if let data = try? Data(contentsOf: url) {
@@ -136,10 +140,18 @@ class ActivityTableViewController: UITableViewController {
        let selectedVC = storyboard.instantiateViewController(identifier: "SelectedActivityVC") as! DetailedActivityViewController
       
     let slcActivity: [String] = ["\(activityList[indexPath.row].name)", "\(activityList[indexPath.row].time_start)", "\(activityList[indexPath.row].time_end)", "\(activityList[indexPath.row].description)", "\(activityList[indexPath.row].location)"]
-       
        defaults.set(slcActivity, forKey: "slcActivity" )
-       navigationController?.pushViewController(selectedVC, animated: true)
+      
+    navigationController?.pushViewController(selectedVC, animated: true)
    }
+    
+        override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                studentActivityList.remove(at: indexPath.row)
+                defaults.set(studentActivityList, forKey: "StudentActivityList")
+                tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
