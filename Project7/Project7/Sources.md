@@ -22,3 +22,13 @@
 3. [Date Parsing](https://nsscreencast.com/episodes/367-dates-and-times)
 4. [Color Formatting](https://stackoverflow.com/questions/25094184/uicolor-extension-in-swift-error)
 5. [Background Color](https://stackoverflow.com/questions/30679701/ios-swift-how-to-change-background-color-of-table-view/41843684)
+
+## Mark
+1.[Static Table Views](https://www.youtube.com/watch?v=OBsj1GuanVw)
+2.[Color Formatting](https://stackoverflow.com/questions/24074257/how-can-i-use-uicolorfromrgb-in-swift)
+3.[Local Notifications](https://www.youtube.com/watch?v=JuqQUP0pnZY
+4.[UISwitches](https://www.youtube.com/watch?v=pBhNWJ17-ng&t=208s)
+5.[Returning to RVC](https://stackoverflow.com/questions/34326632/how-to-return-to-root-view-controller)
+6.[Button Formatting](https://stackoverflow.com/questions/26961274/how-can-i-make-a-button-have-a-rounded-border-in-swift)
+7.[Programatic Segues](https://stackoverflow.com/questions/27604192/ios-how-to-segue-programmatically-using-swift)
+

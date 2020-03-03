@@ -26,7 +26,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //keyboard handling
         firstNameTextField.delegate = self
         lastNameTextField.delegate = self
         
@@ -56,7 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.layer.cornerRadius = 20
         registerForKeyboardNotifications()
     }
-    
+    //incase user logs out
     override func viewWillAppear(_ animated: Bool) {
         let urlString = "https://summer-session-api.herokuapp.com/students"
                 if let url = URL(string: urlString) {
@@ -79,7 +79,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             performSegue(withIdentifier: "login", sender: nil)
         }
         
-        // Styling
+        // Styling - https://stackoverflow.com/questions/26961274/how-can-i-make-a-button-have-a-rounded-border-in-swift - exchange on how to round the button corners
         loginButton.layer.cornerRadius = 20
         
         // Keyboard handling
@@ -97,7 +97,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         DoLogin(firstname!, lastname!)
     }
     
-    // Login set up
+    // Login set up- code refurbished from one of our quizzes and - https://stackoverflow.com/questions/27604192/ios-how-to-segue-programmatically-using-swift - this link showed me how to programatically segue between VCs
     func DoLogin(_ first:String,_ last:String){
         if let i: Int = firstnames.firstIndex(of: first)  {
             let lastname = lastnames[i]
@@ -132,13 +132,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             print("error decoding student name json")
         }
     }
-    
+    // Keyboard handling- Samar inputted this
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
       textField.resignFirstResponder()
       return false
     }
      
-    // Keyboard handling
     func registerForKeyboardNotifications() {
       NotificationCenter.default.addObserver(self,
                           selector: #selector(keyboardWasShown(_:)),

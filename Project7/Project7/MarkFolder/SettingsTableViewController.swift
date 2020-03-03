@@ -6,6 +6,7 @@
 //  Copyright © 2020 CSC509. All rights reserved.
 //
 
+//https://www.youtube.com/watch?v=OBsj1GuanVw - video helped me learn to use static table view cells
 import UIKit
 import Foundation
 
@@ -27,7 +28,7 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Color Styling
+        // Color Styling-https://stackoverflow.com/questions/24074257/how-can-i-use-uicolorfromrgb-in-swift - this page showed me how to code an rgb color
         self.tableView.backgroundColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
     }
     
@@ -76,7 +77,7 @@ class SettingsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    // Notification Creation
+    // Notification Creation-https://www.youtube.com/watch?v=JuqQUP0pnZY- followed this video to learn how to create local notifications
     func createNotification(weekday: Int, hour: Int, min: Int, title: String, message: String){
         let content = UNMutableNotificationContent()
             content.title = title
@@ -88,7 +89,7 @@ class SettingsTableViewController: UITableViewController {
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
-    // Settings switches
+    // Settings switches - https://www.youtube.com/watch?v=pBhNWJ17-ng&t=208s - video helped me understand how to use switches
     @IBAction func signInSwitchUsed(_ sender: Any) {
             if signInSwitchStatus.isOn == true{
                 signInNotifications = true
@@ -109,7 +110,7 @@ class SettingsTableViewController: UITableViewController {
         }
     }
     
-    // Log out
+    // Log out, refurbished some of my project 6 code for the alert and- https://stackoverflow.com/questions/34326632/how-to-return-to-root-view-controller  - this exchange showed how to return to the root VC
     @IBAction func logOutPressed(_ sender: Any) {
         let logOutAlert = UIAlertController(title: "Log Out?", message: "are you sure you want to log out?", preferredStyle: .alert)
         logOutAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak logOutAlert] (_) in
