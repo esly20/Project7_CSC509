@@ -25,6 +25,7 @@ class ScheduleCollectionViewController: UICollectionViewController {
     var pageDays: [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 //    var classPeriods: [String] = ["1", "2a", "2b"]
     var weekDays: [String] = ["Day"]
+     //var weekDays: [String] = ["", "", "", "", "", ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,9 +87,11 @@ class ScheduleCollectionViewController: UICollectionViewController {
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return weekDays.count
+
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return scheduleList.schedule.count
+
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
