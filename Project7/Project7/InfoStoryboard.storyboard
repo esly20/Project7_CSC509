@@ -46,13 +46,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uqb-RQ-sQs">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="andover__Seal&amp;Wordmark__RGB__white" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-gN-Eg6">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAP-CQ-ZYn">
-                                        <rect key="frame" x="0.0" y="96" width="414" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="110" width="414" height="110"/>
                                         <state key="normal" title="Commons Menu">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -61,7 +61,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbw-dX-Pnd">
-                                        <rect key="frame" x="0.0" y="192.5" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="220" width="414" height="109.5"/>
                                         <state key="normal" title="PA Net">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -70,7 +70,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRR-4R-zTB">
-                                        <rect key="frame" x="0.0" y="288.5" width="414" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="329.5" width="414" height="110"/>
                                         <state key="normal" title="School Website">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -78,17 +78,8 @@
                                             <action selector="schoolWebsiteButtonPressed:" destination="bN5-5U-E4v" eventType="touchUpInside" id="Qy2-ad-qkW"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-be-2rA">
-                                        <rect key="frame" x="0.0" y="385" width="414" height="96"/>
-                                        <state key="normal" title="Bluebook">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="bluebookButtonPressed:" destination="bN5-5U-E4v" eventType="touchUpInside" id="NXL-9w-Fds"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AF8-DA-RNz">
-                                        <rect key="frame" x="0.0" y="481" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="439.5" width="414" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Athletics">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -98,7 +89,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZK-Ww-SpO">
-                                        <rect key="frame" x="0.0" y="577" width="414" height="96.5"/>
+                                        <rect key="frame" x="0.0" y="549.5" width="414" height="110"/>
                                         <state key="normal" title="Addison Gallery">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -107,7 +98,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eut-Ib-0sk">
-                                        <rect key="frame" x="0.0" y="673.5" width="414" height="96"/>
+                                        <rect key="frame" x="0.0" y="659.5" width="414" height="109.5"/>
                                         <state key="normal" title="Peabody Museum ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>

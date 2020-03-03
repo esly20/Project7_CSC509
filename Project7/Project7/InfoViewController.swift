@@ -5,6 +5,7 @@
 //  Created by Patrick Alston on 2/21/20.
 //  Copyright © 2020 CSC509. All rights reserved.
 //
+// I used https://www.hackingwithswift.com/example-code/system/how-to-open-a-url-in-safari to find an easier way to implement webkit into the app to be able to go to the websites that are in the info section.
 
 import UIKit
 import WebKit
@@ -31,11 +32,6 @@ class InfoViewController: UIViewController, WKNavigationDelegate {
         UIApplication.shared.open(pawebsiteurl)
         }
     }
-    @IBAction func bluebookButtonPressed(_ sender: Any) {
-        if let bluebookurl = URL(string: "https://panet.andover.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_15_1") {
-        UIApplication.shared.open(bluebookurl)
-    }
-}
     @IBAction func athleticsButtonPressed(_ sender: Any) {
         if let athleticsurl = URL(string: "https://athletics.andover.edu") {
         UIApplication.shared.open(athleticsurl)
@@ -44,14 +40,14 @@ class InfoViewController: UIViewController, WKNavigationDelegate {
     @IBAction func addisonButtonPressed(_ sender: Any) {
         if let addisonurl = URL(string: "https://addison.andover.edu/Pages/default.aspx") {
         UIApplication.shared.open(addisonurl)
+        }
     }
-}
     @IBAction func peabodyButtonPressed(_ sender: Any) {
         if let peabodyurl = URL(string: "https://peabody.andover.edu") {
         UIApplication.shared.open(peabodyurl)
+        }
     }
 }
-
     /*
     // MARK: - Navigation
 
@@ -62,5 +58,5 @@ class InfoViewController: UIViewController, WKNavigationDelegate {
     }
     */
 
-    }
+    
 
