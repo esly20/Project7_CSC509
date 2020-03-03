@@ -17,7 +17,7 @@ class StudentTeamTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        data = DataLayer()
         navigationTitle.title = "\(data.getStudentInfo()!.firstname)'s Team"
     }
 

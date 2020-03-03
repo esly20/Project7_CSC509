@@ -118,7 +118,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.19215686269999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.40000000000000002" green="0.67843137254901964" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="uqb-RQ-sQs" firstAttribute="top" secondItem="r26-2R-nz9" secondAttribute="top" id="nNu-fH-78S"/>
                             <constraint firstItem="uqb-RQ-sQs" firstAttribute="leading" secondItem="92z-4K-WhO" secondAttribute="leading" id="qPe-Mv-xeg"/>
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c42-TJ-iFv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2200" y="115"/>
+            <point key="canvasLocation" x="2196" y="115"/>
         </scene>
     </scenes>
     <resources>

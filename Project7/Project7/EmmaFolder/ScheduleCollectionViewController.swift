@@ -9,15 +9,15 @@ import UIKit
 import Foundation
 
 class ScheduleCollectionViewController: UICollectionViewController {
-    
+    let defaults = UserDefaults.standard
+    //var userid: Int = 0
     //var frame = CGRect.zero
-    let data = DataLayer(userID: 1) //WILL LATER GET FROM USER DEFAULTS
     //var scheduleList = [Course]()
+    var data = DataLayer()
     var scheduleList: Schedule = Schedule(schedule: [Course]())
-    
 
-    private let reuseIdentifier = "BlockCell"
-    private let itemsPerRow: CGFloat = 1
+    let reuseIdentifier = "BlockCell"
+    let itemsPerRow: CGFloat = 1
     let sectionInsets = UIEdgeInsets(top: 10.0,
                                      left: 30.0,
                                      bottom: 10.0,
@@ -28,11 +28,16 @@ class ScheduleCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        data = DataLayer()
+//        if let user =
+//            defaults.array(forKey: "user") as? [Int] {
+//            userid = user[0]
+//        }
+
+
         scheduleList = data.getSchedule()!
         collectionView.reloadData()
         
-
 //        let urlString = "https://summer-session-api.herokuapp.com/student/1/schedule"
 //        if let url = URL(string: urlString) {
 //            if let data = try? Data(contentsOf: url) {
@@ -73,11 +78,11 @@ class ScheduleCollectionViewController: UICollectionViewController {
 //            print("successfully loaded data")
 //    }
     
-    func showError() {
-        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
-    }
+//    func showError() {
+//        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+//        ac.addAction(UIAlertAction(title: "OK", style: .default))
+//        present(ac, animated: true)
+//    }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return weekDays.count

@@ -10,7 +10,6 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    var data: DataLayer = DataLayer()
     var abbotBlue: UIColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
     
     // MARK: Outlets
@@ -88,6 +87,7 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let data: DataLayer = DataLayer()
         
         //Button design set up
         studentTeamButton.backgroundColor = abbotBlue

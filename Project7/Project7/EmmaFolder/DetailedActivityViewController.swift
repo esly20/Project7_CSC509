@@ -37,11 +37,22 @@ class DetailedActivityViewController: UIViewController {
         }
     
     @IBAction func signUpPressed(_ sender: UIButton) {
+       //self.navigationController?.popViewController(animated: true)
         let alert = UIAlertController(title: "Sign Up", message: self.alertText, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+        //alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+        
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler:{ action in
+            self.navigationController?.popViewController(animated: true)
+        }))
         self.present(alert, animated: true, completion: nil)
         if let studentActivityData = try? encoder.encode(activity){
         defaults.set(studentActivityData, forKey: "StudentActivityList")
         }
+        
+        print(navigationController)
+//        let storyboard = UIStoryboard(name: "ActivitiesStoryboard", bundle: nil)
+//        let selectedVC = storyboard.instantiateViewController(identifier: "ActivitySB") as! ActivityTableViewController
+//        performSegue(withIdentifier: "signUpComplete", sender: self)
+        
     }
 }

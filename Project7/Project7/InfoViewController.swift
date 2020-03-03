@@ -10,40 +10,47 @@ import UIKit
 import WebKit
 
 class InfoViewController: UIViewController, WKNavigationDelegate {
+    var urlText: String = ""
     var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     @IBAction func commonsButtonPressed(_ sender: Any) {
-        let commonsurl = URL(string: "https://phillipsacademy.campusdish.com/en/LocationsAndMenus/PareskyCommons")!
-        webView!.load(URLRequest(url: commonsurl))
+        if let url = URL(string: "https://phillipsacademy.campusdish.com/LocationsAndMenus/PareskyCommons") {
+            UIApplication.shared.open(url)
+        }
     }
     @IBAction func paNetButtonPressed(_ sender: Any) {
-        let paneturl = URL(string: "https://panet.andover.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_15_1")!
-        webView!.load(URLRequest(url: paneturl))
+        if let paneturl = URL(string: "https://panet.andover.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_15_1") {
+        UIApplication.shared.open(paneturl)
     }
+}
     @IBAction func schoolWebsiteButtonPressed(_ sender: Any) {
-        let pawebsiteurl = URL(string: "https://www.andover.eduf")!
-        webView!.load(URLRequest(url: pawebsiteurl))
+        if let pawebsiteurl = URL(string: "https://www.andover.edu") {
+        UIApplication.shared.open(pawebsiteurl)
+        }
     }
     @IBAction func bluebookButtonPressed(_ sender: Any) {
-        let bluebookurl = URL(string: "https://panet.andover.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_15_1")!
-        webView!.load(URLRequest(url: bluebookurl))
+        if let bluebookurl = URL(string: "https://panet.andover.edu/webapps/portal/execute/tabs/tabAction?tab_tab_group_id=_15_1") {
+        UIApplication.shared.open(bluebookurl)
     }
+}
     @IBAction func athleticsButtonPressed(_ sender: Any) {
-        let athleticsurl = URL(string: "https://athletics.andover.edu")!
-        webView!.load(URLRequest(url: athleticsurl))
+        if let athleticsurl = URL(string: "https://athletics.andover.edu") {
+        UIApplication.shared.open(athleticsurl)
     }
+}
     @IBAction func addisonButtonPressed(_ sender: Any) {
-        let addisonurl = URL(string: "https://addison.andover.edu/Pages/default.aspx")!
-        webView!.load(URLRequest(url: addisonurl))
+        if let addisonurl = URL(string: "https://addison.andover.edu/Pages/default.aspx") {
+        UIApplication.shared.open(addisonurl)
     }
+}
     @IBAction func peabodyButtonPressed(_ sender: Any) {
-        let peabodyurl = URL(string: "https://peabody.andover.edu")!
-        webView!.load(URLRequest(url: peabodyurl))
+        if let peabodyurl = URL(string: "https://peabody.andover.edu") {
+        UIApplication.shared.open(peabodyurl)
     }
-    
+}
     
 
     /*
@@ -57,3 +64,4 @@ class InfoViewController: UIViewController, WKNavigationDelegate {
     */
 
     }
+
