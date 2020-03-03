@@ -15,3 +15,10 @@
 4. [Table View Format](https://stackoverflow.com/questions/37272040/swift-how-to-center-cell-text)
 5. [Dissmissing from an Alert](https://learnappmaking.com/uialertcontroller-alerts-swift-how-to/)
 6. [Understanding what goes into Post](https://www.hackingwithswift.com/books/ios-swiftui/sending-and-receiving-orders-over-the-internet)
+
+## Erik Fotta
+1. [Instantiating VCs through storyboards](https://guides.codepath.com/ios/Creating-View-Controllers-from-Storyboard)
+2. [Date Formatting](https://www.hackingwithswift.com/example-code/language/how-to-use-iso-8601-dates-with-jsondecoder-and-codable)
+3. [Date Parsing](https://nsscreencast.com/episodes/367-dates-and-times)
+4. [Color Formatting](https://stackoverflow.com/questions/25094184/uicolor-extension-in-swift-error)
+5. [Background Color](https://stackoverflow.com/questions/30679701/ios-swift-how-to-change-background-color-of-table-view/41843684)

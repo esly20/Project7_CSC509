@@ -12,7 +12,7 @@ class StudentTeamTableViewCell: UITableViewCell {
     
     var abbotBlue: UIColor = UIColor(red: 102/255, green: 173/255, blue: 220/255, alpha: 1)
     
-    //Outlets
+    // Outlets
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
@@ -21,13 +21,10 @@ class StudentTeamTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
          fullNameLabel.textColor = abbotBlue
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

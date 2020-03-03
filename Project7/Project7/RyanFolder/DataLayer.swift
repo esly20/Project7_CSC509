@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class DataLayer {
+    // Variable declaration
     let defaults = UserDefaults.standard
     let decoder = JSONDecoder()
     let encoder = JSONEncoder()
@@ -21,7 +22,7 @@ class DataLayer {
     let urlStudentActivities: String
     let urlActivities: String = "https://summer-session-api.herokuapp.com/activities"
     
-    //Initializer
+    //Initializers
     init(userID: Int) {
         self.userId = userID
         urlStudentInfoString = "https://summer-session-api.herokuapp.com/student/\(userId)/info"
@@ -40,6 +41,7 @@ class DataLayer {
         urlStudentActivities = "https://summer-session-api.herokuapp.com/student/\(userId)/activities"
     }
     
+    // Updates User ID
     func updateUserId(newUserId: Int) {
         self.userId = newUserId
     }
@@ -97,8 +99,7 @@ class DataLayer {
         guard let url = URL(string: specificURL) else { return nil }
         guard let data = try? Data(contentsOf: url) else { return nil }
         guard let json = try? decoder.decode(type, from: data)  else { return nil }
-        //print("Data from server successful")
-        
+        ///print("Data from server successful")
         defaults.set(data, forKey: key)
         return json
     }
@@ -107,8 +108,7 @@ class DataLayer {
     func decodeData<T: Decodable>(key: String, type: T.Type) -> T? {
         guard let encodedData = defaults.object(forKey: key) as? Data else { return nil }
         guard let decodedData = try? decoder.decode(type, from: encodedData) else { return nil }
-        //print("Data from UD successful")
-        
+        ///print("Data from UD successful")
         return decodedData
     }
 
@@ -119,5 +119,4 @@ class DataLayer {
         }
         return false
     }
-    
 }

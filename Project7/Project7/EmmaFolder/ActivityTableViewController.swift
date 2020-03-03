@@ -25,6 +25,10 @@ class ActivityTableViewController: UITableViewController {
         activityList = data.getActivities()!.activities
         studentActivityList = data.getStudentActivities()!.activities
         tableView.reloadData()
+    }
+    
+        // Not sure if important, don't want to delete
+    
         //        let urlStringActivity = "https://summer-session-api.herokuapp.com/activities"
         //        let urlStringStudentActivity = "https://summer-session-api.herokuapp.com/student/1/activities"
         //
@@ -45,7 +49,7 @@ class ActivityTableViewController: UITableViewController {
         //            }
         //        }
         //        showError()
-    }
+//    }
     
     //    func parseActivities(json: Data) {
     //        let decoder = JSONDecoder()
@@ -103,7 +107,7 @@ class ActivityTableViewController: UITableViewController {
         }
     }
     
-    
+    // Cell set up
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as! ActivityTableViewCell
         if indexPath.section == 0 {
@@ -125,28 +129,31 @@ class ActivityTableViewController: UITableViewController {
         }
     }
     
+    // Section titles
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return  "All Campus Activities"
         } else{
             return "My Activities"
         }
-        
     }
     
+    // Cell selected
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row) tapped")
         
+        // VC instantialiation
         let storyboard = UIStoryboard(name: "ActivitiesStoryboard", bundle: nil)
         let selectedVC = storyboard.instantiateViewController(identifier: "SelectedActivityVC") as! DetailedActivityViewController
         
+        // Defaults push
         let slcActivity: [String] = ["\(activityList[indexPath.row].name)", "\(activityList[indexPath.row].time_start)", "\(activityList[indexPath.row].time_end)", "\(activityList[indexPath.row].description)", "\(activityList[indexPath.row].location)", "\(activityList[indexPath.row].activityid)"]
-        //    defaults.set(studentActivityList[indexPath.row], forKey: "slcstudentActivity")
         defaults.set(slcActivity, forKey: "slcActivity" )
         
+        // VC push
         navigationController?.pushViewController(selectedVC, animated: true)
     }
     
+    // Deleting
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             //studentActivityList.remove(at: indexPath.row)
@@ -156,8 +163,7 @@ class ActivityTableViewController: UITableViewController {
         }
     }
     
-    
-    
+    // Delete set up
     func deleteRequest(urlString: String, data: Data?) {
         let url = URL(string: urlString)!
         var request = URLRequest(url: url)
@@ -186,5 +192,4 @@ class ActivityTableViewController: UITableViewController {
         }
         task.resume()
     }
-    
 }
