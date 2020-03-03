@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     var isLoggedIn:Bool = Bool()
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     var studentList = [Student]()
     var firstnames = [String]()
@@ -46,6 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if isLoggedIn == true{
             performSegue(withIdentifier: "login", sender: nil)
         }
+    loginButton.layer.cornerRadius = 10
         registerForKeyboardNotifications()
     }
     
